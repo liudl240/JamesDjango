@@ -1,6 +1,6 @@
 # JamesDjango
 
-##docker 部署数据库
+## docker 部署数据库
 ```
 vim docker-compose.yml
 version: '3.3'
