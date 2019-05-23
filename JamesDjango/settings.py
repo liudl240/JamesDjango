@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
+    'django.contrib.sessions.backends.db',
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'mysites',
@@ -133,3 +134,6 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS=[
     os.path.join(BASE_DIR, "static"),
 ]
+
+
+LOGIN_URL = '/users/login/'
