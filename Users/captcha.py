@@ -49,3 +49,4 @@ def create_validate_code():
               float(random.randint(1, 2)) / 500
               ]
     return image , code_str
+

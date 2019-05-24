@@ -4,6 +4,7 @@ from Users import views
 
 urlpatterns = [
     url('login', views.login, name='login'),
+    url('sendemail', views.sendemail, name='sendemail'),
     url('captcha', views.captcha, name='captcha'),
     url('logout', views.logout, name='logout'),
     url('userlist', views.userlist, name='userlist'),

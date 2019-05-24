@@ -134,6 +134,13 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS=[
     os.path.join(BASE_DIR, "static"),
 ]
-
-
 LOGIN_URL = '/users/login/'
+
+"""邮箱配置"""
+EMAIL_USE_SSL = True 
+EMAIL_HOST = 'smtp.exmail.qq.com'  # 如果是 163 改成 smtp.163.com
+EMAIL_PORT = 465
+EMAIL_HOST_USER = "liudongliang@szlaozi.com" # 帐号
+EMAIL_HOST_PASSWORD = "Liudltest123."  # 授权码（****）
+# 默认邮件
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
