@@ -100,8 +100,14 @@ def login(request):
     return render(request, "Users/login.html", {'error_msg':error_msg})
 
 """用户列表|查看|编辑"""
+@login_require
 def userlist(request):
-    return render(request, 'Users/userlist.html')
+    username = request.session.get("username",None)
+    userlist = models.UserInfo.objects.all()
+    context = {"userlist":userlist,"username":username}
+    return render(request, 'Users/userlist.html',context)
+
+
 
 """增加用户"""
 def adduser(request):
