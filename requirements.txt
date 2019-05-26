@@ -2,7 +2,7 @@ Django==2.2.1
 django-celery==3.2.2
 django-redis-sessions==0.6.1
 django-storages==1.6.5
-mysqlclient==1.4.2.post1
+mysqlclient==1.4.2
 redis==3.2.1
 requests==2.22.0
 urllib3==1.25.2

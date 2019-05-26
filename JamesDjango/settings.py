@@ -23,8 +23,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '7-r6&xiis2i*4-px!e%jaodar=%g-*_dpzdkcffu-v4sx3!(1#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
+#DEBUG = False
 DEBUG = True
-
 ALLOWED_HOSTS = ['127.0.0.1','Django.james.com']
 
 
@@ -134,6 +134,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS=[
     os.path.join(BASE_DIR, "static"),
 ]
+
 LOGIN_URL = '/users/login/'
 
 """邮箱配置"""

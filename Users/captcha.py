@@ -21,7 +21,7 @@ def create_validate_code():
     # 定义画笔
     draw = ImageDraw.Draw(image, "RGB")
     # 创建字体（字体的路径，服务器路径）
-    font_path = '/mnt/JamesDjango/static/fonts/kumo.ttf'
+    font_path = './static/fonts/kumo.ttf'
     # 实例化字体，设置大小是30
     font = ImageFont.truetype(font_path, 30)
     # 准备画布上的字符集
