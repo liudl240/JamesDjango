@@ -1,0 +1,73 @@
+{% extends "bases/sidebar.html" %}
+{% block content %}
+    <!--页面主要内容-->
+    <main class="lyear-layout-content">
+      <div class="container-fluid">
+        <div class="row">
+          <!-- .col-sm-6 -->
+	{% for service in servicelistinfo %}
+          <div class="col-sm-6 col-lg-3">
+            <div class="card">
+              <div class="card-header bg-primary">
+                <h4>{{ service.title }}</h4>
+                <ul class="card-actions">
+                  <li>
+                   <a href={{ service.jumpLink }}>跳转</a>
+                  </li>
+                  <li>
+                   <a href=/service/editservice?title={{ service.title}}>编辑</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="card-body">
+                <p>{{ service.desLink }}</p>
+              </div>
+            </div>
+          </div>
+         {% endfor %}
+          <!-- .col-sm-6 -->
+        </div>
+      </div>
+
+<div class="row lyear-wrapper">
+  <div class="lyear-login">
+    <div class="login-center text-center">
+        <h4>添加 跳转连接</h4>
+      <div class="login-header text-center">
+      <form action="/service/servicelist" method="post">
+        {% csrf_token %}
+        <div class="form-group has-feedback feedback-left">
+          <input type="text" placeholder={{ serviceinfo.title}} class="form-control" name="title" id="title" />
+          <span class="mdi mdi-account form-control-feedback" aria-hidden="true"></span>
+        </div>
+        <div class="form-group has-feedback feedback-left">
+          <input type="text" placeholder={{ serviceinfo.jumpLink }} class="form-control" id="jumpLink" name="jumpLink" />
+          <span class="mdi mdi-lock form-control-feedback" aria-hidden="true"></span>
+        </div>
+        <div class="form-group has-feedback feedback-left">
+          <input type="text" placeholder={{ serviceinfo.desLink|e }} class="form-control" id="desLink" name="desLink"  />
+          <span class="mdi mdi-lock form-control-feedback" aria-hidden="true"></span>
+        </div>
+            <div class="form-group">
+            <button class="btn btn-block btn-primary"  name="submit" >提交生成</button>
+            <span style="color:red;" class="btn " id="example-error-notify" >{{ error_msg }}</span>
+        </div>
+        </form>
+      <footer class="col-sm-12 text-center">
+        <p class="m-b-0">Copyright © 2019 <a href="/">JamesOps</a>自动化运维</p>
+      </footer>
+    </div>
+  </div>
+</div>
+    </main>
+
+    <!--End 页面主要内容-->
+  </div>
+</div>
+<script type="text/javascript" src="/static/js/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/static/js/perfect-scrollbar.min.js"></script>
+<script type="text/javascript" src="/static/js/main.min.js"></script>
+</body>
+</html>
+{% endblock content %}

@@ -159,7 +159,9 @@ def edituser(request):
 """用户信息"""
 @login_require
 def userinfo(request):
-    return render(request, 'Users/userinfo.html')
+    username = request.session.get("username", None) 
+    context = {"username": username}
+    return render(request, 'Users/userinfo.html',context)
 
 """注销"""
 @login_require
