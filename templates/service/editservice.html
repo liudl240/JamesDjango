@@ -11,11 +11,14 @@
               <div class="card-header bg-primary">
                 <h4>{{ service.title }}</h4>
                 <ul class="card-actions">
-                  <li>
-                   <a href={{ service.jumpLink }}>跳转</a>
+                    <li>
+                   <a href=/service/delservice?id={{ service.id }}>删除</a>
                   </li>
                   <li>
-                   <a href=/service/editservice?title={{ service.title}}>编辑</a>
+                   <a href=/service/editservice?id={{ service.id}}>编辑</a>
+                  </li>
+                  <li>
+                   <a href={{ service.jumpLink }}>跳转</a>
                   </li>
                 </ul>
               </div>
@@ -34,18 +37,18 @@
     <div class="login-center text-center">
         <h4>添加 跳转连接</h4>
       <div class="login-header text-center">
-      <form action="/service/servicelist" method="post">
+      <form action="/service/editservice?id={{ idinfo.id }}" method="post">
         {% csrf_token %}
         <div class="form-group has-feedback feedback-left">
-          <input type="text" placeholder={{ serviceinfo.title}} class="form-control" name="title" id="title" />
+          <input type="text" placeholder={{ idinfo.title}} class="form-control" name="title" id="title" />
           <span class="mdi mdi-account form-control-feedback" aria-hidden="true"></span>
         </div>
         <div class="form-group has-feedback feedback-left">
-          <input type="text" placeholder={{ serviceinfo.jumpLink }} class="form-control" id="jumpLink" name="jumpLink" />
+          <input type="text" placeholder={{ idinfo.jumpLink }} class="form-control" id="jumpLink" name="jumpLink" />
           <span class="mdi mdi-lock form-control-feedback" aria-hidden="true"></span>
         </div>
         <div class="form-group has-feedback feedback-left">
-          <input type="text" placeholder={{ serviceinfo.desLink|e }} class="form-control" id="desLink" name="desLink"  />
+          <input type="text" placeholder={{ idinfo.desLink }}  class="form-control" id="desLink" name="desLink"  />
           <span class="mdi mdi-lock form-control-feedback" aria-hidden="true"></span>
         </div>
             <div class="form-group">

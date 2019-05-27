@@ -1,4 +1,4 @@
-from django.shortcuts import render, render_to_response
+from django.shortcuts import render, render_to_response,HttpResponseRedirect,redirect
 from Users.views import login_require
 from mysites import models
 """主页"""
@@ -22,9 +22,9 @@ def servicelist(request):
         input_title = request.POST.get("title",None)
         input_jumpLink = request.POST.get("jumpLink",None)
         input_desLink = request.POST.get("desLink",None)
-        print(input_title,input_jumpLink,input_desLink)
         titleinfo = models.servicelist.objects.filter(title=input_title)
         jumpLinkinfo = models.servicelist.objects.filter(jumpLink=input_jumpLink)
+        print(input_title,input_jumpLink,input_desLink)
         if input_title == "" or  input_jumpLink == "":
             status="请认证填写，不能为空"
             context= {"username":username, "error_msg":status,"servicelistinfo":servicelistinfo}
@@ -44,32 +44,52 @@ def servicelist(request):
 def editservice(request):
     username = request.session.get("username", None)
     servicelistinfo = models.servicelist.objects.all()
-    edit_title = request.GET.get("title",None)
-    print("编辑标题："+edit_title)
-    serviceinfo = models.servicelist.objects.filter(title=edit_title) 
-    context = {"username":username,"servicelistinfo":servicelistinfo,"serviceinfo":serviceinfo}
+    edit_id = request.GET.get("id",None)
+    print(edit_id)
+    idinfo = models.servicelist.objects.filter(id=edit_id)
+    if len(idinfo) == 0:
+        status = "没有如此的id号"
+        context = {"username":username,"servicelistinfo":servicelistinfo,"error_msg":status}
+        return render(request, 'service/servicelist.html',context)
+    context = {"username":username,"servicelistinfo":servicelistinfo,"idinfo":idinfo[0]}
     if request.method == "POST":
         input_title = request.POST.get("title",None)
         input_jumpLink = request.POST.get("jumpLink",None)
         input_desLink = request.POST.get("desLink",None)
-        print(input_title,input_jumpLink,input_desLink)
+        edit_id = request.GET.get("id",None)
+        idinfo = models.servicelist.objects.filter(id=edit_id)
+        print(input_title,input_jumpLink,input_desLink+"JAMES TEST",edit_id)
         titleinfo = models.servicelist.objects.filter(title=input_title)
         jumpLinkinfo = models.servicelist.objects.filter(jumpLink=input_jumpLink)
+        idinfo = models.servicelist.objects.filter(id=edit_id)
+        print("testjames001")
         if input_title == "" or  input_jumpLink == "":
             status="请认证填写，不能为空"
-            context= {"username":username, "error_msg":status,"servicelistinfo":servicelistinfo}
-            return render(request, 'service/servicelist.html',context)
+            context= {"username":username, "error_msg":status,"servicelistinfo":servicelistinfo,"idinfo":idinfo[0]}
+            return render(request, 'service/editservice.html',context)
         elif len(titleinfo) > 0 or len(jumpLinkinfo) > 0:
             status="连接获取标题已存在，请查阅后添加"
-            context= {"username":username, "error_msg":status,"servicelistinfo":servicelistinfo}
-            return render(request, 'service/servicelist.html',context)
+            context= {"username":username, "error_msg":status,"servicelistinfo":servicelistinfo,"idinfo":idinfo[0]}
+            return render(request, 'service/editservice.html',context)
         else:
-            models.servicelist.objects.create(title=input_title,jumpLink=input_jumpLink,desLink=input_desLink)
+            idinfo.update(title=input_title,jumpLink=input_jumpLink,desLink=input_desLink)
             status="提交成功"
-            context= {"username":username, "error_msg":status,"servicelistinfo":servicelistinfo}
-            return render(request, 'service/servicelist.html',context)
+            context= {"username":username, "error_msg":status,"servicelistinfo":servicelistinfo,"idinfo":idinfo[0]}
+            return render(request, 'service/editservice.html',context)
     return render(request, 'service/editservice.html',context)
 
+"""删除链接"""
+def delservice(request):
+    edit_id = request.GET.get("id", None)
+    idinfo = models.servicelist.objects.filter(id=edit_id)
+    servicelistinfo = models.servicelist.objects.all()
+
+    if len(idinfo) == 0 :
+        context = {"error_msg": "没有这个id"}
+        return HttpResponseRedirect( 'service/servicelist.html', context)
+    idinfo.delete()
+    context = {"error_msg":"删除成功","servicelistinfo":servicelistinfo}
+    return render(request,'service/servicelist.html',context)
 
 """404页面"""
 def page_not_found(request):
