@@ -29,7 +29,6 @@ def captcha(request):
     return HttpResponse(f.getvalue())
 
 
-"""获取图片"""
 
 
 """获取邮箱验证码"""
@@ -82,7 +81,11 @@ def login(request):
         userinfo = models.UserInfo.objects.all().filter(username=input_username)
         if len(userinfo) > 0:
             if input_username == userinfo[0].username:
-                if check_password(input_password,userinfo[0].password):
+                if userinfo[0].active == 0:
+                    print("禁止登录")
+                    error_msg="禁止登录"
+                    return render(request, "Users/login.html", {'error_msg':error_msg})
+                elif check_password(input_password,userinfo[0].password):
                     print("登陆成功")
                     request.session["username"] = input_username
                     context={'username':request.session.get("username")}
@@ -140,7 +143,8 @@ def adduser(request):
                     return render(request, "Users/adduser.html", {'error_msg': error_msg})
                 password = make_password(input_password)
                 email = input_email
-                c_time = datetime.fromtimestamp(time.time())
+                c_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+                print(c_time)
                 models.UserInfo.objects.create(username=input_username, password=password,email=email,c_time=c_time)
                 status = "恭喜，注册成功"
                 return render(request, 'Users/login.html', {'error_msg':status})
@@ -150,11 +154,51 @@ def adduser(request):
 """删除用户"""
 @login_require
 def deluser(request):
-    return render(request, 'Users/deluser.html')
+    edit_id = request.GET.get("id", None)
+    idinfo = models.UserInfo.objects.filter(id=edit_id)
+    userinfo = models.UserInfo.objects.all()
+    username = request.session.get("username", None)
+    if len(idinfo) == 0 :
+        context = {"error_msg": "没有这个id用户","userinfo":userinfo,"username":username}
+        return HttpResponseRedirect( '/users/userlist', context)
+    idinfo.delete()
+    print("删除成功")
+    status="删除成功"
+    context = {"error_msg": status,"userinfo":userinfo,"username":username}
+    return HttpResponseRedirect( '/users/userlist', context)
 
 """修改用户"""
+@login_require
 def edituser(request):
-    return render(request, 'Users/edituser.html')
+    edit_id = request.GET.get("id", None)
+    idinfo = models.UserInfo.objects.filter(id=edit_id)
+    username = request.session.get("username", None)
+    print(username,idinfo[0].username)
+    context = {"username":username,"idinfo":idinfo[0]}
+    if request.method == "POST":
+        input_username = request.POST.get("username",None)
+        input_email = request.POST.get("email",None)
+        input_active = request.POST.get("active",None)
+        input_password = request.POST.get("password",None)    
+        edit_id = request.GET.get("id", None)
+        username = request.session.get("username", None)
+        idinfo = models.UserInfo.objects.filter(id=edit_id)
+        context = {"username":username, "idinfo":idinfo[0]}
+        if input_username == "" and input_email == "" and input_active == "" and input_password == "":
+            status="输入为空，没有修改！"
+            context = {"error_msg": status,"userinfo":userinfo,"username":username}
+            return HttpResponseRedirect( '/users/userlist', context)
+        if input_username != "":
+            idinfo.update(username=input_username) 
+        elif input_email != "":
+            idinfo.update(email=input_email) 
+        elif input_active != "":
+            idinfo.update(active=input_active)
+        elif input_password != "":
+            idinfo.update(password=make_password(input_password))
+        #return render(request, 'Users/edituser.html',context)
+        return HttpResponseRedirect( '/users/userlist', context)
+    return render(request, 'Users/edituser.html',context)
 
 """用户信息"""
 @login_require
@@ -168,6 +212,9 @@ def userinfo(request):
 def logout(request):
     username = request.session.get('username', None) 
     request.session.clear()
+    userinfo = models.UserInfo.objects.filter(username=username)
+    l_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+    userinfo.update(l_time=l_time)
     return render(request, 'Users/login.html')
 
 """修改密码"""
@@ -190,6 +237,7 @@ def changepasswd(request):
             return render(request, 'Users/login.html', {'error_msg': status})
     return render(request, "Users/changepasswd.html")
 """忘记密码"""
+@login_require
 def editpassword(request):
     if request.method == "POST":
         input_captcha = request.POST.get("captcha",None)

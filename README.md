@@ -6,7 +6,7 @@ vim docker-compose.yml
 version: '3.3'
 
 services:
-  mysql:
+  lwmysql:
     environment:
         MYSQL_ROOT_PASSWORD: 123456
     image: mysql:5.6
@@ -26,12 +26,4 @@ docker-compose -d up .
 ```
 mysql -uroot -h127.0.0.1 -p
 create database db_name default character set utf8 collate utf8_general_ci;
-```
-## 检查数据更新
-```
-python manage.py makemigrations
-```
-## 更新数据到数据库
-```
-python manage.py migrate
 ```

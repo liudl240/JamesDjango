@@ -1,5 +1,6 @@
 from django.shortcuts import render, render_to_response,HttpResponseRedirect,redirect
 from Users.views import login_require
+import random
 from mysites import models
 """主页"""
 @login_require
@@ -15,9 +16,12 @@ def index(request):
 """生产链接"""
 @login_require
 def servicelist(request):
+    color=random.choice(['bg-success','bg-warning','bg-danger','bg-purple','bg-cyan','bg-brown','bg-info','bg-primary'])
+    color ="\"card-header {_color}\"".format(_color=color)
+    print(color)
     username = request.session.get("username", None)
     servicelistinfo = models.servicelist.objects.all()
-    context = {"username":username,"servicelistinfo":servicelistinfo}
+    context = {"username":username,"servicelistinfo":servicelistinfo,"color":color }
     if request.method == "POST":
         input_title = request.POST.get("title",None)
         input_jumpLink = request.POST.get("jumpLink",None)
@@ -84,16 +88,18 @@ def editservice(request):
     return render(request, 'service/editservice.html',context)
 
 """删除链接"""
+@login_require
 def delservice(request):
     edit_id = request.GET.get("id", None)
     idinfo = models.servicelist.objects.filter(id=edit_id)
     servicelistinfo = models.servicelist.objects.all()
+    username = request.session.get("username", None)
 
     if len(idinfo) == 0 :
-        context = {"error_msg": "没有这个id"}
+        context = {"error_msg": "没有这个id","username":username}
         return HttpResponseRedirect( 'service/servicelist.html', context)
     idinfo.delete()
-    context = {"error_msg":"删除成功","servicelistinfo":servicelistinfo}
+    context = {"error_msg":"删除成功","servicelistinfo":servicelistinfo,"username":username}
     return render(request,'service/servicelist.html',context)
 
 """404页面"""

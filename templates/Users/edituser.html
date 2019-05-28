@@ -8,7 +8,7 @@
 	{% for service in servicelistinfo %}
           <div class="col-sm-6 col-lg-3">
             <div class="card">
-              <div class="card-header bg-info" >
+              <div class="card-header bg-primary">
                 <h4>{{ service.title }}</h4>
                 <ul class="card-actions">
                     <li>
@@ -35,24 +35,32 @@
 <div class="row lyear-wrapper">
   <div class="lyear-login">
     <div class="login-center text-center">
-        <h4>添加 跳转连接</h4>
+        <h4>编辑 用户信息</h4>
       <div class="login-header text-center">
-      <form action="/service/servicelist" method="post">
+      <form action="/users/edituser?id={{ idinfo.id }}" method="post">
         {% csrf_token %}
         <div class="form-group has-feedback feedback-left">
-          <input type="text" placeholder="输入标题名称" class="form-control" name="title" id="title" />
+          <input type="text" placeholder={{ idinfo.username}} class="form-control" name="username" id="username" />
           <span class="mdi mdi-account form-control-feedback" aria-hidden="true"></span>
         </div>
         <div class="form-group has-feedback feedback-left">
-          <input type="text" placeholder="跳转连接" class="form-control" id="jumpLink" name="jumpLink" />
-          <span class="mdi mdi-lock form-control-feedback" aria-hidden="true"></span>
+          <input type="text" placeholder={{ idinfo.email }} class="form-control" id="email" name="email" />
+          <span class="mdi mdi-email form-control-feedback" aria-hidden="true"></span>
         </div>
         <div class="form-group has-feedback feedback-left">
-          <input type="text" placeholder="描述" class="form-control" id="desLink" name="desLink" />
+          <select class="form-control" id="active" name="active">
+             <option value ="1">允许登录</option>
+             <option value ="0">禁止登录</option>
+          </select>
+          <span class="mdi mdi-account-key form-control-feedback" aria-hidden="true"></span>
+        </div>
+        <div class="form-group has-feedback feedback-left">
+          <input type="password" placeholder="输入修改密码"  class="form-control" id="password" name="password"  />
           <span class="mdi mdi-lock form-control-feedback" aria-hidden="true"></span>
         </div>
             <div class="form-group">
-            <button class="btn btn-block btn-primary"  name="submit" >提交生成</button>
+            <button class="btn btn-block btn-primary"  name="submit" >提交编辑</button>
+            <button class="btn btn-block btn-success" type="button" onclick="location.href='/users/userlist'">返 回</button>
             <span style="color:red;" class="btn " id="example-error-notify" >{{ error_msg }}</span>
         </div>
         </form>

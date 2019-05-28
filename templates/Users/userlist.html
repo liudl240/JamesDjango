@@ -11,6 +11,7 @@
             <div class="card">
               <div class="card-header">
                 <h4>用户列表</h4>
+                <a align="right" class="btn btn-success" href="/users/adduser">添加用户</a>
               </div>
               <div class="card-body">
                 <div class="table-responsive">
@@ -22,9 +23,7 @@
                         <th>邮箱</th>
                         <th>创建时间</th>
                         <th>上次登录时间</th>
-                        <th>性别</th>
-                        <th>是否允许登陆</th>
-                        <th>是否为管理员</th>
+                        <th>是否允许登录</th>
                         <th>操作</th>
                       </tr>
 
@@ -36,12 +35,10 @@
                         <td>{{  userinfo.username }}</td>
                         <td>{{  userinfo.email }}</td>
                         <td>{{  userinfo.c_time }}</td>
-                        <td>未实现</td>
-                        <td>{{  userinfo.sex }}</td>
-                        <td>未实现</td>
-                        <td>未实现</td>
+                        <td>{{ userinfo.l_time }}</td>
+                        <td>{{  userinfo.active }}</td>
                           <td>
-                              <a href="#">删除</a> <a href="#">修改</a>
+                              <a href="/users/deluser?id={{userinfo.id}}">删除</a> <a href="/users/edituser?id={{userinfo.id}}">修改</a>
                           </td>
                       </tr>
                           {%  endfor %}

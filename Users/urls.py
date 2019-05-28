@@ -10,6 +10,8 @@ urlpatterns = [
     url('userlist', views.userlist, name='userlist'),
     url('adduser', views.adduser, name='adduser'),
     url('userinfo', views.userinfo, name='userinfo'),
+    url('deluser', views.deluser, name='deluser'),
+    url('edituser', views.edituser, name='edituser'),
     url('changepasswd', views.changepasswd, name='changepasswd'),
     url('editpassword', views.editpassword, name='editpassword'),
 ]
