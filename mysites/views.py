@@ -67,6 +67,11 @@ def editservice(request):
             status="请认证填写，不能为空"
             context= {"username":username, "error_msg":status,"servicelistinfo":servicelistinfo,"idinfo":idinfo[0]}
             return render(request, 'service/editservice.html',context)
+        elif input_title == titleinfo[0].title or input_jumpLink == jumpLinkinfo[0].jumpLink:
+            idinfo.update(title=input_title,jumpLink=input_jumpLink,desLink=input_desLink)
+            status="提交成功"
+            context= {"username":username, "error_msg":status,"servicelistinfo":servicelistinfo,"idinfo":idinfo[0]}
+            return render(request, 'service/editservice.html',context)
         elif len(titleinfo) > 0 or len(jumpLinkinfo) > 0:
             status="连接获取标题已存在，请查阅后添加"
             context= {"username":username, "error_msg":status,"servicelistinfo":servicelistinfo,"idinfo":idinfo[0]}

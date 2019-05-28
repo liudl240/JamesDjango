@@ -35,7 +35,7 @@
 <div class="row lyear-wrapper">
   <div class="lyear-login">
     <div class="login-center text-center">
-        <h4>添加 跳转连接</h4>
+        <h4>编辑 跳转连接</h4>
       <div class="login-header text-center">
       <form action="/service/editservice?id={{ idinfo.id }}" method="post">
         {% csrf_token %}
@@ -52,7 +52,7 @@
           <span class="mdi mdi-lock form-control-feedback" aria-hidden="true"></span>
         </div>
             <div class="form-group">
-            <button class="btn btn-block btn-primary"  name="submit" >提交生成</button>
+            <button class="btn btn-block btn-primary"  name="submit" >提交编辑</button>
             <span style="color:red;" class="btn " id="example-error-notify" >{{ error_msg }}</span>
         </div>
         </form>
