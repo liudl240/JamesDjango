@@ -67,24 +67,39 @@ def editservice(request):
         jumpLinkinfo = models.servicelist.objects.filter(jumpLink=input_jumpLink)
         idinfo = models.servicelist.objects.filter(id=edit_id)
         print("testjames001")
-        if input_title == "" or  input_jumpLink == "":
-            status="请认证填写，不能为空"
+        if input_desLink =="" and input_jumpLink == "" and input_title == "":
+            status = "没有修改编辑，不能都为空"
             context= {"username":username, "error_msg":status,"servicelistinfo":servicelistinfo,"idinfo":idinfo[0]}
             return render(request, 'service/editservice.html',context)
-        elif input_title == titleinfo[0].title or input_jumpLink == jumpLinkinfo[0].jumpLink:
-            idinfo.update(title=input_title,jumpLink=input_jumpLink,desLink=input_desLink)
-            status="提交成功"
-            context= {"username":username, "error_msg":status,"servicelistinfo":servicelistinfo,"idinfo":idinfo[0]}
-            return render(request, 'service/editservice.html',context)
-        elif len(titleinfo) > 0 or len(jumpLinkinfo) > 0:
-            status="连接获取标题已存在，请查阅后添加"
-            context= {"username":username, "error_msg":status,"servicelistinfo":servicelistinfo,"idinfo":idinfo[0]}
-            return render(request, 'service/editservice.html',context)
-        else:
-            idinfo.update(title=input_title,jumpLink=input_jumpLink,desLink=input_desLink)
-            status="提交成功"
-            context= {"username":username, "error_msg":status,"servicelistinfo":servicelistinfo,"idinfo":idinfo[0]}
-            return render(request, 'service/editservice.html',context)
+        elif input_title != "":
+            idinfo.update(title = input_title)
+        elif input_jumpLink != "":
+            idinfo.update(jumpLink=input_jumpLink)
+        elif input_desLink != "":
+            idinfo.update(desLink=input_desLink)
+        status="提交成功"
+        context= {"username":username, "error_msg":status,"servicelistinfo":servicelistinfo,"idinfo":idinfo[0]}
+        return render(request, 'service/editservice.html',context)
+
+
+        # if input_title == "" or  input_jumpLink == "":
+        #     status="请认证填写，不能为空"
+        #     context= {"username":username, "error_msg":status,"servicelistinfo":servicelistinfo,"idinfo":idinfo[0]}
+        #     return render(request, 'service/editservice.html',context)
+        # elif input_title == titleinfo[0].title or input_jumpLink == jumpLinkinfo[0].jumpLink:
+        #     idinfo.update(title=input_title,jumpLink=input_jumpLink,desLink=input_desLink)
+        #     status="提交成功"
+        #     context= {"username":username, "error_msg":status,"servicelistinfo":servicelistinfo,"idinfo":idinfo[0]}
+        #     return render(request, 'service/editservice.html',context)
+        # elif len(titleinfo) > 0 or len(jumpLinkinfo) > 0:
+        #     status="连接获取标题已存在，请查阅后添加"
+        #     context= {"username":username, "error_msg":status,"servicelistinfo":servicelistinfo,"idinfo":idinfo[0]}
+        #     return render(request, 'service/editservice.html',context)
+        # else:
+        #     idinfo.update(title=input_title,jumpLink=input_jumpLink,desLink=input_desLink)
+        #     status="提交成功"
+        #     context= {"username":username, "error_msg":status,"servicelistinfo":servicelistinfo,"idinfo":idinfo[0]}
+        #     return render(request, 'service/editservice.html',context)
     return render(request, 'service/editservice.html',context)
 
 """删除链接"""
