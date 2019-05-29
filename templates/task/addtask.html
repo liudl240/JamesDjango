@@ -1,6 +1,5 @@
 {% extends "bases/sidebar.html" %}
 {% block content %}
-
     <!--页面主要内容-->
     <main class="lyear-layout-content">
       
@@ -10,18 +9,17 @@
           <div class="col-lg-12">
             <div class="card">
               <ul class="nav nav-tabs page-tabs">
-                <li class="active"> <a href="#!">基本</a> </li>
+                <li class="active"> <a href="#!">创建任务</a> </li>
                 <li> <a href="lyear-config-system.html">系统</a> </li>
                 <li> <a href="lyear-config-upload.html">上传</a> </li>
               </ul>
               <div class="tab-content">
                 <div class="tab-pane active">
-                  
-                  <form action="#!" method="post" name="edit-form" class="edit-form">
+                  <form action="/task/addtask" method="post" name="edit-form" class="edit-form">
+                     {% csrf_token %}
                     <div class="form-group">
                       <label for="web_site_title">任务名称</label>
                       <input class="form-control" type="text" id="web_site_title" name="web_site_title" value="搭建k8s" placeholder="请输入任务名称" >
-                      <small class="help-block">调用方式：<code>config('web_site_title')</code></small>
                     </div>
                     <div class="form-group">
                       <label for="web_site_logo">LOGO图片</label>
@@ -43,12 +41,10 @@
                     <div class="form-group">
                       <label for="web_site_copyright">版权信息</label>
                       <input class="form-control" type="text" id="web_site_copyright" name="web_site_copyright" value="" placeholder="请输入版权信息" >
-                      <small class="help-block">调用方式：<code>config('web_site_copyright')</code></small>
                     </div>
                     <div class="form-group">
                       <label for="web_site_icp">备案信息</label>
                       <input class="form-control" type="text" id="web_site_icp" name="web_site_icp" value="" placeholder="请输入备案信息" >
-                      <small class="help-block">调用方式：<code>config('web_site_icp')</code></small>
                     </div>
                     <div class="form-group">
                       <label class="btn-block" for="web_site_status">启动任务</label>
@@ -57,6 +53,7 @@
                         <span></span>
                       </label>
                       <small class="help-block">启动任务</small>
+
                     </div>
                     <div class="form-group">
                       <button type="submit" class="btn btn-primary m-r-5">确 定</button>
@@ -80,10 +77,10 @@
   </div>
 </div>
 
-<script type="text/javascript" src="js/jquery.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/perfect-scrollbar.min.js"></script>
-<script type="text/javascript" src="js/main.min.js"></script>
+<script type="text/javascript" src="/static/js/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/static/js/perfect-scrollbar.min.js"></script>
+<script type="text/javascript" src="/static/js/main.min.js"></script>
 </body>
 </html>
 {% endblock content %}

@@ -18,8 +18,8 @@
                       </button>
                       <ul class="dropdown-menu">
                         <li> <a tabindex="-1" href="javascript:void(0)" data-field="title">标题</a> </li>
-                        <li> <a tabindex="-1" href="javascript:void(0)" data-field="cat_name">栏目</a> </li>
-                        <li> <a tabindex="-1" href="javascript:void(0)" data-field="cat_name">标签</a> </li>
+                        <li> <a tabindex="-1" href="javascript:void(0)" data-field="cat_name">作者</a> </li>
+                        <li> <a tabindex="-1" href="javascript:void(0)" data-field="cat_name">状态</a> </li>
                       </ul>
                     </div>
                     <input type="text" class="form-control" value="" name="keyword" placeholder="请输入名称">
@@ -28,8 +28,9 @@
                 <div class="toolbar-btn-action">
                   <a class="btn btn-primary m-r-5" href="/task/addtask"><i class="mdi mdi-plus"></i> 新增</a>
                   <a class="btn btn-success m-r-5" href="#!"><i class="mdi mdi-check"></i> 启用</a>
-                  <a class="btn btn-warning m-r-5" href="#!"><i class="mdi mdi-block-helper"></i> 禁用</a>
+                  <a class="btn btn-warning m-r-5" href="#!"><i class="mdi mdi-block-helper"></i> 结束</a>
                   <a class="btn btn-danger" href="task/edittask"><i class="mdi mdi-window-close"></i> 修改</a>
+                   <a class="btn btn-info" href="task/edittask"><i class="mdi mdi-window-close"></i> 移除</a>
                 </div>
               </div>
               <div class="card-body">
@@ -76,9 +77,10 @@
                         <td><font class="text-success">进行中</font></td>
                         <td>
                           <div class="btn-group">
-                            <a class="btn btn-xs btn-default" href="#!" title="编辑" data-toggle="tooltip"><i class="mdi mdi-pencil"></i></a>
                             <a class="btn btn-xs btn-default" href="#!" title="删除" data-toggle="tooltip"><i class="mdi mdi-window-close"></i></a>
-                            <a class="btn btn-xs btn-default" href="#!" title="查看详情" data-toggle="tooltip"><i class="mdi mdi-book-open-page-variant"></i></a>
+                            <a class="btn btn-xs btn-default" href="#!" title="编辑" data-toggle="tooltip"><i class="mdi mdi-pencil"></i></a>
+                            <a class="btn btn-xs btn-default" href="#!" title="创建项目理由" data-toggle="tooltip"><i class="mdi mdi-book-open-page-variant"></i></a>
+                            <a class="btn btn-xs btn-default" href="#!" title="查看解决文档" data-toggle="tooltip"><i class="mdi mdi-book-open-page-variant"></i></a>
                           </div>
                         </td>
                       </tr>
