@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'mysites',
     'Users',
     'Task',
+    'wiki',
 ]
 
 MIDDLEWARE = [
@@ -80,7 +81,7 @@ WSGI_APPLICATION = 'JamesDjango.wsgi.application'
 DATABASES = {
         'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'JamesDjango',
+        'NAME': 'JamesOps',
         'PASSWORD':'123456',
         'USER': 'root',
         'HOST':'127.0.0.1',
