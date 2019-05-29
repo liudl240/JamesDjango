@@ -10,8 +10,7 @@
           <div class="col-lg-12">
             <div class="card">
               <div class="card-header">
-                <h4>用户列表</h4>
-                <a align="right" class="btn btn-success" href="/users/adduser">添加用户</a>
+                <h4>用户审核</h4>
               </div>
               <div class="card-body">
                 <div class="table-responsive">
@@ -26,7 +25,6 @@
                         <th>是否允许登录</th>
                         <th>操作</th>
                       </tr>
-
                     </thead>
                     <tbody>
                     {%    for userinfo in userlist %}
@@ -38,16 +36,15 @@
                         <td>{{ userinfo.l_time }}</td>
                         <td>{{  userinfo.active }}</td>
                           <td>
-			<div class="btn-group">
-                            <a class="btn btn-xs btn-default" href="/users/deluser?id={{userinfo.id}}" title="删除" data-toggle="tooltip" data-original-title="删除"><i class="mdi mdi-window-close"></i></a>
-                            <a class="btn btn-xs btn-default" href="/users/edituser?id={{userinfo.id}}" title="编辑" data-toggle="tooltip" data-original-title="编辑"><i class="mdi mdi-pencil"></i></a>
-                          </div>
+                              <a class="btn btn-success m-r-5" href="/users/reviewuser?id={{userinfo.id}}&active=1"><i class="mdi mdi-check"></i> 启用</a>
+                              <a class="btn btn-warning m-r-5" href="/users/reviewuser?id={{userinfo.id}}&active=0"><i class="mdi mdi-block-helper"></i> 禁用</a>
                           </td>
                       </tr>
                           {%  endfor %}
                       <tr>
 
                     </tbody>
+
                   </table>
                 </div>
               </div>

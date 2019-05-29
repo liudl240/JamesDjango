@@ -188,6 +188,13 @@ def edituser(request):
             status="输入为空，没有修改！"
             context = {"error_msg": status,"userinfo":userinfo,"username":username}
             return HttpResponseRedirect( '/users/userlist', context)
+        elif input_username != "" or input_email !="":
+            userinfo = models.UserInfo.objects.filter(username=input_username) 
+            emailinfo = models.UserInfo.objects.filter(email=input_email) 
+            if len(userinfo) > 0 or len(emailinfo) > 0:
+                status="用户名或者邮箱已存在，不能修改！"
+                context = {"error_msg": status,"userinfo":userinfo,"username":username}
+                return HttpResponseRedirect( '/users/userlist', context)
         if input_username != "":
             idinfo.update(username=input_username) 
         elif input_email != "":
@@ -196,7 +203,8 @@ def edituser(request):
             idinfo.update(active=input_active)
         elif input_password != "":
             idinfo.update(password=make_password(input_password))
-        #return render(request, 'Users/edituser.html',context)
+        status="修改成功，请查阅"
+        context = {"error_msg": status,"userinfo":userinfo,"username":username}
         return HttpResponseRedirect( '/users/userlist', context)
     return render(request, 'Users/edituser.html',context)
 
@@ -266,3 +274,19 @@ def editpassword(request):
         status = "恭喜，修改密码成功"
         return render(request, 'Users/login.html', {'error_msg': status})
     return render(request,'Users/editpassword.html')
+
+@login_require
+def reviewuser(request):
+    username = request.session.get("username", None)
+    userlist = models.UserInfo.objects.all().order_by('-active')
+    context = {"username": username,"userlist":userlist}
+    edit_id = request.GET.get("id",None)
+    edit_active = request.GET.get("active",None)
+    if edit_id == "" or edit_active == "":
+        status="修改失败，请联系管理员"
+        context = {"username": username,"userlist":userlist,"error_msg":status}
+    else:
+        models.UserInfo.objects.filter(id=edit_id).update(active=edit_active)
+        status="审核成功" 
+        context = {"username": username,"userlist":userlist,"error_msg":status}
+    return render(request,"Users/reviewuser.html",context)
