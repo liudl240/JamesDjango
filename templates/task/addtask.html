@@ -71,7 +71,8 @@
                           </figure>
                         </li>
                         <li class="col-xs-4 col-sm-3 col-md-2">
-                          <a class="pic-add" id="add-pic-btn" href="#!" title="点击上传"></a>
+                          <input type="file" id="file" onchange="imgPreview(this)" style="display: none">
+                          <a class="pic-add" id="add-pic-btn" onclick="file.click()" title="点击上传"></a>
                         </li>
                       </ul>
                     </div>
