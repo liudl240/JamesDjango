@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,HttpResponseRedirect,HttpResponse,render_to_response
 from upload.models import IMG
 import json
 # Create your views here.
@@ -19,6 +19,7 @@ def uploadImg(request):
                 name = imageinfo.get("name"),
             )
             new_img.save()
+        return HttpResponseRedirect( '/users/userlist')
     return render(request, 'upload/uploadimg.html')
 
 def showImg(request):
