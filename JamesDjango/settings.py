@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'Users',
     'Task',
     'wiki',
+    'upload',
 ]
 
 MIDDLEWARE = [
@@ -135,6 +136,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_DIRS=[
     os.path.join(BASE_DIR, "static"),
+    os.path.join(BASE_DIR,'media'),
 ]
 
 LOGIN_URL = '/users/login/'
@@ -147,3 +149,11 @@ EMAIL_HOST_USER = "liudongliang@szlaozi.com" # 帐号
 EMAIL_HOST_PASSWORD = "Liudltest123."  # 授权码（****）
 # 默认邮件
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+
+"""图片"""
+MEDIA_URL = '/media/'
+MEDIA_DIRS=[
+    os.path.join(BASE_DIR, "static"),
+    os.path.join(BASE_DIR,'media'),
+]
+MEDIA_ROOT = os.path.join(BASE_DIR,'media')

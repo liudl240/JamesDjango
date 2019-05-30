@@ -16,10 +16,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.conf.urls import include, url
-
+from JamesDjango.settings import MEDIA_ROOT
+from django.views.static import serve
+from django.views.static import serve
+from . import settings
 urlpatterns = [
     #path('admin/', admin.site.urls),
     path('users/', include('Users.urls')),
     path('task/', include('Task.urls')),
+    path('upload/', include('upload.urls')),
+    url(r'^media/(?P<path>.*)', serve, {"document_root": settings.MEDIA_ROOT}),
     path('', include('mysites.urls')),
 ]
