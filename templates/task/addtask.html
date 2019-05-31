@@ -32,27 +32,20 @@
                     <input type="text" class="form-control" id="title" name="title" value="" placeholder="请输入标题" />
                   </div>
                   <div class="form-group col-md-12">
-                    <label for="seo_keywords">关键词</label>
-                    <input type="text" class="form-control" id="seo_keywords" name="seo_keywords" value="" placeholder="关键词" />
-                  </div>
-                  <div class="form-group col-md-12">
-                    <label for="seo_description">任务描述</label>
-                    <textarea class="form-control" id="seo_description" name="seo_description" rows="5" value="" placeholder="描述为何创建任务"></textarea>
-                  </div>
-                  <div class="form-group col-md-12">
                     <label>任务截图</label>
                     <div class="form-controls">
-                      
                       <ul class="list-inline clearfix lyear-uploads-pic">
+			{% for img in imgs %}                      
                         <li class="col-xs-4 col-sm-3 col-md-2">
                           <figure>
-                            <img src="/static/images/gallery/15.jpg" alt="图片一">
+                            <img src="/media/{{ img.img }}" alt="{{ img.name }}">
                             <figcaption>
-                              <a class="btn btn-round btn-square btn-primary" href="#!"><i class="mdi mdi-eye"></i></a>
-                              <a class="btn btn-round btn-square btn-danger" href="#!"><i class="mdi mdi-delete"></i></a>
+                              <a class="btn btn-round btn-square btn-primary" href="/media/{{ img.img }}"><i class="mdi mdi-eye"></i></a>
+                              <a class="btn btn-round btn-square btn-danger" href="/upload/delimg/?id={{ img.id}}"><i class="mdi mdi-delete"></i></a>
                             </figcaption>
                           </figure>
                         </li>
+			{% endfor %}
                         <li class="col-xs-4 col-sm-3 col-md-2">
                             <input type="file" id="pic_selector" multiple style="display: none" />
 {#                          <input type="file" id="file" name="img" href="/upload/uploadimg" onchange="imgPreview(this)" style="display: none">#}
@@ -62,11 +55,51 @@
                     </div>
                   </div>
                   <div class="form-group col-md-12">
-                    <label for="content">任务列表</label>
-                    <textarea class="form-control" id="seo_description" name="seo_description" rows="5" value="" placeholder="搭建nginx测试环境
-测试环境测试如何实现防盗链
-测试环境测试如何实现负载均衡">请添加分类任务/MARKDOWN</textarea>
-                  <small class="help-block">大任务细分</small>
+                    <label for="seo_description">任务描述</label>
+                    <textarea class="form-control" id="seo_description" name="description" rows="5" value="" placeholder="描述为何创建任务">探究为何nginx每天凌晨6点都会重启</textarea>
+                  </div>
+
+
+                 <div class="form-group col-md-12">
+                   <label for="seo_description">任务细分</label>
+                  <table class="table table-bordered">
+                    <thead>
+                      <tr>
+                        <th>
+                          <label class="lyear-checkbox checkbox-primary">
+                            <input type="checkbox" id="check-all"><span></span>
+                          </label>
+                        </th>
+                        <th>编号</th>
+                        <th>任务名称</th>
+                        <th>需要时间</th>
+                        <th>状态</th>
+                        <th>操作</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <label class="lyear-checkbox checkbox-primary">
+                            <input type="checkbox" name="ids[]" value="1"><span></span>
+                          </label>
+                        </td>
+                        <td>1</td>
+                        <td>查看nginx日志</td>
+                        <td>1天</td>
+                        <td><font class="text-success">正常</font></td>
+                        <td>
+                          <div class="btn-group">
+                            <a class="btn btn-xs btn-default" href="#!" title="" data-toggle="tooltip" data-original-title="编辑"><i class="mdi mdi-pencil"></i></a>
+                            <a class="btn btn-xs btn-default" href="#!" title="" data-toggle="tooltip" data-original-title="删除"><i class="mdi mdi-window-close"></i></a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                    </tbody>
+                  </table>
+
+
                   </div>
                   <div class="form-group col-md-12">
                     <label for="tags">标签</label>

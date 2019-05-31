@@ -1,0 +1,29 @@
+{% extends "bases/form.html" %}
+{% block content %}
+                 <h4>大任务分小任务</h4>
+                <form method="post" action="/task/add_task_point" class="site-form">
+                  {% csrf_token %}
+                  <div class="form-group">
+                    <label >任务名称</label>
+                    <input type="text" class="form-control" name="title"  placeholder="请输入任务名称">
+                  </div>
+                  <div class="form-group">
+                    <label >需要时间</label>
+                    <input type="date" class="form-control" name="time" id="txtDate" />
+                  </div>
+                  <div class="form-group">
+                    <label >状态</label>
+                     <div class="form-controls">
+                      <select name="type" class="form-control" id="type">
+                        <option value="1">未开始</option>
+                        <option value="2">进行中</option>
+                        <option value="3">结束</option>
+                      </select>
+                    </div>
+
+                  </div>
+                  <button type="submit" class="btn btn-primary">创建小任务</button>
+                  <button type="button" class="btn btn-info" onclick="javascript:history.back(-1);return false;">返 回</button>
+                </form>
+{% endblock content %}
+
