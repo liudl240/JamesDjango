@@ -5,6 +5,33 @@ import os,base64
 import json
 # Create your views here.
 
+
+
+def uploadImg(request):
+    if request.method == 'POST':
+        print(request.FILES.get('file',None))
+        if request.FILES.get('file',None) != None:
+            new_img = IMG(
+                img=request.FILES.get('file'),
+                name = request.FILES.get('file').name
+            )
+        new_img.save()
+        print("这是图片名字:"+ request.POST.get("name",None))
+        print("这是图片UID:"+ request.POST.get("uid",None))
+        print("这是图片ID:"+ request.POST.get("id",None))
+        print("这是图片类型:"+ request.POST.get("type",None))
+        print("这是图片最后修改时间:"+ request.POST.get("lastModifiedDate",None))
+        print("这是图片大小:"+ request.POST.get("size",None))
+        #print("这是图片大小:"+ request.FILES)
+
+        print("*" * 30 )
+        print(request.FILES['file'])
+        #for imginfo in imgListInfo:
+        #    print(imgInfo)
+        print(request.POST)
+        print(request.GET)
+    return  HttpResponse("请先选择图片再上传")
+"""
 def uploadImg(request):
     if request.method == 'POST':
         print(request.FILES.get('img',None))
@@ -22,7 +49,7 @@ def uploadImg(request):
         else:
             return  HttpResponse("请先选择图片再上传")
     return render(request, 'upload/uploadimg.html')
-
+"""
 def showImg(request):
     imgs = IMG.objects.all()
     content = {

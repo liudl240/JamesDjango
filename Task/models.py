@@ -14,9 +14,14 @@ class tasks(models.Model):
         (7, '不急重要'),
         (8, '不急加重'),
     )
+    GENDER_CHOICES1 = (
+        (0, '未启动'),
+        (1, '启动'),
+        (2, '完成'),
+    )
 
     id = models.AutoField(primary_key=True)
-    tasktype = models.SmallIntegerField(choices=GENDER_CHOICES, default=1, verbose_name='任务状态')
+    tasktype = models.SmallIntegerField(choices=GENDER_CHOICES, default=1, verbose_name='任务类型')
     title = models.CharField(max_length=128,null=False)
     description = models.FileField(null=True)
     tags = models.CharField(max_length=128,unique=True) 
@@ -25,6 +30,7 @@ class tasks(models.Model):
     m_time = models.DateTimeField(null=True)
     username = models.ForeignKey('Users.UserInfo',to_field='username',null=True,on_delete=models.CASCADE)
     doc = models.ForeignKey('wiki.doc',to_field='id',null=True,on_delete=models.CASCADE)
+    status = models.SmallIntegerField(choices=GENDER_CHOICES1, default=0, verbose_name='任务状态')
 
     def __str__(self):
         return self.name

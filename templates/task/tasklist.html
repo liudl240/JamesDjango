@@ -51,10 +51,12 @@
                         <th>结束时间</th>
                         <th>修改时间</th>
                         <th>状态</th>
+                        <th>类型</th>
                         <th>操作</th>
                       </tr>
                     </thead>
                     <tbody>
+                      {% for taskinfo in taskinfolist %}
                       <tr>
                         <td>
                           <label class="lyear-checkbox checkbox-primary">
@@ -62,29 +64,28 @@
                           </label>
 
                         </td>
-                        <td>10</td>
-                        <td>DJango学习，以及css和html</td>
+                        <td>{{ taskinfo.id}}</td>
+                        <td>{{ taskinfo.title }}</td>
                         <td>
-
-                        <span class="label label-yellow">Django</span>
-                        <span class="label label-pink">html</span>
-                        <span class="label label-info">非常紧急</span>
+                        <span class="label label-yellow">{{ taskinfo.tags }}</span>
                         </td>
-                        <td>james</td>
-                        <td>2019-05-28 08:01:38.000000</td>
-                        <td>2019-05-28 08:01:38.000000</td>
-                        <td>2019-05-28 08:01:38.000000</td>
-                        <td><font class="text-success">进行中</font></td>
+                        <td>{{ taskinfo.username_id }}</td>
+                        <td>{{ taskinfo.c_time }}</td>
+                        <td>{{ taskinfo.f_time }}</td>
+                        <td>{{ taskinfo.m_time }}</td>
+                        <td><font class="text-success">{{ taskinfo.get_status_display }}</font></td>
+                        <td><font class="text-success">{{ taskinfo.get_tasktype_display }}</font></td>
                         <td>
                           <div class="btn-group">
-                            <a class="btn btn-xs btn-default" href="#!" title="删除" data-toggle="tooltip"><i class="mdi mdi-window-close"></i></a>
-                            <a class="btn btn-xs btn-default" href="#!" title="编辑" data-toggle="tooltip"><i class="mdi mdi-pencil"></i></a>
+                            <a class="btn btn-xs btn-default" href="/task/edittask?id={{ taskinfo.id }}" title="编辑" data-toggle="tooltip"><i class="mdi mdi-pencil"></i></a>
+                            <a class="btn btn-xs btn-default" href="/task/add_task_point?id={{ taskinfo.id }}" title="创建小任务" data-toggle="tooltip"><i class="mdi mdi-format-list-bulleted"></i></a>
                             <a class="btn btn-xs btn-default" href="#!" title="创建项目原因" data-toggle="tooltip"><i class="mdi mdi-content-paste"></i></a>
                             <a class="btn btn-xs btn-default" href="#!" title="查看解决文档" data-toggle="tooltip"><i class="mdi mdi-book-open-page-variant"></i></a>
                             <a class="btn btn-xs btn-default" href="#!" title="创建解决文档" data-toggle="tooltip"><i class="mdi mdi-lead-pencil"></i></a>
 
                           </div>
                         </td>
+                        {% endfor %}
                       </tr>
                     </tbody>
                   </table>

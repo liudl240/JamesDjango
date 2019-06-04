@@ -25,7 +25,7 @@ SECRET_KEY = '7-r6&xiis2i*4-px!e%jaodar=%g-*_dpzdkcffu-v4sx3!(1#'
 # SECURITY WARNING: don't run with debug turned on in production!
 #DEBUG = False
 DEBUG = True
-ALLOWED_HOSTS = ['127.0.0.1','Django.james.com']
+ALLOWED_HOSTS = ['127.0.0.1','django.james.com','192.168.122.24',]
 
 
 # Application definition
