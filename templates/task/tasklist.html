@@ -27,9 +27,9 @@
                 </form>
                 <div class="toolbar-btn-action">
                   <a class="btn btn-primary m-r-5" href="/task/addtask"><i class="mdi mdi-plus"></i> 新增</a>
-                  <a class="btn btn-success m-r-5" href="#!"><i class="mdi mdi-check"></i> 启用</a>
-                  <a class="btn btn-warning m-r-5" href="#!"><i class="mdi mdi-block-helper"></i> 完成</a>
-                   <a class="btn btn-info" href="/task/edittask"><i class="mdi mdi-window-close"></i> 移除</a>
+                  <button type="submit" class="btn btn-success m-r-5 mdi mdi-check" target-form="add-form">启用</button>
+                  <button type="submit" class="btn btn-warning m-r-5 mdi mdi-block-helper" target-form="add-form">完成</button>
+                  <button type="submit" class="btn btn-info m-r-5 mdi mdi-window-close" target-form="add-form">移除</button>
                 </div>
               </div>
               <div class="card-body">
@@ -73,15 +73,14 @@
                         <td>{{ taskinfo.c_time }}</td>
                         <td>{{ taskinfo.f_time }}</td>
                         <td>{{ taskinfo.m_time }}</td>
-                        <td><font class="text-success">{{ taskinfo.get_status_display }}</font></td>
+                        <td><font class="text-warning">{{ taskinfo.get_status_display }}</font></td>
                         <td><font class="text-success">{{ taskinfo.get_tasktype_display }}</font></td>
                         <td>
                           <div class="btn-group">
-                            <a class="btn btn-xs btn-default" href="/task/edittask?id={{ taskinfo.id }}" title="编辑" data-toggle="tooltip"><i class="mdi mdi-pencil"></i></a>
-                            <a class="btn btn-xs btn-default" href="/task/add_task_point?id={{ taskinfo.id }}" title="创建小任务" data-toggle="tooltip"><i class="mdi mdi-format-list-bulleted"></i></a>
+                            <a class="btn btn-xs btn-default" href="/task/edittask?task_id={{ taskinfo.id }}" title="编辑" data-toggle="tooltip"><i class="mdi mdi-pencil"></i></a>
+                            <a class="btn btn-xs btn-default" href="/task/add_task_point?task_id={{ taskinfo.id }}" title="创建小任务" data-toggle="tooltip"><i class="mdi mdi-format-list-bulleted"></i></a>
                             <a class="btn btn-xs btn-default" href="#!" title="创建项目原因" data-toggle="tooltip"><i class="mdi mdi-content-paste"></i></a>
-                            <a class="btn btn-xs btn-default" href="#!" title="查看解决文档" data-toggle="tooltip"><i class="mdi mdi-book-open-page-variant"></i></a>
-                            <a class="btn btn-xs btn-default" href="#!" title="创建解决文档" data-toggle="tooltip"><i class="mdi mdi-lead-pencil"></i></a>
+                            <a class="btn btn-xs btn-default" href="#!" title="解决文档" data-toggle="tooltip"><i class="mdi mdi-book-open-page-variant"></i></a>
 
                           </div>
                         </td>

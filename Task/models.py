@@ -16,7 +16,7 @@ class tasks(models.Model):
     )
     GENDER_CHOICES1 = (
         (0, '未启动'),
-        (1, '启动'),
+        (1, '进行中'),
         (2, '完成'),
     )
 
@@ -41,15 +41,16 @@ class tasks(models.Model):
 class task_point(models.Model):
     """记录一个大任务分开成几个小任务去完成"""
     GENDER_CHOICES = (
-        (1, '未开始'),
-        (2, '进行中'),
-        (3, '结束'),
+        (0, '未启动'),
+        (1, '进行中'),
+        (2, '完成'),
     )
     id = models.AutoField(primary_key=True)
     title = models.CharField(max_length=128,null=False)
     c_time = models.DateTimeField(null=True)
-    t_time = models.DateTimeField(null=True)
-    status = models.SmallIntegerField(choices=GENDER_CHOICES, default=1, verbose_name='未开始') 
+    f_time = models.DateTimeField(null=True)
+    status = models.SmallIntegerField(choices=GENDER_CHOICES, default=1, verbose_name='小任务状态') 
+    task = models.ForeignKey('Task.tasks',to_field='id',null=True,on_delete=models.CASCADE)
     class Meta:
         db_table = 'task_point'
-        ordering = ['status']
+        ordering = ['c_time']
