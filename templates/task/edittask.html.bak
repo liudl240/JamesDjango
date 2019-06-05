@@ -1,0 +1,128 @@
+{% extends "bases/sidebar.html" %}
+{% block content %}
+    <!--页面主要内容-->
+    <main class="lyear-layout-content">
+      
+      <div class="container-fluid">
+        
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="card">
+              <div class="card-body">
+                
+                <form action="#!" method="post" class="row">
+                  <div class="form-group col-md-12">
+                    <label for="type">任务程度</label>
+                    <div class="form-controls">
+                      <select name="type" class="form-control" id="type">
+                        <option value="1">不急</option>
+                        <option value="2">正常</option>
+                        <option value="3">紧急</option>
+                        <option value="4">加急</option>
+                        <option value="5">重要</option>
+                        <option value="6">加重</option>
+                        <option value="7">不急重要</option>
+                        <option value="8">不急加重</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group col-md-12">
+                    <label for="title">标题</label>
+                    <input type="text" class="form-control" id="title" name="title" value="" placeholder="请输入标题" />
+                  </div>
+                  <div class="form-group col-md-12">
+                    <label for="seo_keywords">关键词</label>
+                    <input type="text" class="form-control" id="seo_keywords" name="seo_keywords" value="" placeholder="关键词" />
+                  </div>
+                  <div class="form-group col-md-12">
+                    <label for="seo_description">任务描述</label>
+                    <textarea class="form-control" id="seo_description" name="seo_description" rows="5" value="" placeholder="描述为何创建任务"></textarea>
+                  </div>
+                  <div class="form-group col-md-12">
+                    <label>任务截图</label>
+                    <div class="form-controls">
+                      
+                      <ul class="list-inline clearfix lyear-uploads-pic">
+                        <li class="col-xs-4 col-sm-3 col-md-2">
+                          <figure>
+                            <img src="/static/images/gallery/15.jpg" alt="图片一">
+                            <figcaption>
+                              <a class="btn btn-round btn-square btn-primary" href="#!"><i class="mdi mdi-eye"></i></a>
+                              <a class="btn btn-round btn-square btn-danger" href="#!"><i class="mdi mdi-delete"></i></a>
+                            </figcaption>
+                          </figure>
+                        </li>
+                        <li class="col-xs-4 col-sm-3 col-md-2">
+                          <figure>
+                            <img src="/static/images/gallery/16.jpg" alt="图片二">
+                            <figcaption>
+                              <a class="btn btn-round btn-square btn-primary" href="#!"><i class="mdi mdi-eye"></i></a>
+                              <a class="btn btn-round btn-square btn-danger" href="#!"><i class="mdi mdi-delete"></i></a>
+                            </figcaption>
+                          </figure>
+                        </li>
+                        <li class="col-xs-4 col-sm-3 col-md-2">
+                          <figure>
+                            <img src="/static/images/gallery/17.jpg" alt="图片三">
+                            <figcaption>
+                              <a class="btn btn-round btn-square btn-primary" href="#!"><i class="mdi mdi-eye"></i></a>
+                              <a class="btn btn-round btn-square btn-danger" href="#!"><i class="mdi mdi-delete"></i></a>
+                            </figcaption>
+                          </figure>
+                        </li>
+                        <li class="col-xs-4 col-sm-3 col-md-2">
+                          <a class="pic-add" id="add-pic-btn" href="#!" title="点击上传"></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="form-group col-md-12">
+                    <label for="content">任务列表</label>
+                    <textarea class="form-control" id="seo_description" name="seo_description" rows="5" value="" placeholder="搭建nginx测试环境
+测试环境测试如何实现防盗链
+测试环境测试如何实现负载均衡">请添加分类任务/MARKDOWN</textarea>
+                  <small class="help-block">大任务细分</small>
+                  </div>
+                  <div class="form-group col-md-12">
+                    <label for="tags">标签</label>
+                    <input class="js-tags-input form-control" type="text" id="tags" name="tags" value="" />
+                  </div>
+                  <div class="form-group col-md-12">
+                    <label for="status">状态</label>
+                    <div class="clearfix">
+                      <label class="lyear-radio radio-inline radio-primary">
+                        <input type="radio" name="status" value="0"><span>未启动</span>
+                      </label>
+                      <label class="lyear-radio radio-inline radio-primary">
+                        <input type="radio" name="status" value="1" checked><span>启动</span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="form-group col-md-12">
+                    <button type="submit" class="btn btn-primary ajax-post" target-form="add-form">确 定</button>
+                    <button type="button" class="btn btn-default" onclick="javascript:history.back(-1);return false;">返 回</button>
+                  </div>
+                </form>
+       
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        
+      </div>
+      
+    </main>
+    <!--End 页面主要内容-->
+  </div>
+</div>
+
+<script type="text/javascript" src="/static/js/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/static/js/perfect-scrollbar.min.js"></script>
+<!--标签插件-->
+<script src="/static/js/jquery-tags-input/jquery.tagsinput.min.js"></script>
+<script type="text/javascript" src="/static/js/main.min.js"></script>
+</body>
+</html>
+{% endblock content %}

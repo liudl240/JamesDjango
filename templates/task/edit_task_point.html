@@ -1,0 +1,112 @@
+{% extends "bases/sidebar.html" %}
+{% block content %}
+
+
+
+
+
+
+
+
+
+
+    <!--页面主要内容-->
+    <main class="lyear-layout-content">
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="card">
+        <div class="card-body">
+ 
+
+
+
+
+
+<ul class="nav nav-tabs page-tabs">
+  <li class="active"> <a href="#!">添加小任务</a> </li>
+  <li> <a href="/task/addtask/">添加大任务</a> </li>
+  <li> <a href="/task/tasklist">任务列表</a> </li>
+</ul>
+
+               
+
+                <form action="#!" method="post" class="row">
+                    {% csrf_token %}
+                  <div class="form-group col-md-12">
+                    <label for="type">任务状态</label>
+                    <div class="form-controls">
+                      <select name="type" class="form-control" id="type">
+                        <option value="0">未启动</option>
+                        <option value="1">进行中</option>
+                        <option value="2">完成</option>
+                        <option selected="selected" value="{{ task_point1.status }}">{{ task_point1.get_status_display}}</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group col-md-12">
+                    <label for="title">标题</label>
+                    <input type="text" class="form-control" id="title" name="title" value="{{task_point1.title}}" placeholder="请输入标题" />
+                  </div>
+
+                  <div class="form-group col-md-12">
+                    <button type="submit" class="btn btn-primary ajax-post" target-form="add-form">确 定</button>
+                    <button type="button" class="btn btn-default" onclick="javascript:history.back(-1);return false;">返 回</button>
+                  </div>
+                </form>
+
+                <div class="table-responsive">
+                  <table class="table table-bordered">
+                    <thead>
+                      <tr>
+                        <th>编号</th>
+                        <th>标题</th>
+                        <th>创建时间</th>
+                        <th>完成时间</th>
+                        <th>状态</th>
+                        <th>操作</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        {% for task_point in task_point_info %}
+                      <tr>
+                        <td> {{ task_point.id }}</td>
+                        <td>{{ task_point.title}}</td>
+                        <td>{{ task_point.c_time}}</td>
+                        <td>{{ task_point.f_time}}</td>
+                        <td><font class="text-success">{{ task_point.get_status_display }}</font></td>
+                        <td>
+                          <div class="btn-group">
+                            <a class="btn btn-xs btn-default" href="/task/edit_task_point?task_id={{ task_id}}&task_point_id={{ task_point.id }}" title="" data-toggle="tooltip" data-original-title="编辑"><i class="mdi mdi-pencil"></i></a>
+                            <a class="btn btn-xs btn-default" href="/task/del_task_point?task_id={{ task_id}}&task_point_id={{ task_point.id }}" title="" data-toggle="tooltip" data-original-title="删除"><i class="mdi mdi-window-close"></i></a>
+                          </div>
+                        </td>
+                      </tr>
+                      {% endfor %}
+                    </tbody>
+                  </table>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    
+  </div>
+  
+</main>
+<script type="text/javascript" src="/static/js/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/static/js/perfect-scrollbar.min.js"></script>
+<script type="text/javascript" src="/static/js/main.min.js"></script>
+<!--时间选择插件-->
+<script src="/static/js/bootstrap-datetimepicker/moment.min.js"></script>
+<script src="/static/js/bootstrap-datetimepicker/bootstrap-datetimepicker.min.js"></script>
+<script src="/static/js/bootstrap-datetimepicker/locale/zh-cn.js"></script>
+<!--日期选择插件-->
+<script src="/static/js/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+<script src="/static/js/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min.js"></script>
+<script type="text/javascript" src="/static/js/main.min.js"></script>
+</body>
+</html>
+{% endblock content %}

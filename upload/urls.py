@@ -7,4 +7,5 @@ from django.conf import settings
 urlpatterns = [
     url('uploadimg', views.uploadImg, name='uploadImg'),
     url('showimg', views.showImg, name='showImg'),
+    url('delimg', views.delImg, name='delImg'),
 ]
