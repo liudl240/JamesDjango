@@ -204,6 +204,7 @@ def edituser(request):
         elif input_password != "":
             idinfo.update(password=make_password(input_password))
         status="修改成功，请查阅"
+        userinfo = models.UserInfo.objects.all()
         context = {"error_msg": status,"userinfo":userinfo,"username":username}
         return HttpResponseRedirect( '/users/userlist', context)
     return render(request, 'Users/edituser.html',context)
