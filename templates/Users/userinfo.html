@@ -23,20 +23,20 @@
                 <form method="post" action="#!" class="site-form">
                   <div class="form-group">
                     <label for="username">用户名</label>
-                    <input type="text" class="form-control" name="username" id="username" value="lightyear" disabled="disabled" />
+                    <input type="text" class="form-control" name="username" id="username" value="{{userinfo.username}}" disabled="disabled" />
                   </div>
                   <div class="form-group">
                     <label for="nickname">昵称</label>
-                    <input type="text" class="form-control" name="nickname" id="nickname" placeholder="输入您的昵称" value="笔下光年">
+                    <input type="text" class="form-control" name="nickname" id="nickname" placeholder="输入您的昵称" value="{{userinfo.nickname}}">
                   </div>
                   <div class="form-group">
                     <label for="email">邮箱</label>
-                    <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp" placeholder="请输入正确的邮箱地址" value="3331653644@qq.com">
+                    <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp" placeholder="请输入正确的邮箱地址" value="{{userinfo.email}}">
                     <small id="emailHelp" class="form-text text-muted">请保证您填写的邮箱地址是正确的。</small>
                   </div>
                   <div class="form-group">
                     <label for="remark">简介</label>
-                    <textarea class="form-control" name="remark" id="remark" rows="3"></textarea>
+                    <textarea class="form-control" name="remark" id="remark" rows="3">{{ userinfo.remark }}</textarea>
                   </div>
                   <button type="submit" class="btn btn-primary">保存</button>
                 </form>

@@ -8,8 +8,15 @@
         <div class="row">
           <div class="col-lg-12">
             <div class="card">
+
+         <ul class="nav nav-tabs page-tabs">
+           <li class="active"> <a href="/task/tasklist">任务列表</a> </li>
+           <li> <a href="/task/addtask">添加任务</a> </li>
+           <li> <a  onclick="javascript:history.back(-1);return false;">返回</a> </li>
+         </ul>       
               <div class="card-toolbar clearfix">
-                <form class="pull-right search-bar" method="get" action="#!" role="form">
+                <form class="pull-right search-bar" method="POST" action="" role="form">
+                   {% csrf_token %}
                   <div class="input-group">
                     <div class="input-group-btn">
                       <input type="hidden" name="search_field" id="search-field" value="title">
@@ -18,8 +25,9 @@
                       </button>
                       <ul class="dropdown-menu">
                         <li> <a tabindex="-1" href="javascript:void(0)" data-field="title">标题</a> </li>
-                        <li> <a tabindex="-1" href="javascript:void(0)" data-field="cat_name">作者</a> </li>
-                        <li> <a tabindex="-1" href="javascript:void(0)" data-field="cat_name">状态</a> </li>
+                        <li> <a tabindex="-1" href="javascript:void(0)" data-field="username">作者</a> </li>
+                        <li> <a tabindex="-1" href="javascript:void(0)" data-field="status">状态</a> </li>
+                        <li> <a tabindex="-1" href="javascript:void(0)" data-field="status">类型</a> </li>
                       </ul>
                     </div>
                     <input type="text" class="form-control" value="" name="keyword" placeholder="请输入名称">
@@ -27,9 +35,9 @@
                 </form>
                 <div class="toolbar-btn-action">
                   <a class="btn btn-primary m-r-5" href="/task/addtask"><i class="mdi mdi-plus"></i> 新增</a>
-                  <button type="submit" class="btn btn-success m-r-5 mdi mdi-check" target-form="add-form">启用</button>
-                  <button type="submit" class="btn btn-warning m-r-5 mdi mdi-block-helper" target-form="add-form">完成</button>
-                  <button type="submit" class="btn btn-info m-r-5 mdi mdi-window-close" target-form="add-form">移除</button>
+                  <button type="submit" class="btn btn-success m-r-5 mdi mdi-check"  >启用</button>
+                  <button type="submit" class="btn btn-warning m-r-5 mdi mdi-block-helper" >完成</button>
+                  <button type="submit" class="btn btn-info m-r-5 mdi mdi-window-close" onclick="location.href='index.html'">移除</button>
                 </div>
               </div>
               <div class="card-body">
@@ -79,7 +87,7 @@
                           <div class="btn-group">
                             <a class="btn btn-xs btn-default" href="/task/edittask?task_id={{ taskinfo.id }}" title="编辑" data-toggle="tooltip"><i class="mdi mdi-pencil"></i></a>
                             <a class="btn btn-xs btn-default" href="/task/add_task_point?task_id={{ taskinfo.id }}" title="创建小任务" data-toggle="tooltip"><i class="mdi mdi-format-list-bulleted"></i></a>
-                            <a class="btn btn-xs btn-default" href="#!" title="创建项目原因" data-toggle="tooltip"><i class="mdi mdi-content-paste"></i></a>
+                            <a class="btn btn-xs btn-default" href="/task/taskinfo?task_id={{ taskinfo.id }}" title="创建项目原因" data-toggle="tooltip"><i class="mdi mdi-content-paste"></i></a>
                             <a class="btn btn-xs btn-default" href="#!" title="解决文档" data-toggle="tooltip"><i class="mdi mdi-book-open-page-variant"></i></a>
 
                           </div>

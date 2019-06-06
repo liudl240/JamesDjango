@@ -3,6 +3,8 @@ from django.db import models
 class UserInfo(models.Model):
     '''用户表'''
     username = models.CharField(max_length=128,unique=True)
+    nickname = models.CharField(max_length=128,null=True)
+    remark = models.CharField(max_length=244,null=True)
     password = models.CharField(max_length=256)
     email = models.EmailField(unique=True)
     active = models.BooleanField(default='0')
