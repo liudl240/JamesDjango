@@ -204,6 +204,7 @@ def edituser(request):
         elif input_password != "":
             idinfo.update(password=make_password(input_password))
         status="修改成功，请查阅"
+        userinfo = models.UserInfo.objects.all()
         context = {"error_msg": status,"userinfo":userinfo,"username":username}
         return HttpResponseRedirect( '/users/userlist', context)
     return render(request, 'Users/edituser.html',context)
@@ -211,8 +212,15 @@ def edituser(request):
 """用户信息"""
 @login_require
 def userinfo(request):
-    username = request.session.get("username", None) 
-    context = {"username": username}
+    username = request.session.get("username", None)
+    userinfo = models.UserInfo.objects.filter(username=username)
+    context = {"username": username,"userinfo":userinfo[0]}
+    if request.method == "POST":
+        input_nickname = request.POST.get("nickname",None)
+        input_email = request.POST.get("email",None)
+        input_remark = request.POST.get("remark",None)
+        userinfo.update(nickname=input_nickname,email=input_email,remark=input_remark)
+        return HttpResponseRedirect( '/users/userinfo', context)
     return render(request, 'Users/userinfo.html',context)
 
 """注销"""

@@ -1,0 +1,131 @@
+{% extends "bases/sidebar.html" %}
+{% block content %}
+
+
+    <!--页面主要内容-->
+    <main class="lyear-layout-content">
+      <div class="container-fluid">
+
+         <ul class="nav nav-tabs page-tabs">
+           <li ><a href="/task/tasklist">任务列表</a> </li>
+           <li> <a href="/task/addtask">添加任务</a> </li>
+           <li class="active">  <a href="#!">任务详情</a> </li>
+           <li> <a  onclick="javascript:history.back(-1);return false;">返回</a> </li>
+         </ul>
+
+
+
+<div class="col-lg-12">
+            <div class="card">
+              <div class="card-header"><h4>标签</h4></div>
+              <div class="card-body">
+
+	{% for tag in taskinfo.tags %}
+                <span class="label label-info">{{ tag }}</span>
+        {% endfor %}
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-md-12">
+            <div class="card">
+              <div class="card-header"><h4>任务标题</h4></div>
+              <div class="card-body">
+                
+                <!--手风琴效果-->
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                  <div class="panel panel-primary">
+                    <div class="panel-heading" role="tab" id="headingOne">
+                      <h4 class="panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          {{ taskinfo.title}}
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                      <div class="panel-body">
+                         {{ taskinfo.description}}
+                      </div>
+                    </div>
+                  </div>
+                   <div class="panel panel-cyan">
+                    <div class="panel-heading" role="tab" id="headingTwo">
+                      <h4 class="panel-title">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                          小任务
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                      <div class="panel-body">
+
+
+
+              <div class="card-body">
+                <div class="table-responsive">
+                  <table class="table table-bordered">
+                    <thead>
+                      <tr>
+                        <th>标题</th>
+                        <th>状态</th>
+                        <th>操作</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        {% for task_point in task_point_list %}
+                      <tr>
+                        <td>{{ task_point.title}}</td>
+                        <td><font class="text-success">{{ task_point.get_status_display }}</font></td>
+                        <td>
+                          <div class="btn-group">
+                            <a class="btn btn-xs btn-default" href="/task/edit_task_point?task_id={{ task_id}}&task_point_id={{ task_point.id }}" title="" data-toggle="tooltip" data-original-title="编辑"><i class="mdi mdi-pencil"></i></a>
+                            <a class="btn btn-xs btn-default" href="/task/del_task_point?task_id={{ task_id}}&task_point_id={{ task_point.id }}" title="" data-toggle="tooltip" data-original-title="删除"><i class="mdi mdi-window-close"></i></a>
+                          </div>
+                        </td>
+                      </tr>
+                      {% endfor %}
+                    </tbody>
+                  </table>
+          </div>
+          </div>
+
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--手风琴效果 End-->
+                    </div>
+                </div>
+   
+       
+            <div class="card">
+              <div class="card-header"><h4>任务截图</h4></div>
+              <div class="card-body">
+
+                      <ul class="list-inline clearfix lyear-uploads-pic">
+                        {% for taskimg in imglist %}
+                        <li class="col-xs-4 col-sm-3 col-md-2">
+                          <figure>
+                            <img src="/media/{{ taskimg.img }}">
+                            <figcaption>
+                              <a class="btn btn-round btn-square btn-primary" href="/media/{{ taskimg.img }}"><i class="mdi mdi-eye"></i></a>
+                              <a class="btn btn-round btn-square btn-danger" href="/upload/delimg?task_id={{task_id}}&taskimg_id={{ taskimg.id}}"><i class="mdi mdi-delete"></i></a>
+                            </figcaption>
+                          </figure>
+                        </li>
+                       {% endfor  %}
+                      </ul>
+                    </div>
+                  </div>
+    </main>
+    <!--End 页面主要内容-->
+  </div>
+</div>
+
+<script type="text/javascript" src="/static/js/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/static/js/perfect-scrollbar.min.js"></script>
+<script type="text/javascript" src="/static/js/main.min.js"></script>
+{% endblock content %}

@@ -11,10 +11,22 @@ def tasklist(request):
     username = request.session.get("username", None)
     taskinfolist = tasks.objects.all()
     context = {"username":username,"taskinfolist":taskinfolist}
-    #check_box_list = request.POST.getlist('check_box_list') 
-    #print(check_box_list)
+    input_title = request.POST.get('title') 
+    input_username = request.POST.get('username') 
+    input_status = request.POST.get('status') 
+    print(input_title,input_username,input_status)
     return render(request,'task/tasklist.html',context)
 
+def taskinfo(request):
+    username = request.session.get("username", None)
+    input_task_id = request.GET.get("task_id",None)
+    input_task_id = request.GET.get("task_id",None)
+    taskinfo = tasks.objects.all().filter(id=input_task_id)
+    task_point_list = task_point.objects.filter(task_id=input_task_id)
+    imglist = IMG.objects.all().filter(task_id=input_task_id)
+    input_task_id = request.GET.get("task_id",None)
+    context={"username":username,"taskinfo":taskinfo[0],"task_point_list":task_point_list,"imglist":imglist,"task_id":input_task_id}
+    return render(request,'task/taskinfo.html',context)
 
 def addtask(request):
     username = request.session.get("username", None)
@@ -57,7 +69,7 @@ def edittask(request):
             input_tasktype = request.POST.get("type",None)
             input_title = request.POST.get("title",None)
             input_description = request.POST.get("description",None)
-            input_tags = request.POST.get("tags",None).split(",")
+            input_tags = request.POST.get("tags",None)
             input_status = request.POST.get("status",None)
             input_task_id = request.GET.get("task_id",None)
             if input_task_id != None:
@@ -84,6 +96,9 @@ def complatetask(request):
     username = request.session.get("username", None)
     taskinfolist = tasks.objects.all()
     context = {"username":username,"taskinfolist":taskinfolist}
+    #check_box_list = request.POST.getlist('checkbox')
+    check_box_list = request.GET.getlist('checkbox')
+    print(check_box_list)
     return HttpResponseRedirect('/task/tasklist.html',context)
 
 def add_task_point(request):

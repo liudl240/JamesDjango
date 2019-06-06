@@ -408,7 +408,8 @@
            <li> <a  onclick="javascript:history.back(-1);return false;">返回</a> </li>
          </ul>       
 
-    <h4>添加为何创建任务图片</h4>
+
+        <h4>添加为何创建任务图片</h4>
     <div id="wrapper">
         <div id="container">
             <!--头部，相册选择和格式选择-->
@@ -424,42 +425,22 @@
                     <div class="progress">
                         <span class="text">0%</span>
                         <span class="percentage"></span>
-                    </div>
-                <div class="info"></div>
+                    </div><div class="info"></div>
                     <div class="btns">
-                        <div id="filePicker2"></div>
-                        <div class="uploadBtn">开始上传</div>
+                        <div id="filePicker2"></div><div class="uploadBtn">开始上传</div>
                     </div>
                 </div>
             </div>
-         </div>
-      </div>
+        </div>
+    </div>
 
-                  <div class="form-group col-md-12">
-                    <div class="form-controls">
-
-                      <ul class="list-inline clearfix lyear-uploads-pic">
-                        {% for taskimg in imglist %}
-                        <li class="col-xs-4 col-sm-3 col-md-2">
-                          <figure>
-                            <img src="/media/{{ taskimg.img }}">
-                            <figcaption>
-                              <a class="btn btn-round btn-square btn-primary" href="/media/{{ taskimg.img }}"><i class="mdi mdi-eye"></i></a>
-                              <a class="btn btn-round btn-square btn-danger" href="/upload/delimg?task_id={{task_id}}&taskimg_id={{ taskimg.id}}"><i class="mdi mdi-delete"></i></a>
-                            </figcaption>
-                          </figure>
-                        </li>
-                       {% endfor  %}
-                      </ul>
-                    </div>
-                  </div>
 
                 <form action="#!" method="post" class="row">
                     {% csrf_token %}
                   <div class="form-group col-md-12">
                     <label for="type">任务程度</label>
                     <div class="form-controls">
-                      <select name="type" class="form-control"  id="type">
+                      <select name="type" class="form-control" id="type">
                         <option value="1">不急</option>
                         <option value="2">正常</option>
                         <option value="3">紧急</option>
@@ -468,23 +449,22 @@
                         <option value="6">加重</option>
                         <option value="7">不急重要</option>
                         <option value="8">不急加重</option>
-                        <option selected="selected" value="{{ taskinfo.tasktype}}" >{{ taskinfo.get_tasktype_display }}</option>
                       </select>
                     </div>
                   </div>
                   <div class="form-group col-md-12">
                     <label for="title">标题</label>
-                    <input type="text" class="form-control" id="title" name="title" value="{{ taskinfo.title }}" placeholder="请输入标题" />
+                    <input type="text" class="form-control" id="title" name="title" value="" placeholder="请输入标题" />
                   </div>
 
                   <div class="form-group col-md-12">
                     <label for="seo_description">任务描述</label>
-                    <textarea class="form-control" id="seo_description" name="description" rows="5" value="" placeholder="描述为何创建任务">{{ taskinfo.description }}</textarea>
+                    <textarea class="form-control" id="seo_description" name="description" rows="5" value="" placeholder="描述为何创建任务">探究为何nginx每天凌晨6点都会重启</textarea>
                   </div>
 
                   <div class="form-group col-md-12">
                     <label for="tags">标签</label>
-                    <input class="js-tags-input form-control" type="text" id="tags" name="tags" value="{{ taskinfo.tags}}" />
+                    <input class="js-tags-input form-control" type="text" id="tags" name="tags" value="" />
                   </div>
                   <div class="form-group col-md-12">
                     <label for="status">状态</label>

@@ -4,6 +4,7 @@ from Task import views
 
 urlpatterns = [
     url('tasklist', views.tasklist, name='tasklist'),
+    url('taskinfo', views.taskinfo, name='taskinfo'),
     url('addtask', views.addtask, name='addtask'),
     url('edittask', views.edittask, name='edittask'),
     url('deltask', views.deltask, name='deltask'),
