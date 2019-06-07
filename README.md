@@ -27,3 +27,11 @@ docker-compose -d up .
 mysql -uroot -h127.0.0.1 -p
 create database db_name default character set utf8 collate utf8_general_ci;
 ```
+
+
+## 最近需要实现的功能如下
+* 用户的头像的剪辑上传
+* 任务的状态的修改, 即，任务，启动，完成
+* 任务的移除功能
+* wiki markdown 写文档
+* 搜素功能
