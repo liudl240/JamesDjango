@@ -4,9 +4,10 @@ import time
 from Task.models import tasks
 from Task.models import task_point
 from upload.models import IMG
-
+from Task.makeTaskid import taskidMD5
+from Users.views import login_require
 # Create your views here.
-
+@login_require
 def tasklist(request):
     username = request.session.get("username", None)
     taskinfolist = tasks.objects.all()
@@ -16,20 +17,22 @@ def tasklist(request):
     input_status = request.POST.get('status') 
     print(input_title,input_username,input_status)
     return render(request,'task/tasklist.html',context)
-
+@login_require
 def taskinfo(request):
     username = request.session.get("username", None)
-    input_task_id = request.GET.get("task_id",None)
     input_task_id = request.GET.get("task_id",None)
     taskinfo = tasks.objects.all().filter(id=input_task_id)
     task_point_list = task_point.objects.filter(task_id=input_task_id)
     imglist = IMG.objects.all().filter(task_id=input_task_id)
-    input_task_id = request.GET.get("task_id",None)
-    context={"username":username,"taskinfo":taskinfo[0],"task_point_list":task_point_list,"imglist":imglist,"task_id":input_task_id}
+    taglist = taskinfo[0].tags.split(",")
+    print(taglist)
+    context={"username":username,"taskinfo":taskinfo[0],"task_point_list":task_point_list,"imglist":imglist,"task_id":input_task_id,"taglist":taglist}
     return render(request,'task/taskinfo.html',context)
-
+@login_require
 def addtask(request):
     username = request.session.get("username", None)
+    taskid = taskidMD5(username)
+    request.session['taskidMD5'] = taskid
     imgs=IMG.objects.all()
     context = {"username":username,"imgs":imgs}
     print("*____________________"* 3)
@@ -51,14 +54,18 @@ def addtask(request):
             status = input_status, 
             description = input_description,
         ) 
-        new_task.save()         
-        print(input_tasktype,input_title,input_description,input_tags,input_status)
+        new_task.save()
+        # print("新任务的ID号："+ str(new_task.id))
+        IMG.objects.filter(active=taskid).update(task_id=new_task.id,active=None)         
+        # print(input_tasktype,input_title,input_description,input_tags,input_status)
         return HttpResponseRedirect('task/tasklist.html',context)
     return render(request,'task/addtask.html',context)
-
+@login_require
 def edittask(request):
     input_task_id = request.GET.get("task_id",None)
     username = request.session.get("username", None)
+    taskid = taskidMD5(username)
+    request.session['taskidMD5'] = taskid
     taskinfo = tasks.objects.all().filter(id=input_task_id)
     imglist = IMG.objects.all().filter(task_id=input_task_id)
     context = {"username":username,"taskinfo":taskinfo[0],"imglist":imglist,"task_id":input_task_id}
@@ -74,24 +81,25 @@ def edittask(request):
             input_task_id = request.GET.get("task_id",None)
             if input_task_id != None:
                 taskinfo.update(title=input_title,tasktype=input_tasktype,tags=input_tags,status=input_status,description=input_description)
+                IMG.objects.filter(active=taskid).update(task_id=input_task_id,active=None)  
             return HttpResponseRedirect('/task/tasklist.html',context)
         return render(request,'task/edittask.html',context )
     else:
         return HttpResponse("没有如此ID")
         
-
+@login_require
 def deltask(request):
     username = request.session.get("username", None)
     taskinfolist = tasks.objects.all()
     context = {"username":username,"taskinfolist":taskinfolist}
     return HttpResponseRedirect('/task/tasklist.html',context)
-
+@login_require
 def starttask(request):
     username = request.session.get("username", None)
     taskinfolist = tasks.objects.all()
     context = {"username":username,"taskinfolist":taskinfolist}
     return HttpResponseRedirect('/task/tasklist.html',context)
-
+@login_require
 def complatetask(request):
     username = request.session.get("username", None)
     taskinfolist = tasks.objects.all()
@@ -100,7 +108,7 @@ def complatetask(request):
     check_box_list = request.GET.getlist('checkbox')
     print(check_box_list)
     return HttpResponseRedirect('/task/tasklist.html',context)
-
+@login_require
 def add_task_point(request):
     input_task_id = request.GET.get("task_id",None)
     username = request.session.get("username", None)
@@ -127,7 +135,7 @@ def add_task_point(request):
         context = {"username":username,"task_point_info":task_point_info,"status":"没有如此ID","task_id":None}
         return render(request,'task/add_task_point.html',context)
     return render(request,'task/add_task_point.html',context)
-
+@login_require
 def del_task_point(request):
     print("到这里了") 
     username = request.session.get("username", None)
@@ -141,7 +149,7 @@ def del_task_point(request):
     else:
         return HttpResponse("没有如此ID")
     return HttpResponseRedirect('/task/add_task_point/?task_id={}'.format(input_task_id))
-
+@login_require
 def edit_task_point(request):
     username = request.session.get("username", None)
     input_task_id = request.GET.get("task_id",None)
