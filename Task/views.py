@@ -6,17 +6,34 @@ from Task.models import task_point
 from upload.models import IMG
 from Task.makeTaskid import taskidMD5
 from Users.views import login_require
+import json
+from django.forms.models import model_to_dict
 # Create your views here.
 @login_require
 def tasklist(request):
     username = request.session.get("username", None)
     taskinfolist = tasks.objects.all()
-    context = {"username":username,"taskinfolist":taskinfolist}
+    """为了输出tag"""
+    tasklist_json = []
+    for tasklist in taskinfolist:
+        """修改枚举值"""
+        tasklist.status = tasklist.get_status_display()
+        tasklist.tasktype = tasklist.get_tasktype_display()
+        json_dict = model_to_dict(tasklist)
+        tasklist_json.append(json_dict)
+    for tag in tasklist_json:
+        tag["tags"] = tag["tags"].split(",")
+    # for i in taskinfolist:
+    #     print(i.get_tasktype_display())
+    #     print(i.get_status_display())
+    context = {"username":username,"tasklist_json":tasklist_json,"taskinfolist":taskinfolist}
     input_title = request.POST.get('title') 
     input_username = request.POST.get('username') 
     input_status = request.POST.get('status') 
-    print(input_title,input_username,input_status)
+    # print(input_title,input_username,input_status)
     return render(request,'task/tasklist.html',context)
+
+
 @login_require
 def taskinfo(request):
     username = request.session.get("username", None)

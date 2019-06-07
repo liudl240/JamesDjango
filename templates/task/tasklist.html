@@ -64,7 +64,7 @@
                       </tr>
                     </thead>
                     <tbody>
-                      {% for taskinfo in taskinfolist %}
+                      {% for taskinfo in tasklist_json %}
                       <tr>
                         <td>
                           <label class="lyear-checkbox checkbox-primary">
@@ -72,24 +72,27 @@
                           </label>
 
                         </td>
-                        <td>{{ taskinfo.id}}</td>
-                        <td>{{ taskinfo.title }}</td>
+                        <td>{{ taskinfo.id }}</td>
+                        <td>{{ taskinfo.title  }}</td>
                         <td>
-                        <span class="label label-yellow">{{ taskinfo.tags }}</span>
+                          {% for tag in taskinfo.tags  %}
+                        <span class="label label-yellow">{{ tag }}</span>
+                         {% endfor %}
                         </td>
-                        <td>{{ taskinfo.username_id }}</td>
+                        <td>{{ taskinfo.username }}</td>
                         <td>{{ taskinfo.c_time }}</td>
                         <td>{{ taskinfo.f_time }}</td>
                         <td>{{ taskinfo.m_time }}</td>
-                        <td><font class="text-warning">{{ taskinfo.get_status_display }}</font></td>
-                        <td><font class="text-success">{{ taskinfo.get_tasktype_display }}</font></td>
+                        <!-- <td><font class="text-warning">{{ taskinfo.get_status_display }}</font></td>
+                        <td><font class="text-success">{{ taskinfo.get_tasktype_display }}</font></td> -->
+                        <td><font class="text-warning">{{ taskinfo.status}}</font></td>
+                        <td><font class="text-success">{{ taskinfo.tasktype }}</font></td>
                         <td>
                           <div class="btn-group">
                             <a class="btn btn-xs btn-default" href="/task/edittask?task_id={{ taskinfo.id }}" title="编辑" data-toggle="tooltip"><i class="mdi mdi-pencil"></i></a>
                             <a class="btn btn-xs btn-default" href="/task/add_task_point?task_id={{ taskinfo.id }}" title="创建小任务" data-toggle="tooltip"><i class="mdi mdi-format-list-bulleted"></i></a>
                             <a class="btn btn-xs btn-default" href="/task/taskinfo?task_id={{ taskinfo.id }}" title="创建项目原因" data-toggle="tooltip"><i class="mdi mdi-content-paste"></i></a>
                             <a class="btn btn-xs btn-default" href="#!" title="解决文档" data-toggle="tooltip"><i class="mdi mdi-book-open-page-variant"></i></a>
-
                           </div>
                         </td>
                         {% endfor %}

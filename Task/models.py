@@ -32,8 +32,7 @@ class tasks(models.Model):
     doc = models.ForeignKey('wiki.doc',to_field='id',null=True,on_delete=models.CASCADE)
     status = models.SmallIntegerField(choices=GENDER_CHOICES1, default=0, verbose_name='任务状态')
 
-    def __str__(self):
-        return self.name
+
     class Meta:
         db_table = 'tasks'
         ordering = ['c_time']
