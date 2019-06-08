@@ -7,8 +7,8 @@ from upload.models import IMG
 from Task.makeTaskid import taskidMD5,tag_tagcolor
 from Task.choices_switch import choices_switch
 from Users.views import login_require
-import json
-
+import json,os 
+from JamesDjango.settings import MEDIA_ROOT
 
 # Create your views here.
 
@@ -132,8 +132,15 @@ def deltask(request):
     for input_task_id in check_box_list:
         """获取id的对象"""
         taskinfo = tasks.objects.filter(id=input_task_id)
+        """删除任务图片"""
+        img = IMG.objects.all().filter(task_id=input_task_id)
+        if len(img) > 0:
+            os.remove(MEDIA_ROOT+ "/img/" + img[0].name)
         """移除task"""
         taskinfo.delete()
+
+        
+
     context = {"username":username,"taskinfolist":taskinfolist}
     return HttpResponseRedirect('/task/tasklist.html',context)
 @login_require
