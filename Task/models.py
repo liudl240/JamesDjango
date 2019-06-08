@@ -5,6 +5,7 @@ from django.db import models
 class tasks(models.Model):
     '''任务表'''
     GENDER_CHOICES = (
+        (0, '不急加重'),
         (1, '不急'),
         (2, '正常'),
         (3, '紧急'),
@@ -12,7 +13,6 @@ class tasks(models.Model):
         (5, '重要'),
         (6, '加重'),
         (7, '不急重要'),
-        (8, '不急加重'),
     )
     GENDER_CHOICES1 = (
         (0, '未启动'),
@@ -24,10 +24,13 @@ class tasks(models.Model):
     tasktype = models.SmallIntegerField(choices=GENDER_CHOICES, default=1, verbose_name='任务类型')
     title = models.CharField(max_length=128,null=False)
     description = models.FileField(null=True)
-    tags = models.CharField(max_length=128,unique=True) 
+    tags = models.CharField(max_length=128,unique=True)
+    """创建时间""" 
     c_time = models.DateTimeField(null=False)
+    """开始时间""" 
+    s_time = models.DateTimeField(null=True)
+    """完成时间""" 
     f_time = models.DateTimeField(null=True)
-    m_time = models.DateTimeField(null=True)
     username = models.ForeignKey('Users.UserInfo',to_field='username',null=True,on_delete=models.CASCADE)
     doc = models.ForeignKey('wiki.doc',to_field='id',null=True,on_delete=models.CASCADE)
     status = models.SmallIntegerField(choices=GENDER_CHOICES1, default=0, verbose_name='任务状态')

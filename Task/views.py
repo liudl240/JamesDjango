@@ -4,33 +4,48 @@ import time
 from Task.models import tasks
 from Task.models import task_point
 from upload.models import IMG
-from Task.makeTaskid import taskidMD5
+from Task.makeTaskid import taskidMD5,tag_tagcolor
+from Task.choices_switch import choices_switch
 from Users.views import login_require
 import json
-from django.forms.models import model_to_dict
+
+
 # Create your views here.
+
+
+    
 @login_require
 def tasklist(request):
     username = request.session.get("username", None)
     taskinfolist = tasks.objects.all()
-    """为了输出tag"""
-    tasklist_json = []
-    for tasklist in taskinfolist:
-        """修改枚举值"""
-        tasklist.status = tasklist.get_status_display()
-        tasklist.tasktype = tasklist.get_tasktype_display()
-        json_dict = model_to_dict(tasklist)
-        tasklist_json.append(json_dict)
-    for tag in tasklist_json:
-        tag["tags"] = tag["tags"].split(",")
-    # for i in taskinfolist:
-    #     print(i.get_tasktype_display())
-    #     print(i.get_status_display())
-    context = {"username":username,"tasklist_json":tasklist_json,"taskinfolist":taskinfolist}
     input_title = request.POST.get('title') 
     input_username = request.POST.get('username') 
     input_status = request.POST.get('status') 
+    input_search_field = None
+    input_keyword = None
     # print(input_title,input_username,input_status)
+    if request.method == "POST":
+        input_search_field = request.POST.get("search_field")
+        input_keyword = request.POST.get("keyword",None)
+        print(input_search_field,input_keyword)
+        if input_keyword != None:
+            """标题检索"""
+            if input_search_field == "title":
+                taskinfolist = tasks.objects.all().filter(title__icontains=input_keyword)
+            """作者检索"""
+            if input_search_field == "username":
+                taskinfolist = tasks.objects.all().filter(username=input_keyword)
+            """状态检索"""
+            if input_search_field == "status":
+                status_code = choices_switch("GENDER_CHOICES1",input_keyword)
+                taskinfolist = tasks.objects.all().filter(status=status_code )  
+            """类型检索"""
+            if input_search_field == "tasktype":
+                tasktype_code = choices_switch("GENDER_CHOICES",input_keyword)
+                taskinfolist = tasks.objects.all().filter(tasktype=tasktype_code)
+
+    tasklist_json = tag_tagcolor(taskinfolist)
+    context = {"username":username,"tasklist_json":tasklist_json,"input_search_field":input_search_field,"input_keyword":input_keyword}
     return render(request,'task/tasklist.html',context)
 
 
@@ -42,8 +57,11 @@ def taskinfo(request):
     task_point_list = task_point.objects.filter(task_id=input_task_id)
     imglist = IMG.objects.all().filter(task_id=input_task_id)
     taglist = taskinfo[0].tags.split(",")
-    print(taglist)
-    context={"username":username,"taskinfo":taskinfo[0],"task_point_list":task_point_list,"imglist":imglist,"task_id":input_task_id,"taglist":taglist}
+    # print(taglist)
+    taskinfo = tag_tagcolor(taskinfo)
+    # print(taskinfo[0])
+    # context={"username":username,"taskinfo":taskinfo[0],"task_point_list":task_point_list,"imglist":imglist,"task_id":input_task_id,"taglist":taglist}
+    context={"username":username,"taskinfo":taskinfo[0],"task_point_list":task_point_list,"imglist":imglist}
     return render(request,'task/taskinfo.html',context)
 @login_require
 def addtask(request):
@@ -108,12 +126,34 @@ def edittask(request):
 def deltask(request):
     username = request.session.get("username", None)
     taskinfolist = tasks.objects.all()
+    """获取复选框内容"""
+    check_box_list = request.GET.getlist('ids[]')
+    """获取id对象"""
+    for input_task_id in check_box_list:
+        """获取id的对象"""
+        taskinfo = tasks.objects.filter(id=input_task_id)
+        """移除task"""
+        taskinfo.delete()
     context = {"username":username,"taskinfolist":taskinfolist}
     return HttpResponseRedirect('/task/tasklist.html',context)
 @login_require
 def starttask(request):
     username = request.session.get("username", None)
     taskinfolist = tasks.objects.all()
+    """获取复选框值"""
+    check_box_list = request.GET.getlist('ids[]')
+    print(check_box_list)
+    """点击启动，如何启动时间为None则修改启动时间，修改task状态"""
+    for input_task_id in check_box_list:
+        """获取id的对象"""
+        taskinfo = tasks.objects.filter(id=input_task_id)
+        """只有状态是未启动【0】的时候才会启动"""
+        if taskinfo[0].status == 0:
+            taskinfo.update(status=1)
+        """修改启动时间"""
+        if taskinfo[0].s_time == None:
+            input_stime = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+            taskinfo.update(s_time=input_stime)
     context = {"username":username,"taskinfolist":taskinfolist}
     return HttpResponseRedirect('/task/tasklist.html',context)
 @login_require
@@ -121,9 +161,18 @@ def complatetask(request):
     username = request.session.get("username", None)
     taskinfolist = tasks.objects.all()
     context = {"username":username,"taskinfolist":taskinfolist}
-    #check_box_list = request.POST.getlist('checkbox')
-    check_box_list = request.GET.getlist('checkbox')
-    print(check_box_list)
+    """获取复选框值"""
+    check_box_list = request.GET.getlist('ids[]')
+    # print(check_box_list)
+    """获取taskid对象"""
+    for input_task_id in check_box_list:
+        """获取对象"""
+        taskinfo = tasks.objects.filter(id=input_task_id)
+        """只有状态为进行中的时候才可以修改状态"""
+        """修改完成时间"""
+        if taskinfo[0].status == 1:
+            input_ftime = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+            taskinfo.update(status=2,f_time=input_ftime)
     return HttpResponseRedirect('/task/tasklist.html',context)
 @login_require
 def add_task_point(request):

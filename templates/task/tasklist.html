@@ -21,27 +21,27 @@
                     <div class="input-group-btn">
                       <input type="hidden" name="search_field" id="search-field" value="title">
                       <button class="btn btn-default dropdown-toggle" id="search-btn" data-toggle="dropdown" type="button" aria-haspopup="true" aria-expanded="false">
-                      标题 <span class="caret"></span>
+                          标题 <span class="caret"></span>
                       </button>
                       <ul class="dropdown-menu">
                         <li> <a tabindex="-1" href="javascript:void(0)" data-field="title">标题</a> </li>
                         <li> <a tabindex="-1" href="javascript:void(0)" data-field="username">作者</a> </li>
                         <li> <a tabindex="-1" href="javascript:void(0)" data-field="status">状态</a> </li>
-                        <li> <a tabindex="-1" href="javascript:void(0)" data-field="status">类型</a> </li>
+                        <li> <a tabindex="-1" href="javascript:void(0)" data-field="tasktype">类型</a> </li>
                       </ul>
                     </div>
-                    <input type="text" class="form-control" value="" name="keyword" placeholder="请输入名称">
+                    <input type="text" class="form-control" value="{{ input_keyword }}" name="keyword" placeholder="请输入需要检索的内容">
                   </div>
                 </form>
+                <form name="form1">   
                 <div class="toolbar-btn-action">
                   <a class="btn btn-primary m-r-5" href="/task/addtask"><i class="mdi mdi-plus"></i> 新增</a>
-                  <button type="submit" class="btn btn-success m-r-5 mdi mdi-check"  >启用</button>
-                  <button type="submit" class="btn btn-warning m-r-5 mdi mdi-block-helper" >完成</button>
-                  <button type="submit" class="btn btn-info m-r-5 mdi mdi-window-close" onclick="location.href='index.html'">移除</button>
+                  <button type="submit" class="btn btn-success m-r-5 mdi mdi-check"   onclick="starttask();" >启用</button>
+                  <button type="submit" class="btn btn-warning m-r-5 mdi mdi-block-helper"   onclick="complatetask();" >完成</button>
+                  <button type="submit" class="btn btn-info m-r-5 mdi mdi-window-close" onclick="deltask();">移除</button>
                 </div>
               </div>
-              <div class="card-body">
-                
+              <div class="card-body"> 
                 <div class="table-responsive">
                   <table class="table table-bordered">
                     <thead>
@@ -56,8 +56,8 @@
                         <th>标签</th>
                         <th>作者</th>
                         <th>创建时间</th>
+                        <th>启动时间</th>
                         <th>结束时间</th>
-                        <th>修改时间</th>
                         <th>状态</th>
                         <th>类型</th>
                         <th>操作</th>
@@ -68,21 +68,20 @@
                       <tr>
                         <td>
                           <label class="lyear-checkbox checkbox-primary">
-                            <input type="checkbox" name="ids[]" value="1"><span></span>
+                            <input type="checkbox" name="ids[]" value="{{ taskinfo.id }}"><span></span>
                           </label>
-
                         </td>
                         <td>{{ taskinfo.id }}</td>
                         <td>{{ taskinfo.title  }}</td>
                         <td>
                           {% for tag in taskinfo.tags  %}
-                        <span class="label label-yellow">{{ tag }}</span>
+                        <span class="label {{ tag |last}}">{{ tag |first  }}</span>
                          {% endfor %}
                         </td>
                         <td>{{ taskinfo.username }}</td>
                         <td>{{ taskinfo.c_time }}</td>
+                        <td>{{ taskinfo.s_time }}</td>
                         <td>{{ taskinfo.f_time }}</td>
-                        <td>{{ taskinfo.m_time }}</td>
                         <!-- <td><font class="text-warning">{{ taskinfo.get_status_display }}</font></td>
                         <td><font class="text-success">{{ taskinfo.get_tasktype_display }}</font></td> -->
                         <td><font class="text-warning">{{ taskinfo.status}}</font></td>
@@ -91,7 +90,7 @@
                           <div class="btn-group">
                             <a class="btn btn-xs btn-default" href="/task/edittask?task_id={{ taskinfo.id }}" title="编辑" data-toggle="tooltip"><i class="mdi mdi-pencil"></i></a>
                             <a class="btn btn-xs btn-default" href="/task/add_task_point?task_id={{ taskinfo.id }}" title="创建小任务" data-toggle="tooltip"><i class="mdi mdi-format-list-bulleted"></i></a>
-                            <a class="btn btn-xs btn-default" href="/task/taskinfo?task_id={{ taskinfo.id }}" title="创建项目原因" data-toggle="tooltip"><i class="mdi mdi-content-paste"></i></a>
+                            <a class="btn btn-xs btn-default" href="/task/taskinfo?task_id={{ taskinfo.id }}" title="任务详情" data-toggle="tooltip"><i class="mdi mdi-content-paste"></i></a>
                             <a class="btn btn-xs btn-default" href="#!" title="解决文档" data-toggle="tooltip"><i class="mdi mdi-book-open-page-variant"></i></a>
                           </div>
                         </td>
@@ -100,6 +99,7 @@
                     </tbody>
                   </table>
                 </div>
+              </form>
 
                 <ul class="pagination">
                   <li class="disabled"><span>«</span></li>
@@ -143,6 +143,20 @@ $(function(){
     });
 });
 </script>
+<script> 
+    function starttask(){ 
+    document.form1.action="/task/starttask"; 
+    document.form1.submit(); 
+    } 
+    function complatetask(){ 
+    document.form1.action="/task/complatetask"; 
+    document.form1.submit(); 
+    } 
+    function deltask(){ 
+    document.form1.action="/task/deltask"; 
+    document.form1.submit(); 
+    } 
+    </script>
 </body>
 </html>
 {% endblock content %}
