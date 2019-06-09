@@ -1,6 +1,7 @@
 {% extends "bases/sidebar.html" %}
 {% block content %}
  
+ 
     <!--页面主要内容-->
     <main class="lyear-layout-content">
       
@@ -12,7 +13,7 @@
               <div class="card-body">
                 
                 <div class="edit-avatar">
-                  <img src="/static/cat.jpg" alt="..." class="img-avatar">
+                  <img src="/static/cat.jpg" alt="头像" class="img-avatar">
                   <div class="avatar-divider"></div>
                   <div class="edit-avatar-content">
                     <button class="btn btn-default">修改头像</button>
@@ -27,8 +28,12 @@
                   </div>
                   <div class="form-group">
                     <label for="nickname">昵称</label>
-                    <input type="text" class="form-control" name="nickname" id="nickname" placeholder="输入您的昵称" value="{{userinfo.nickname}}">
+                    <input type="text" class="form-control" name="nickname" id="nickname" placeholder="贵姓？怎么称呼您呢？" value="{{userinfo.nickname}}">
                   </div>
+                  <div class="form-group">
+                      <label for="cellphone">手机</label>
+                      <input type="text" class="form-control" name="cellphone" id="cellphone" placeholder="这家伙貌似不知道手机是神马" value="{{userinfo.cellphone}}">
+                    </div>
                   <div class="form-group">
                     <label for="email">邮箱</label>
                     <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp" placeholder="请输入正确的邮箱地址" value="{{userinfo.email}}">
@@ -36,7 +41,7 @@
                   </div>
                   <div class="form-group">
                     <label for="remark">简介</label>
-                    <textarea class="form-control" name="remark" id="remark" rows="3">{{ userinfo.remark }}</textarea>
+                    <textarea class="form-control" name="remark" id="remark" rows="3" placeholder="这家伙很懒什么也没有留下">{{ userinfo.remark }}</textarea>
                   </div>
                   <button type="submit" class="btn btn-primary">保存</button>
                 </form>
