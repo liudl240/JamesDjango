@@ -8,7 +8,7 @@
 
          <ul class="nav nav-tabs page-tabs">
            <li ><a href="/task/tasklist">任务列表</a> </li>
-           <li> <a href="/task/addtask">添加任务</a> </li>
+           <li> <a href="/task/addtask?task_id={{ taskinfo.id }}">添加任务</a> </li>
            <li> <a href="/task/edittask/?task_id={{ taskinfo.id }}">修改任务</a> </li>
            <li> <a href="/task/add_task_point?task_id={{ taskinfo.id }}">添加小任务</a> </li>
            <li class="active">  <a href="#!">任务详情</a> </li>
@@ -81,6 +81,7 @@
                         <td>
                           <div class="btn-group">
                             <a class="btn btn-xs btn-default" href="/task/edit_task_point?task_id={{ taskinfo.id}}&task_point_id={{ task_point.id }}" title="" data-toggle="tooltip" data-original-title="编辑"><i class="mdi mdi-pencil"></i></a>
+                            <a class="btn btn-xs btn-default" href="/task/done_task_point?task_id={{ taskinfo.id}}&task_point_id={{ task_point.id }}" title="" data-toggle="tooltip" data-original-title="完成"><i class="mdi mdi-library"></i></a>
                             <a class="btn btn-xs btn-default" href="/task/del_task_point?task_id={{ taskinfo.id }}&task_point_id={{ task_point.id }}" title="" data-toggle="tooltip" data-original-title="删除"><i class="mdi mdi-window-close"></i></a>
                           </div>
                         </td>

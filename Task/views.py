@@ -9,7 +9,7 @@ from Task.choices_switch import choices_switch
 from Users.views import login_require
 import json,os 
 from JamesDjango.settings import MEDIA_ROOT
-
+from django.core.paginator import Paginator , PageNotAnInteger,EmptyPage
 # Create your views here.
 
 
@@ -23,11 +23,9 @@ def tasklist(request):
     input_status = request.POST.get('status') 
     input_search_field = None
     input_keyword = None
-    # print(input_title,input_username,input_status)
     if request.method == "POST":
         input_search_field = request.POST.get("search_field")
         input_keyword = request.POST.get("keyword",None)
-        print(input_search_field,input_keyword)
         if input_keyword != None:
             """标题检索"""
             if input_search_field == "title":
@@ -45,7 +43,25 @@ def tasklist(request):
                 taskinfolist = tasks.objects.all().filter(tasktype=tasktype_code)
 
     tasklist_json = tag_tagcolor(taskinfolist)
-    context = {"username":username,"tasklist_json":tasklist_json,"input_search_field":input_search_field,"input_keyword":input_keyword}
+
+    """"分页"""
+    # 值1：所有的数据
+    # 值2：每一页的数据
+    # 值3：当最后一页数据少于n条，将数据并入上一页
+    paginator = Paginator(tasklist_json,10,3)
+    try:
+        # GET请求方式，get()获取指定Key值所对应的value值
+        # 获取index的值，如果没有，则设置使用默认值1
+        num = request.GET.get('index','1')
+        # 获取第几页
+        number = paginator.page(num)
+    except PageNotAnInteger:
+        # 如果输入的页码数不是整数，那么显示第一页数据
+        number = paginator.page(1)
+    except EmptyPage:
+        number = paginator.page(paginator.num_pages)
+
+    context = {"username":username,"tasklist_json":tasklist_json,"input_search_field":input_search_field,"input_keyword":input_keyword, 'page':number,'paginator':paginator}
     return render(request,'task/tasklist.html',context)
 
 
@@ -57,12 +73,13 @@ def taskinfo(request):
     task_point_list = task_point.objects.filter(task_id=input_task_id)
     imglist = IMG.objects.all().filter(task_id=input_task_id)
     taglist = taskinfo[0].tags.split(",")
-    # print(taglist)
     taskinfo = tag_tagcolor(taskinfo)
-    # print(taskinfo[0])
     # context={"username":username,"taskinfo":taskinfo[0],"task_point_list":task_point_list,"imglist":imglist,"task_id":input_task_id,"taglist":taglist}
     context={"username":username,"taskinfo":taskinfo[0],"task_point_list":task_point_list,"imglist":imglist}
     return render(request,'task/taskinfo.html',context)
+
+
+
 @login_require
 def addtask(request):
     username = request.session.get("username", None)
@@ -95,6 +112,7 @@ def addtask(request):
         # print(input_tasktype,input_title,input_description,input_tags,input_status)
         return HttpResponseRedirect('task/tasklist.html',context)
     return render(request,'task/addtask.html',context)
+
 @login_require
 def edittask(request):
     input_task_id = request.GET.get("task_id",None)
@@ -149,7 +167,6 @@ def starttask(request):
     taskinfolist = tasks.objects.all()
     """获取复选框值"""
     check_box_list = request.GET.getlist('ids[]')
-    print(check_box_list)
     """点击启动，如何启动时间为None则修改启动时间，修改task状态"""
     for input_task_id in check_box_list:
         """获取id的对象"""
@@ -170,7 +187,6 @@ def complatetask(request):
     context = {"username":username,"taskinfolist":taskinfolist}
     """获取复选框值"""
     check_box_list = request.GET.getlist('ids[]')
-    # print(check_box_list)
     """获取taskid对象"""
     for input_task_id in check_box_list:
         """获取对象"""
@@ -185,32 +201,39 @@ def complatetask(request):
 def add_task_point(request):
     input_task_id = request.GET.get("task_id",None)
     username = request.session.get("username", None)
-    #context = {"username":username}
     task_point_info = task_point.objects.all().filter(task_id=input_task_id)
     context = {"username":username,"task_point_info":task_point_info,"task_id":input_task_id}
     if input_task_id != None:
         context = {"username":username,"task_point_info":task_point_info,"task_id":input_task_id}
         if request.method == "POST":
-            print("开始提交表达")
             input_ctime = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
             input_status = request.POST.get("type",None)
             input_title = request.POST.get("title",None) 
             if input_title != None:
-                new_task_point = task_point(
-                    title = input_title,
-                    c_time = input_ctime,
-                    status = input_status,
-                    task_id = input_task_id
-                )
-                new_task_point.save()
+                if input_status == 2:
+                    new_task_point = task_point(
+                        title = input_title,
+                        c_time = input_ctime,
+                        f_time = input_ctime,
+                        status = input_status,
+                        task_id = input_task_id
+                    )
+                    new_task_point.save() 
+                else:
+                    new_task_point = task_point(
+                        title = input_title,
+                        c_time = input_ctime,
+                        status = input_status,
+                        task_id = input_task_id
+                    )
+                    new_task_point.save()
+              
     else:
-        print("没有如此ID")
         context = {"username":username,"task_point_info":task_point_info,"status":"没有如此ID","task_id":None}
-        return render(request,'task/add_task_point.html',context)
     return render(request,'task/add_task_point.html',context)
+
 @login_require
 def del_task_point(request):
-    print("到这里了") 
     username = request.session.get("username", None)
     input_task_id = request.GET.get("task_id",None)
     input_task_point_id = request.GET.get("task_point_id",None)
@@ -222,6 +245,28 @@ def del_task_point(request):
     else:
         return HttpResponse("没有如此ID")
     return HttpResponseRedirect('/task/add_task_point/?task_id={}'.format(input_task_id))
+"""点击完成小任务"""
+@login_require
+def done_task_point(request):
+    username = request.session.get("username", None)
+    input_task_id = request.GET.get("task_id",None)
+    input_task_point_id = request.GET.get("task_point_id",None)
+    taskinfo = tasks.objects.all().filter(id=input_task_id)
+    task_point_info = task_point.objects.all().filter(task_id=input_task_id)
+    task_point1 = task_point.objects.all().filter(id=input_task_point_id)
+    context = {"username":username,"task_point_info":task_point_info,"task_id":input_task_id,"task_point1":task_point1[0]}
+    input_f_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+    if task_point1[0].status != 2:
+        task_point1.update(status=2)
+    if task_point1[0].f_time == None:
+        task_point1.update(f_time=input_f_time)
+    if  taskinfo[0].s_time == None: 
+        taskinfo.update(s_time=input_f_time)
+    if  taskinfo[0].status == 0:
+        taskinfo.update(status= 1)
+    return HttpResponseRedirect('/task/add_task_point/?task_id={}'.format(input_task_id),context)
+
+
 @login_require
 def edit_task_point(request):
     username = request.session.get("username", None)
@@ -230,7 +275,6 @@ def edit_task_point(request):
     task_point_info = task_point.objects.all().filter(task_id=input_task_id)
     task_point1 = task_point.objects.all().filter(id=input_task_point_id)
     context = {"username":username,"task_point_info":task_point_info,"task_id":input_task_id,"task_point1":task_point1[0]}
-    print(task_point1[0].f_time)
     if request.method == "POST":
         input_f_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
         input_title = request.POST.get("title",None)

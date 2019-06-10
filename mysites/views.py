@@ -1,16 +1,44 @@
 from django.shortcuts import render, render_to_response,HttpResponseRedirect,redirect
 from Users.views import login_require
-import random
 from mysites import models
+from Task.models import  tasks,task_point
+from django.forms.models import model_to_dict
+import random
 """主页"""
 @login_require
 def index(request):
-    username = request.session.get("username", None)
-    if username == None:
-        return render(request,"Users/login.html")
-    else:
-        context = {"username":username}
-        return render(request, 'index.html',context)
+    username = request.session.get("username",None)
+    """返回任务前十，显示在主页"""
+    """排序依据是什么: 创建的时间"""
+    """任务"""
+    taskinfolist = tasks.objects.all().filter(status__lt=2)
+    tasklist_json = []
+    for task in taskinfolist:
+        task_schedule = 0.0
+        """百分比计算"""
+        task_point_1 = task_point.objects.filter(status=2,task_id=task.id).count()
+        task_point_2 = task_point.objects.filter(task_id=task.id).count()
+        if task_point_2 > 0:
+            #print(task_point_1, task_point_2)
+            task_schedule = task_point_1/task_point_2*100
+        """颜色信息"""
+        """"""
+        if task.status == 0:
+            task.color = "success"
+        elif task.status == 1:
+            task.color = "info" 
+        """把小数转化为百分比"""
+        task_schedule = str(task_schedule) + "%"
+
+        """转化为json"""
+        """添加进度百分比"""
+        task.task_schedule = task_schedule
+        task.status = task.get_status_display()
+        json_dict = model_to_dict(task)
+        tasklist_json.append(json_dict)
+        """没有子任务的时候，进度则为0%,点击完成则100%"""
+    context = {"username":username,"tasklist":taskinfolist}
+    return render_to_response('index.html',context)
 
 
 """生产链接"""
@@ -18,7 +46,6 @@ def index(request):
 def servicelist(request):
     color=random.choice(['bg-success','bg-warning','bg-danger','bg-purple','bg-cyan','bg-brown','bg-info','bg-primary'])
     color ="\"card-header {_color}\"".format(_color=color)
-    print(color)
     username = request.session.get("username", None)
     servicelistinfo = models.servicelist.objects.all()
     context = {"username":username,"servicelistinfo":servicelistinfo,"color":color }
@@ -45,6 +72,7 @@ def servicelist(request):
     return render(request, 'service/servicelist.html',context)
 
 """编辑链接"""
+@login_require
 def editservice(request):
     username = request.session.get("username", None)
     servicelistinfo = models.servicelist.objects.all()

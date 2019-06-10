@@ -13,8 +13,6 @@ class UserInfo(models.Model):
     l_time = models.DateTimeField(null=True)
     Avatar = models.ImageField(upload_to='Avatar',unique=False,default="/Avatar/cat.jpg")
     Avatar_name = models.CharField(max_length=128,default="cat.jpg")
-    def __str__(self):
-        return self.name
     class Meta:
         db_table = 'UserInfo'
         ordering = ['c_time']

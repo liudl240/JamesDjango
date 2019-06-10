@@ -18,7 +18,6 @@ def choices_switch(CHOICES,input_keyword):
         index = GENDER_CHOICES.index(input_keyword)
     else:
         index = GENDER_CHOICES1.index(input_keyword)
-    # print(index)
     return index
 
 choices_switch("GENDER_CHOICES1","完成")

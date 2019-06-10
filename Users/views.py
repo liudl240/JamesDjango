@@ -20,6 +20,7 @@ def login_require(func):
             res = func(request, *args, **kwargs)
             return res
     return wrapper
+
 """获取图片验证码"""
 def captcha(request):
     f = BytesIO()

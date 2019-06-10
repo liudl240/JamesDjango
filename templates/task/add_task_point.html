@@ -61,7 +61,6 @@
                   <table class="table table-bordered">
                     <thead>
                       <tr>
-                        <th>编号</th>
                         <th>标题</th>
                         <th>创建时间</th>
                         <th>完成时间</th>
@@ -72,14 +71,14 @@
                     <tbody>
                         {% for task_point in task_point_info %}
                       <tr>
-                        <td> {{ task_point.id }}</td>
                         <td>{{ task_point.title}}</td>
                         <td>{{ task_point.c_time}}</td>
-                        <td>{{ task_point.t_time}}</td>
+                        <td>{{ task_point.f_time}}</td>
                         <td><font class="text-success">{{ task_point.get_status_display }}</font></td>
                         <td>
                           <div class="btn-group">
                             <a class="btn btn-xs btn-default" href="/task/edit_task_point?task_id={{ task_id}}&task_point_id={{ task_point.id }}" title="" data-toggle="tooltip" data-original-title="编辑"><i class="mdi mdi-pencil"></i></a>
+                            <a class="btn btn-xs btn-default" href="/task/done_task_point?task_id={{ task_id}}&task_point_id={{ task_point.id }}" title="" data-toggle="tooltip" data-original-title="完成"><i class="mdi mdi-library"></i></a>
                             <a class="btn btn-xs btn-default" href="/task/del_task_point?task_id={{ task_id}}&task_point_id={{ task_point.id }}" title="" data-toggle="tooltip" data-original-title="删除"><i class="mdi mdi-window-close"></i></a>
                           </div>
                         </td>

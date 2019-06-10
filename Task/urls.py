@@ -12,5 +12,6 @@ urlpatterns = [
     url('complatetask', views.complatetask, name='complatetask'),
     url('add_task_point', views.add_task_point, name='add_task_point'),
     url('del_task_point', views.del_task_point, name='del_task_point'),
+    url('done_task_point', views.done_task_point, name='done_task_point'),
     url('edit_task_point', views.edit_task_point, name='edit_task_point'),
 ]
