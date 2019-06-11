@@ -11,8 +11,7 @@ class UserInfo(models.Model):
     active = models.BooleanField(default='0')
     c_time = models.DateTimeField(null=False)
     l_time = models.DateTimeField(null=True)
-    Avatar = models.ImageField(upload_to='Avatar',unique=False,default="/Avatar/cat.jpg")
-    Avatar_name = models.CharField(max_length=128,default="cat.jpg")
+    Avatar_name = models.CharField(max_length=200,default="cat.jpg")
     class Meta:
         db_table = 'UserInfo'
         ordering = ['c_time']

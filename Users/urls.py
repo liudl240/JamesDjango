@@ -15,4 +15,6 @@ urlpatterns = [
     url('changepasswd', views.changepasswd, name='changepasswd'),
     url('editpassword', views.editpassword, name='editpassword'),
     url('reviewuser', views.reviewuser, name='reviewuser'),
+    url('Avatar', views.Avatar, name='Avatar'),
+    
 ]

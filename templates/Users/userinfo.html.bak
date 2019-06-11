@@ -1,0 +1,226 @@
+{% extends "bases/sidebar.html" %}
+{% block content %}
+ 
+    <!--页面主要内容-->
+    <main class="lyear-layout-content">
+      <div class="container-fluid">
+        
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="card">
+              <div class="card-body">
+                <div class="edit-avatar">
+                  <img src="/static/cat.jpg"  alt="Avatar"  data-target="#changeModal" data-toggle="modal" class="img-avatar" />
+                  <div class="avatar-divider"></div>
+                  <div class="edit-avatar-content">
+                    <button class="btn btn-default" data-target="#changeModal" data-toggle="modal">修改头像</button>
+                    <p class="m-0">选择一张你喜欢的图片，裁剪后会自动生成264x264大小，上传图片大小不能超过2M。</p>
+                 </div>
+             </div>
+          </div>
+       </div>
+<div class="modal fade" id="changeModal" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h4 class="modal-title text-primary">
+            <i class="fa fa-pencil"></i>
+                        更换头像
+            </h4>
+        </div>
+        <div class="modal-body">
+            <p class="tip-info text-center">
+                未选择图片
+            </p>
+            <div class="img-container hidden">
+                <img src="" alt="更换头像" id="photo">
+            </div>
+            <div class="img-preview-box hidden">
+                <span>150*150:</span>
+                <div class="img-preview img-preview-lg">
+                </div>
+                <span>100*100:</span>
+                <div class="img-preview img-preview-md">
+                </div>
+                <span>30*30:</span>
+                <div class="img-preview img-preview-sm">
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <label class="btn btn-danger pull-left" for="photoInput">
+            <input type="file" class="sr-only" id="photoInput" accept="image/*">
+            <span>打开图片</span>
+            </label>
+            <button class="btn btn-primary disabled" disabled="true" onclick="sendPhoto();">提交</button>
+            <button class="btn btn-close" aria-hidden="true" data-dismiss="modal">取消</button>
+        </div>
+    </div>
+</div>
+</div>
+
+
+          <div class="col-md-12">
+            <div class="card">
+              <div class="card-header"><h4>用户信息</h4></div>
+              <div class="card-body">
+
+                <form method="post" action="#!" class="site-form">
+                  <div class="form-group">
+                    <label for="username">用户名</label>
+                    <input type="text" class="form-control" name="username" id="username" value="{{userinfo.username}}" disabled="disabled" />
+                  </div>
+                  <div class="form-group">
+                    <label for="nickname">昵称</label>
+                    <input type="text" class="form-control" name="nickname" id="nickname" placeholder="贵姓？怎么称呼您呢？" value="{{userinfo.nickname}}">
+                  </div>
+                  <div class="form-group">
+                      <label for="cellphone">手机</label>
+                      <input type="text" class="form-control" name="cellphone" id="cellphone" placeholder="这家伙貌似不知道手机是神马" value="{{userinfo.cellphone}}">
+                    </div>
+                  <div class="form-group">
+                    <label for="email">邮箱</label>
+                    <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp" placeholder="请输入正确的邮箱地址" value="{{userinfo.email}}">
+                    <small id="emailHelp" class="form-text text-muted">请保证您填写的邮箱地址是正确的。</small>
+                  </div>
+                  <div class="form-group">
+                    <label for="remark">简介</label>
+                    <textarea class="form-control" name="remark" id="remark" rows="3" placeholder="这家伙很懒什么也没有留下">{{ userinfo.remark }}</textarea>
+                  </div>
+                  <button type="submit" class="btn btn-primary">保存</button>
+                </form>
+       
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+        </div>
+       </div>
+      </div>
+
+      
+    </main>
+    <!--End 页面主要内容-->
+  </div>
+</div>
+
+<script type="text/javascript" src="/static/js/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/static/js/perfect-scrollbar.min.js"></script>
+<script type="text/javascript" src="/static/js/main.min.js"></script>
+<script src="/static/Avatar/jquery.min.js"></script>
+<script src="/static/Avatar/cropper.min.js"></script>
+<script src="/static/Avatar/bootstrap.min.js"></script>
+<script type="text/javascript">
+    var initCropperInModal = function(img, input, modal){
+        var $image = img;
+        var $inputImage = input;
+        var $modal = modal;
+        var options = {
+            aspectRatio: 1, // 纵横比
+            viewMode: 2,
+            preview: '.img-preview' // 预览图的class名
+        };
+        // 模态框隐藏后需要保存的数据对象
+        var saveData = {};
+        var URL = window.URL || window.webkitURL;
+        var blobURL;
+        $modal.on('show.bs.modal',function () {
+            // 如果打开模态框时没有选择文件就点击“打开图片”按钮
+            if(!$inputImage.val()){
+                $inputImage.click();
+            }
+        }).on('shown.bs.modal', function () {
+            // 重新创建
+            $image.cropper( $.extend(options, {
+                ready: function () {
+                    // 当剪切界面就绪后，恢复数据
+                    if(saveData.canvasData){
+                        $image.cropper('setCanvasData', saveData.canvasData);
+                        $image.cropper('setCropBoxData', saveData.cropBoxData);
+                    }
+                }
+            }));
+        }).on('hidden.bs.modal', function () {
+            // 保存相关数据
+            saveData.cropBoxData = $image.cropper('getCropBoxData');
+            saveData.canvasData = $image.cropper('getCanvasData');
+            // 销毁并将图片保存在img标签
+            $image.cropper('destroy').attr('src',blobURL);
+        });
+        if (URL) {
+            $inputImage.change(function() {
+                var files = this.files;
+                var file;
+                if (!$image.data('cropper')) {
+                    return;
+                }
+                if (files && files.length) {
+                    file = files[0];
+                    if (/^image\/\w+$/.test(file.type)) {
+
+                        if(blobURL) {
+                            URL.revokeObjectURL(blobURL);
+                        }
+                        blobURL = URL.createObjectURL(file);
+
+                        // 重置cropper，将图像替换
+                        $image.cropper('reset').cropper('replace', blobURL);
+
+                        // 选择文件后，显示和隐藏相关内容
+                        $('.img-container').removeClass('hidden');
+                        $('.img-preview-box').removeClass('hidden');
+                        $('#changeModal .disabled').removeAttr('disabled').removeClass('disabled');
+                        $('#changeModal .tip-info').addClass('hidden');
+
+                    } else {
+                        window.alert('请选择一个图像文件！');
+                    }
+                }
+            });
+        } else {
+            $inputImage.prop('disabled', true).addClass('disabled');
+        }
+    }
+
+
+
+var sendPhoto = function () {
+    // 得到PNG格式的dataURL
+    var photo = $('#photo').cropper('getCroppedCanvas', {
+        width: 300,
+        height: 300
+    }).toDataURL('image/png');
+
+    $.ajax({
+        url: '/users/Avatar', // 要上传的地址
+        type: 'post',
+        data: {
+            'imgData': photo
+        },
+        dataType: 'json',
+        success: function (data) {
+            if (data.status == 0) {
+                // 将上传的头像的地址填入，为保证不载入缓存加个随机数
+                $('.user-photo').attr('src', '头像地址?t=' + Math.random());
+                $('#changeModal').modal('hide');
+            } else {
+                alert(data.info);
+            }
+        }
+    });
+}
+
+
+
+
+
+    $(function(){
+        initCropperInModal($('#photo'),$('#photoInput'),$('#changeModal'));
+    });
+</script>
+</body>
+</html>
+{% endblock content %}

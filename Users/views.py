@@ -8,7 +8,11 @@ from JamesDjango import settings
 from io import BytesIO
 from Users import models
 from datetime import *
-import time
+from Users.initTime import initTime
+import json,base64
+from upload.imgNameMD5  import imgNameMD5
+import urllib , os
+from JamesDjango.settings import MEDIA_ROOT
 
 """用户登陆限制"""
 def login_require(func):
@@ -144,7 +148,7 @@ def adduser(request):
                     return render(request, "Users/adduser.html", {'error_msg': error_msg})
                 password = make_password(input_password)
                 email = input_email
-                c_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+                c_time = initTime() 
                 print(c_time)
                 models.UserInfo.objects.create(username=input_username, password=password,email=email,c_time=c_time)
                 status = "恭喜，注册成功"
@@ -230,7 +234,7 @@ def logout(request):
     username = request.session.get('username', None) 
     request.session.clear()
     userinfo = models.UserInfo.objects.filter(username=username)
-    l_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+    l_time = initTime() 
     userinfo.update(l_time=l_time)
     return render(request, 'Users/login.html')
 
@@ -299,3 +303,21 @@ def reviewuser(request):
         status="审核成功" 
         context = {"username": username,"userlist":userlist,"error_msg":status}
     return render(request,"Users/reviewuser.html",context)
+
+def Avatar(request):
+    username = request.session.get("username", None)
+    userinfo = models.UserInfo.objects.filter(username=username)
+    if request.method == 'POST':
+        img_name = "Avatar.png"
+        img_name = imgNameMD5(img_name) 
+        
+        print(img_name)
+        img_data = urllib.parse.unquote(request.body.decode(encoding='utf-8')).split(",")
+        img_data = base64.b64decode(img_data[1])
+        with open('{_imgdir}/Avatar/{_imgname}'.format(_imgdir=MEDIA_ROOT,_imgname=img_name), 'wb') as f:
+            f.write(img_data)
+        if userinfo[0].Avatar_name != "cat.jpg":
+            os.remove(MEDIA_ROOT+ "/Avatar/" + userinfo[0].Avatar_name)
+        userinfo.update(Avatar_name=img_name)
+    context = {"username": username,"userinfo":userinfo[0]}
+    return render(request,"Users/userinfo.html",context)

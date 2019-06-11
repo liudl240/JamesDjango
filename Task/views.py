@@ -1,6 +1,6 @@
 from django.shortcuts import render,HttpResponseRedirect,HttpResponse
 from datetime import *
-import time
+from Users.initTime import initTime
 from Task.models import tasks
 from Task.models import task_point
 from upload.models import IMG
@@ -96,7 +96,7 @@ def addtask(request):
         input_tags = request.POST.get("tags",None)
         input_status = request.POST.get("status",None)
         """需要添加"""
-        input_ctime = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+        input_ctime = initTime() 
         new_task = tasks(
             username_id=username,
             title = input_title,
@@ -176,7 +176,7 @@ def starttask(request):
             taskinfo.update(status=1)
         """修改启动时间"""
         if taskinfo[0].s_time == None:
-            input_stime = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+            input_stime = initTime() 
             taskinfo.update(s_time=input_stime)
     context = {"username":username,"taskinfolist":taskinfolist}
     return HttpResponseRedirect('/task/tasklist.html',context)
@@ -194,7 +194,7 @@ def complatetask(request):
         """只有状态为进行中的时候才可以修改状态"""
         """修改完成时间"""
         if taskinfo[0].status == 1:
-            input_ftime = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+            input_ftime = initTime() 
             taskinfo.update(status=2,f_time=input_ftime)
     return HttpResponseRedirect('/task/tasklist.html',context)
 @login_require
@@ -206,7 +206,7 @@ def add_task_point(request):
     if input_task_id != None:
         context = {"username":username,"task_point_info":task_point_info,"task_id":input_task_id}
         if request.method == "POST":
-            input_ctime = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+            input_ctime = initTime()
             input_status = request.POST.get("type",None)
             input_title = request.POST.get("title",None) 
             if input_title != None:
@@ -255,7 +255,7 @@ def done_task_point(request):
     task_point_info = task_point.objects.all().filter(task_id=input_task_id)
     task_point1 = task_point.objects.all().filter(id=input_task_point_id)
     context = {"username":username,"task_point_info":task_point_info,"task_id":input_task_id,"task_point1":task_point1[0]}
-    input_f_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+    input_f_time = initTime() 
     if task_point1[0].status != 2:
         task_point1.update(status=2)
     if task_point1[0].f_time == None:
@@ -276,7 +276,7 @@ def edit_task_point(request):
     task_point1 = task_point.objects.all().filter(id=input_task_point_id)
     context = {"username":username,"task_point_info":task_point_info,"task_id":input_task_id,"task_point1":task_point1[0]}
     if request.method == "POST":
-        input_f_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+        input_f_time = initTime() 
         input_title = request.POST.get("title",None)
         input_status = request.POST.get("type",None)
         task_point1.update(title=input_title,status=input_status)
