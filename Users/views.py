@@ -94,7 +94,7 @@ def login(request):
                     print("登陆成功")
                     request.session["username"] = input_username
                     context={'username':request.session.get("username")}
-                    return render(request, 'index.html', context)
+                    return HttpResponseRedirect('/', context)
                 else:
                     print("密码错误")
                     error_msg="密码错误"
@@ -304,6 +304,7 @@ def reviewuser(request):
         context = {"username": username,"userlist":userlist,"error_msg":status}
     return render(request,"Users/reviewuser.html",context)
 
+@login_require
 def Avatar(request):
     username = request.session.get("username", None)
     userinfo = models.UserInfo.objects.filter(username=username)
@@ -320,4 +321,4 @@ def Avatar(request):
             os.remove(MEDIA_ROOT+ "/Avatar/" + userinfo[0].Avatar_name)
         userinfo.update(Avatar_name=img_name)
     context = {"username": username,"userinfo":userinfo[0]}
-    return render(request,"Users/userinfo.html",context)
+    return HttpResponse ("success")

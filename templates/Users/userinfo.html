@@ -205,13 +205,14 @@ var sendPhoto = function () {
         data: {
             'imgData': photo
         },
-        dataType: 'json',
+        dataType: 'text',
         success: function (data) {
-            alter("开始上传")
-            if (data.status == 1) {
+            if (data == "success"){
+                window.location.reload();
+                alert("成功修改头像");
                 // 将上传的头像的地址填入，为保证不载入缓存加个随机数
-                $('.user-photo').attr('src', '/media/Avatar/{{userinfo.Avatar_name}}' + Math.random());
-                $('#changeModal').modal('hide');
+                // $('.user-photo').attr('src', '/media/Avatar/{{userinfo.Avatar_name}}' + Math.random());
+                // $('#changeModal').modal('hide');
             } else {
                 alert("上传失败");
             }
