@@ -25,6 +25,7 @@ urlpatterns = [
     path('users/', include('Users.urls')),
     path('task/', include('Task.urls')),
     path('upload/', include('upload.urls')),
+    path('wiki/', include('wiki.urls')),
     url(r'^media/(?P<path>.*)', serve, {"document_root": settings.MEDIA_ROOT}),
     path('', include('mysites.urls')),
 ]
