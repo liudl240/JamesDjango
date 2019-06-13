@@ -8,12 +8,13 @@
         <link rel="shortcut icon" href="https://pandao.github.io/editor.md/favicon.ico" type="image/x-icon" />
     </head>
     <body>
+            {% for doc in docinfo %}
         <div id="layout">
             <header>
-                <h1>表单取值</h1>   
-                <p>Form get textarea value.</p>     
+                <h1>添加文章</h1>   
             </header>
-            <form method="post" action="/wiki/adddoc">
+            <form method="post" action="/wiki/savedoc?doc_id={{ doc.id }}">
+                <input type="text" class="form-control" id="title" name="title" value="{{ doc.title }}" placeholder="请输入标题" />
                 <div id="test-editormd">
                     <!-- Custom textarea name attribute <textarea style="display:none;" name="test-textarea-name"> -->
                     <textarea style="display:none;">
@@ -28,7 +29,7 @@
         <script src="/static/markdown/editormd.js"></script>   
         <script type="text/javascript">
             $(function() {
-                $.get("/media/wiki/doc/abc.md", function(md) {
+                $.get("/media/wiki/doc/{{ doc.content }}", function(md) {
                     var testEditor = editormd("test-editormd", {
                         width  : "90%",
                         height : 640,
@@ -43,5 +44,6 @@
                 //testEditor.getPreviewedHTML();  // 获取预览窗口里的 HTML，在开启 watch 且没有开启 saveHTMLToTextarea 时使用
             });
         </script>
+            {% endfor %}
     </body>
 </html>

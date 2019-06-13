@@ -75,8 +75,8 @@ def sendemail(request):
 def login(request):
     error_msg="" 
     if request.method == 'POST':
-        input_username = request.POST.get('username','none') 
-        input_password = request.POST.get('password','none')
+        input_username = request.POST.get('username',None) 
+        input_password = request.POST.get('password',None)
         input_captcha = request.POST.get("captcha", None)
         captcha = request.session.get("code", None)
         print(captcha,input_captcha)
