@@ -7,6 +7,7 @@ from upload.models import IMG
 from Task.makeTaskid import taskidMD5,tag_tagcolor
 from Task.choices_switch import choices_switch
 from Users.views import login_require
+from Users.models import UserInfo
 import json,os 
 from JamesDjango.settings import MEDIA_ROOT
 from django.core.paginator import Paginator , PageNotAnInteger,EmptyPage
@@ -17,6 +18,7 @@ from django.core.paginator import Paginator , PageNotAnInteger,EmptyPage
 @login_require
 def tasklist(request):
     username = request.session.get("username", None)
+    userinfo = UserInfo.objects.filter(username=username)
     taskinfolist = tasks.objects.all()
     input_title = request.POST.get('title') 
     input_username = request.POST.get('username') 
@@ -61,13 +63,14 @@ def tasklist(request):
     except EmptyPage:
         number = paginator.page(paginator.num_pages)
 
-    context = {"username":username,"tasklist_json":tasklist_json,"input_search_field":input_search_field,"input_keyword":input_keyword, 'page':number,'paginator':paginator}
+    context = {"userinfo":userinfo[0],"tasklist_json":tasklist_json,"input_search_field":input_search_field,"input_keyword":input_keyword, 'page':number,'paginator':paginator}
     return render(request,'task/tasklist.html',context)
 
 
 @login_require
 def taskinfo(request):
     username = request.session.get("username", None)
+    userinfo = UserInfo.objects.filter(username=username)
     input_task_id = request.GET.get("task_id",None)
     taskinfo = tasks.objects.all().filter(id=input_task_id)
     task_point_list = task_point.objects.filter(task_id=input_task_id)
@@ -75,7 +78,7 @@ def taskinfo(request):
     taglist = taskinfo[0].tags.split(",")
     taskinfo = tag_tagcolor(taskinfo)
     # context={"username":username,"taskinfo":taskinfo[0],"task_point_list":task_point_list,"imglist":imglist,"task_id":input_task_id,"taglist":taglist}
-    context={"username":username,"taskinfo":taskinfo[0],"task_point_list":task_point_list,"imglist":imglist}
+    context={"userinfo":userinfo[0],"taskinfo":taskinfo[0],"task_point_list":task_point_list,"imglist":imglist}
     return render(request,'task/taskinfo.html',context)
 
 
@@ -83,10 +86,11 @@ def taskinfo(request):
 @login_require
 def addtask(request):
     username = request.session.get("username", None)
+    userinfo = UserInfo.objects.filter(username=username)
     taskid = taskidMD5(username)
     request.session['taskidMD5'] = taskid
     imgs=IMG.objects.all()
-    context = {"username":username,"imgs":imgs}
+    context = {"userinfo":userinfo[0],"imgs":imgs}
     print("*____________________"* 3)
     if request.method == "POST":
         """输入"""
@@ -117,15 +121,16 @@ def addtask(request):
 def edittask(request):
     input_task_id = request.GET.get("task_id",None)
     username = request.session.get("username", None)
+    userinfo = UserInfo.objects.filter(username=username)
     taskid = taskidMD5(username)
     request.session['taskidMD5'] = taskid
     taskinfo = tasks.objects.all().filter(id=input_task_id)
     imglist = IMG.objects.all().filter(task_id=input_task_id)
-    context = {"username":username,"taskinfo":taskinfo[0],"imglist":imglist,"task_id":input_task_id}
+    context = {"userinfo":userinfo[0],"taskinfo":taskinfo[0],"imglist":imglist,"task_id":input_task_id}
     if input_task_id != None:
         if request.method == "POST":
             taskinfolist = tasks.objects.all()
-            context = {"username":username,"taskinfolist":taskinfolist}
+            context = {"userinfo":userinfo[0],"taskinfolist":taskinfolist}
             input_tasktype = request.POST.get("type",None)
             input_title = request.POST.get("title",None)
             input_description = request.POST.get("description",None)
@@ -143,6 +148,7 @@ def edittask(request):
 @login_require
 def deltask(request):
     username = request.session.get("username", None)
+    userinfo = UserInfo.objects.filter(username=username)
     taskinfolist = tasks.objects.all()
     """获取复选框内容"""
     check_box_list = request.GET.getlist('ids[]')
@@ -159,11 +165,12 @@ def deltask(request):
 
         
 
-    context = {"username":username,"taskinfolist":taskinfolist}
+    context = {"userinfo":userinfo[0],"taskinfolist":taskinfolist}
     return HttpResponseRedirect('/task/tasklist.html',context)
 @login_require
 def starttask(request):
     username = request.session.get("username", None)
+    userinfo = UserInfo.objects.filter(username=username)
     taskinfolist = tasks.objects.all()
     """获取复选框值"""
     check_box_list = request.GET.getlist('ids[]')
@@ -178,13 +185,14 @@ def starttask(request):
         if taskinfo[0].s_time == None:
             input_stime = initTime() 
             taskinfo.update(s_time=input_stime)
-    context = {"username":username,"taskinfolist":taskinfolist}
+    context = {"userinfo":userinfo[0],"taskinfolist":taskinfolist}
     return HttpResponseRedirect('/task/tasklist.html',context)
 @login_require
 def complatetask(request):
     username = request.session.get("username", None)
+    userinfo = UserInfo.objects.filter(username=username)
     taskinfolist = tasks.objects.all()
-    context = {"username":username,"taskinfolist":taskinfolist}
+    context = {"userinfo":userinfo[0],"taskinfolist":taskinfolist}
     """获取复选框值"""
     check_box_list = request.GET.getlist('ids[]')
     """获取taskid对象"""
@@ -201,10 +209,11 @@ def complatetask(request):
 def add_task_point(request):
     input_task_id = request.GET.get("task_id",None)
     username = request.session.get("username", None)
+    userinfo = UserInfo.objects.filter(username=username)
     task_point_info = task_point.objects.all().filter(task_id=input_task_id)
-    context = {"username":username,"task_point_info":task_point_info,"task_id":input_task_id}
+    context = {"userinfo":userinfo[0],"task_point_info":task_point_info,"task_id":input_task_id}
     if input_task_id != None:
-        context = {"username":username,"task_point_info":task_point_info,"task_id":input_task_id}
+        context = {"userinfo":userinfo[0],"task_point_info":task_point_info,"task_id":input_task_id}
         if request.method == "POST":
             input_ctime = initTime()
             input_status = request.POST.get("type",None)
@@ -229,16 +238,17 @@ def add_task_point(request):
                     new_task_point.save()
               
     else:
-        context = {"username":username,"task_point_info":task_point_info,"status":"没有如此ID","task_id":None}
+        context = {"userinfo":userinfo[0],"task_point_info":task_point_info,"status":"没有如此ID","task_id":None}
     return render(request,'task/add_task_point.html',context)
 
 @login_require
 def del_task_point(request):
     username = request.session.get("username", None)
+    userinfo = UserInfo.objects.filter(username=username)
     input_task_id = request.GET.get("task_id",None)
     input_task_point_id = request.GET.get("task_point_id",None)
     task_point_info = task_point.objects.all().filter(task_id=input_task_id)
-    context = {"username":username,"task_point_info":task_point_info,"status":"没有如此ID"}
+    context = {"userinfo[0]":userinfo[0],"task_point_info":task_point_info,"status":"没有如此ID"}
     task_point_info = task_point.objects.all().filter(id=input_task_point_id)    
     if len(task_point_info) == 1:
         task_point_info.delete()
@@ -249,12 +259,13 @@ def del_task_point(request):
 @login_require
 def done_task_point(request):
     username = request.session.get("username", None)
+    userinfo = UserInfo.objects.filter(username=username)
     input_task_id = request.GET.get("task_id",None)
     input_task_point_id = request.GET.get("task_point_id",None)
     taskinfo = tasks.objects.all().filter(id=input_task_id)
     task_point_info = task_point.objects.all().filter(task_id=input_task_id)
     task_point1 = task_point.objects.all().filter(id=input_task_point_id)
-    context = {"username":username,"task_point_info":task_point_info,"task_id":input_task_id,"task_point1":task_point1[0]}
+    context = {"userinfo":userinfo[0],"task_point_info":task_point_info,"task_id":input_task_id,"task_point1":task_point1[0]}
     input_f_time = initTime() 
     if task_point1[0].status != 2:
         task_point1.update(status=2)
@@ -270,11 +281,12 @@ def done_task_point(request):
 @login_require
 def edit_task_point(request):
     username = request.session.get("username", None)
+    userinfo = UserInfo.objects.filter(username=username)
     input_task_id = request.GET.get("task_id",None)
     input_task_point_id = request.GET.get("task_point_id",None)
     task_point_info = task_point.objects.all().filter(task_id=input_task_id)
     task_point1 = task_point.objects.all().filter(id=input_task_point_id)
-    context = {"username":username,"task_point_info":task_point_info,"task_id":input_task_id,"task_point1":task_point1[0]}
+    context = {"userinfo":userinfo[0],"task_point_info":task_point_info,"task_id":input_task_id,"task_point1":task_point1[0]}
     if request.method == "POST":
         input_f_time = initTime() 
         input_title = request.POST.get("title",None)

@@ -292,12 +292,11 @@
             </div>
             <span class="navbar-page-title"> 后台首页 </span>
           </div>
-          
           <ul class="topbar-right">
             <li class="dropdown dropdown-profile">
               <a href="javascript:void(0)" data-toggle="dropdown">
-                <img class="img-avatar img-avatar-48 m-r-10" src="/static/cat.jpg" alt="笔下光年" />
-                <span>{{ username }}<span class="caret"></span></span>
+                <img class="img-avatar img-avatar-48 m-r-10" src="/media/Avatar/{{userinfo.Avatar}}" alt="头像" />
+                <span>{{ userinfo.username }}<span class="caret"></span></span>
               </a>
               <ul class="dropdown-menu dropdown-menu-right">
                 <li> <a href="/users/userinfo"><i class="mdi mdi-account"></i> 个人信息</a> </li>

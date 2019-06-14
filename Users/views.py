@@ -93,7 +93,7 @@ def login(request):
                 elif check_password(input_password,userinfo[0].password):
                     print("登陆成功")
                     request.session["username"] = input_username
-                    context={'username':request.session.get("username")}
+                    context={'userinfo':userinfo[0]}
                     return HttpResponseRedirect('/', context)
                 else:
                     print("密码错误")
@@ -111,8 +111,9 @@ def login(request):
 @login_require
 def userlist(request):
     username = request.session.get("username",None)
+    userinfo = models.UserInfo.objects.all().filter(username=username)
     userlist = models.UserInfo.objects.all()
-    context = {"userlist":userlist,"username":username}
+    context = {"userlist":userlist,"userinfo":userinfo[0]}
     return render(request, 'Users/userlist.html',context)
 
 
@@ -163,13 +164,14 @@ def deluser(request):
     idinfo = models.UserInfo.objects.filter(id=edit_id)
     userinfo = models.UserInfo.objects.all()
     username = request.session.get("username", None)
+    userinfo = models.UserInfo.objects.all().filter(username=username)
     if len(idinfo) == 0 :
-        context = {"error_msg": "没有这个id用户","userinfo":userinfo,"username":username}
+        context = {"error_msg": "没有这个id用户","userinfo":userinfo,"userinfo":userinfo[0]}
         return HttpResponseRedirect( '/users/userlist', context)
     idinfo.delete()
     print("删除成功")
     status="删除成功"
-    context = {"error_msg": status,"userinfo":userinfo,"username":username}
+    context = {"error_msg": status,"userinfo":userinfo,"userinfo":userinfo[0]}
     return HttpResponseRedirect( '/users/userlist', context)
 
 """修改用户"""
@@ -178,28 +180,28 @@ def edituser(request):
     edit_id = request.GET.get("id", None)
     idinfo = models.UserInfo.objects.filter(id=edit_id)
     username = request.session.get("username", None)
-    print(username,idinfo[0].username)
-    context = {"username":username,"idinfo":idinfo[0]}
+    userinfo = models.UserInfo.objects.all().filter(username=username)
+    context = {"userinfo":userinfo[0],"idinfo":idinfo[0]}
     if request.method == "POST":
         input_username = request.POST.get("username",None)
         input_email = request.POST.get("email",None)
         input_active = request.POST.get("active",None)
+        print(input_active)
         input_password = request.POST.get("password",None)    
         edit_id = request.GET.get("id", None)
         username = request.session.get("username", None)
         idinfo = models.UserInfo.objects.filter(id=edit_id)
-        context = {"username":username, "idinfo":idinfo[0]}
         if input_username == "" and input_email == "" and input_active == "" and input_password == "":
             status="输入为空，没有修改！"
-            context = {"error_msg": status,"userinfo":userinfo,"username":username}
-            return HttpResponseRedirect( '/users/userlist', context)
-        elif input_username != "" or input_email !="":
-            userinfo = models.UserInfo.objects.filter(username=input_username) 
+            context = {"error_msg": status,"idinfo":idinfo,"userinfo":userinfo[0]}
+            return HttpResponseRedirect( '/users/edituser?id={_id}'.format(_id=edit_id), context)
+        if input_username != "" or input_email !="" :
+            edit_userinfo = models.UserInfo.objects.filter(username=input_username) 
             emailinfo = models.UserInfo.objects.filter(email=input_email) 
-            if len(userinfo) > 0 or len(emailinfo) > 0:
+            if len(edit_userinfo) > 0 or len(emailinfo) > 0:
                 status="用户名或者邮箱已存在，不能修改！"
-                context = {"error_msg": status,"userinfo":userinfo,"username":username}
-                return HttpResponseRedirect( '/users/userlist', context)
+                context = {"error_msg": status,"idinfo":idinfo,"userinfo":userinfo[0]}
+                return HttpResponseRedirect('/users/edituser?id={_id}'.format(_id=edit_id), context)
         if input_username != "":
             idinfo.update(username=input_username) 
         elif input_email != "":
@@ -208,10 +210,7 @@ def edituser(request):
             idinfo.update(active=input_active)
         elif input_password != "":
             idinfo.update(password=make_password(input_password))
-        status="修改成功，请查阅"
-        userinfo = models.UserInfo.objects.all()
-        context = {"error_msg": status,"userinfo":userinfo,"username":username}
-        return HttpResponseRedirect( '/users/userlist', context)
+        return HttpResponseRedirect('/users/userlist')
     return render(request, 'Users/edituser.html',context)
 
 """用户信息"""
@@ -291,17 +290,18 @@ def editpassword(request):
 @login_require
 def reviewuser(request):
     username = request.session.get("username", None)
+    userinfo = models.UserInfo.objects.all().filter(username=username)
     userlist = models.UserInfo.objects.all().order_by('-active')
-    context = {"username": username,"userlist":userlist}
+    context = {"userinfo": userinfo[0],"userlist":userlist}
     edit_id = request.GET.get("id",None)
     edit_active = request.GET.get("active",None)
     if edit_id == "" or edit_active == "":
         status="修改失败，请联系管理员"
-        context = {"username": username,"userlist":userlist,"error_msg":status}
+        context = {"userinfo": userinfo[0],"userlist":userlist,"error_msg":status}
     else:
         models.UserInfo.objects.filter(id=edit_id).update(active=edit_active)
         status="审核成功" 
-        context = {"username": username,"userlist":userlist,"error_msg":status}
+        context = {"userinfo": userinfo,"userlist":userlist,"error_msg":status}
     return render(request,"Users/reviewuser.html",context)
 
 @login_require
@@ -317,8 +317,8 @@ def Avatar(request):
         img_data = base64.b64decode(img_data[1])
         with open('{_imgdir}/Avatar/{_imgname}'.format(_imgdir=MEDIA_ROOT,_imgname=img_name), 'wb') as f:
             f.write(img_data)
-        if userinfo[0].Avatar_name != "cat.jpg":
-            os.remove(MEDIA_ROOT+ "/Avatar/" + userinfo[0].Avatar_name)
-        userinfo.update(Avatar_name=img_name)
+        if userinfo[0].Avatar != "cat.jpg":
+            os.remove(MEDIA_ROOT+ "/Avatar/" + userinfo[0].Avatar)
+        userinfo.update(Avatar=img_name)
     context = {"username": username,"userinfo":userinfo[0]}
     return HttpResponse ("success")

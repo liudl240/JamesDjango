@@ -37,7 +37,6 @@ def Solve_doc(request):
             title = title ,
             c_time = initTime(),
             content = new_md_name,
-            username_id = userinfo.id,
         )
         new_doc.save()
         """更新文档ID到任务表"""

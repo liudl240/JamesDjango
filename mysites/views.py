@@ -4,10 +4,12 @@ from mysites import models
 from Task.models import  tasks,task_point
 from django.forms.models import model_to_dict
 import random
+from Users.models import UserInfo
 """主页"""
 @login_require
 def index(request):
     username = request.session.get("username",None)
+    userinfo = UserInfo.objects.filter(username=username)
     """返回任务前十，显示在主页"""
     """排序依据是什么: 创建的时间"""
     """任务"""
@@ -37,7 +39,7 @@ def index(request):
         json_dict = model_to_dict(task)
         tasklist_json.append(json_dict)
         """没有子任务的时候，进度则为0%,点击完成则100%"""
-    context = {"username":username,"tasklist":taskinfolist}
+    context = {"userinfo":userinfo[0],"tasklist":taskinfolist}
     return render_to_response('index.html',context)
 
 
@@ -48,7 +50,8 @@ def servicelist(request):
     color ="\"card-header {_color}\"".format(_color=color)
     username = request.session.get("username", None)
     servicelistinfo = models.servicelist.objects.all()
-    context = {"username":username,"servicelistinfo":servicelistinfo,"color":color }
+    userinfo = UserInfo.objects.filter(username=username)
+    context = {"userinfo":userinfo[0],"servicelistinfo":servicelistinfo,"color":color }
     if request.method == "POST":
         input_title = request.POST.get("title",None)
         input_jumpLink = request.POST.get("jumpLink",None)
@@ -58,16 +61,16 @@ def servicelist(request):
         print(input_title,input_jumpLink,input_desLink)
         if input_title == "" or  input_jumpLink == "":
             status="请认证填写，不能为空"
-            context= {"username":username, "error_msg":status,"servicelistinfo":servicelistinfo}
+            context= {"userinfo":userinfo[0], "error_msg":status,"servicelistinfo":servicelistinfo}
             return render(request, 'service/servicelist.html',context)
         elif len(titleinfo) > 0 or len(jumpLinkinfo) > 0:
             status="连接获取标题已存在，请查阅后添加"
-            context= {"username":username, "error_msg":status,"servicelistinfo":servicelistinfo}
+            context= {"userinfo":userinfo[0], "error_msg":status,"servicelistinfo":servicelistinfo}
             return render(request, 'service/servicelist.html',context)
         else:
             models.servicelist.objects.create(title=input_title,jumpLink=input_jumpLink,desLink=input_desLink)
             status="提交成功"
-            context= {"username":username, "error_msg":status,"servicelistinfo":servicelistinfo}
+            context= {"userinfo":userinfo[0], "error_msg":status,"servicelistinfo":servicelistinfo}
             return render(request, 'service/servicelist.html',context)
     return render(request, 'service/servicelist.html',context)
 
@@ -75,15 +78,16 @@ def servicelist(request):
 @login_require
 def editservice(request):
     username = request.session.get("username", None)
+    userinfo = UserInfo.objects.filter(username=username)
     servicelistinfo = models.servicelist.objects.all()
     edit_id = request.GET.get("id",None)
     print(edit_id)
     idinfo = models.servicelist.objects.filter(id=edit_id)
     if len(idinfo) == 0:
         status = "没有如此的id号"
-        context = {"username":username,"servicelistinfo":servicelistinfo,"error_msg":status}
+        context = {"userinfo":userinfo[0],"servicelistinfo":servicelistinfo,"error_msg":status}
         return render(request, 'service/servicelist.html',context)
-    context = {"username":username,"servicelistinfo":servicelistinfo,"idinfo":idinfo[0]}
+    context = {"userinfo":userinfo[0],"servicelistinfo":servicelistinfo,"idinfo":idinfo[0]}
     if request.method == "POST":
         input_title = request.POST.get("title",None)
         input_jumpLink = request.POST.get("jumpLink",None)
@@ -97,12 +101,12 @@ def editservice(request):
         print("testjames001")
         if input_desLink =="" and input_jumpLink == "" and input_title == "":
             status = "没有修改编辑，不能都为空"
-            context= {"username":username, "error_msg":status,"servicelistinfo":servicelistinfo,"idinfo":idinfo[0]}
+            context= {"userinfo":userinfo[0], "error_msg":status,"servicelistinfo":servicelistinfo,"idinfo":idinfo[0]}
             return render(request, 'service/editservice.html',context)
         elif input_title != "" or input_jumpLink != "":
             if len(titleinfo) > 0 or len(jumpLinkinfo) > 0:
                 status="连接获取标题已存在，请查阅后添加"
-                context= {"username":username, "error_msg":status,"servicelistinfo":servicelistinfo,"idinfo":idinfo[0]}
+                context= {"userinfo":userinfo[0], "error_msg":status,"servicelistinfo":servicelistinfo,"idinfo":idinfo[0]}
                 return render(request, 'service/editservice.html',context)
         if input_title != "":
             idinfo.update(title = input_title)
@@ -111,7 +115,7 @@ def editservice(request):
         elif input_desLink != "":
             idinfo.update(desLink=input_desLink)
         status="提交成功"
-        context= {"username":username, "error_msg":status,"servicelistinfo":servicelistinfo,"idinfo":idinfo[0]}
+        context= {"userinfo":userinfo[0], "error_msg":status,"servicelistinfo":servicelistinfo,"idinfo":idinfo[0]}
         return render(request, 'service/editservice.html',context)
 
 
@@ -145,12 +149,13 @@ def delservice(request):
     idinfo = models.servicelist.objects.filter(id=edit_id)
     servicelistinfo = models.servicelist.objects.all()
     username = request.session.get("username", None)
+    userinfo = UserInfo.objects.filter(username=username)
 
     if len(idinfo) == 0 :
-        context = {"error_msg": "没有这个id","username":username}
+        context = {"error_msg": "没有这个id","userinfo":userinfo[0]}
         return HttpResponseRedirect( 'service/servicelist.html', context)
     idinfo.delete()
-    context = {"error_msg":"删除成功","servicelistinfo":servicelistinfo,"username":username}
+    context = {"error_msg":"删除成功","servicelistinfo":servicelistinfo,"userinfo":userinfo[0]}
     return render(request,'service/servicelist.html',context)
 
 """404页面"""
