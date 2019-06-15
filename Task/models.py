@@ -24,7 +24,7 @@ class tasks(models.Model):
     tasktype = models.SmallIntegerField(choices=GENDER_CHOICES, default=1, verbose_name='任务类型')
     title = models.CharField(max_length=128,null=False)
     description = models.FileField(null=True)
-    tags = models.CharField(max_length=128,unique=True)
+    tags = models.CharField(max_length=200,null=True)
     """创建时间""" 
     c_time = models.DateTimeField(null=False)
     """开始时间""" 
