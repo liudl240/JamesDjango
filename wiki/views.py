@@ -29,7 +29,7 @@ def Solve_doc(request):
         title = taskinfo.title
         """markdown文件名字"""
         new_md_name = NameMD5()
-        with open("{_dir}/wiki/doc/{_docname}".format(_dir=MEDIA_ROOT,_docname=new_md_name), "w") as f:
+        with open("{_dir}/wiki/doc/{_docname}".format(_dir=MEDIA_ROOT,_docname=new_md_name), "w",encoding='utf-8') as f:
             f.write("# 请开始你的表演")
             f.close()
         """写入数据库"""
@@ -37,6 +37,7 @@ def Solve_doc(request):
             title = title ,
             c_time = initTime(),
             content = new_md_name,
+            username_id = username,
         )
         new_doc.save()
         """更新文档ID到任务表"""
@@ -66,9 +67,9 @@ def savedoc(request):
         #文件名
         doc_name = docinfo[0].content.split(".md")[0]
         doc_markdown_name = "{_dir}/wiki/doc/{_docname}".format(_dir=MEDIA_ROOT,_docname=doc_name)
-        with open("{}.md".format(doc_markdown_name), 'w') as f :
+        with open("{}.md".format(doc_markdown_name), 'w',encoding='utf-8') as f :
             f.close()
-        with open("./templates/wiki/doc/{}.html".format(doc_name),'w') as f:
+        with open("./templates/wiki/doc/{}.html".format(doc_name),'w',encoding='utf-8') as f:
             f.write(doc_html)
             f.close()
         docinfo.update(title=title)
