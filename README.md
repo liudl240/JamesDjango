@@ -25,7 +25,7 @@ docker-compose -d up .
 > 创建数据库
 ```
 mysql -uroot -h127.0.0.1 -p
-create database db_name default character set utf8 collate utf8_general_ci;
+create database JamesOps default character set utf8 collate utf8_general_ci;
 ```
 
 
