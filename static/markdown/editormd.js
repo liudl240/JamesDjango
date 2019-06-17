@@ -3910,7 +3910,7 @@
             emailLink            : true,    // for mail address auto link
             tex                  : false,
             taskList             : false,   // Github Flavored Markdown task lists
-            emoji                : false,
+            emoji                : true,
             flowChart            : false,
             sequenceDiagram      : false,
             previewCodeHighlight : true

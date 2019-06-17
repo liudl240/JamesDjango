@@ -66,6 +66,7 @@ def savedoc(request):
         print(title)
         #markdown
         doc_markdown = request.POST.get("test-editormd-markdown-doc",None)
+        print(doc_markdown)
         # 文件名
         doc_name = docinfo[0].content
         print(doc_name)
