@@ -6,7 +6,6 @@ urlpatterns = [
     url('wikilist', views.wikilist, name='wikilist'),
     url('Solve_doc', views.Solve_doc, name='Solve_doc'),
     url('savedoc', views.savedoc, name='savedoc'),
-    url('adddoc', views.adddoc, name='adddoc'),
     url('editdoc', views.editdoc, name='editdoc'),
     url('deldoc', views.deldoc, name='deldoc'),
 ]

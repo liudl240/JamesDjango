@@ -6,6 +6,7 @@ from Users.models import UserInfo
 from wiki.docname import NameMD5
 from Users.initTime import initTime
 import markdown
+from Task.makeTaskid import taskidMD5,tag_tagcolor
 
 # Create your views here.
 
@@ -48,11 +49,14 @@ def Solve_doc(request):
     else:
         doc_id = taskinfo.doc_id
         docinfo = doc.objects.all().filter(id=doc_id)
-        html = "wiki/doc/{}.html".format(docinfo[0].content.split(".md")[0])
-        return render(request,html) 
+        # 获取tag
+        taskinfo = tasks.objects.all().filter(id=taskinfo.id)
+        taskinfo = tag_tagcolor(taskinfo)
+        content = {"docinfo": docinfo,"taskinfo":taskinfo[0]}
+        return render(request,'wiki/showdoc.html',content) 
     return render(request, "wiki/adddoc.html",content) 
 
-""""""
+"""保存文档"""
 def savedoc(request):
     doc_id = request.GET.get("doc_id",None) 
     if request.method == "POST":
@@ -62,45 +66,41 @@ def savedoc(request):
         print(title)
         #markdown
         doc_markdown = request.POST.get("test-editormd-markdown-doc",None)
-        #html
-        doc_html = request.POST.get("test-editormd-html-code",None)
-        #文件名
-        doc_name = docinfo[0].content.split(".md")[0]
+        # 文件名
+        doc_name = docinfo[0].content
+        print(doc_name)
         doc_markdown_name = "{_dir}/wiki/doc/{_docname}".format(_dir=MEDIA_ROOT,_docname=doc_name)
-        with open("{}.md".format(doc_markdown_name), 'w',encoding='utf-8') as f :
-            f.close()
-        with open("./templates/wiki/doc/{}.html".format(doc_name),'w',encoding='utf-8') as f:
-            f.write(doc_html)
+        print(doc_markdown_name)
+        # 写入文件
+        with open("{}".format(doc_markdown_name), 'w',encoding='utf-8') as f :
+            f.write(doc_markdown)
             f.close()
         docinfo.update(title=title)
     return HttpResponseRedirect('/task/tasklist')
 
  
 """添加文章"""
-def adddoc(request):
-    username = request.session.get("username",None)
-    userinfo = UserInfo.objects.all().filter(username=username)
-
-    taskid = request.GET.get("task")
-    if request.method == "POST":
-        #获取titile
-        title = request.POST.get("title",None)
-        print(title)
-        #markdown
-        doc_markdown = request.POST.get("test-editormd-markdown-doc",None)
-        #html
-        doc_html = request.POST.get("test-editormd-html-code",None)
-        #文件名
-        doc_markdown_name = "{_dir}/wiki/doc/{_docname}".format(_dir=MEDIA_ROOT,_docname="abc")
-        #doc_html_name = 
-        with open("{}.md".format(doc_markdown_name), 'w') as f :
-            f.write(doc_markdown)  
-            f.close()
-        with open("{}.html".format("./templates/abc"),'w') as f:
-            f.write(doc_html)  
-            f.close()
-        return HttpResponseRedirect('/wiki/adddoc.html')
-    return render(request, "wiki/adddoc.html")
+#def adddoc(request):
+#    username = request.session.get("username",None)
+#    userinfo = UserInfo.objects.all().filter(username=username)
+#
+#    taskid = request.GET.get("task")
+#    if request.method == "POST":
+#        #获取titile
+#        title = request.POST.get("title",None)
+#        print(title)
+#        #markdown
+#        doc_markdown = request.POST.get("test-editormd-markdown-doc",None)
+#        #html
+#        doc_html = request.POST.get("test-editormd-html-code",None)
+#        #文件名
+#        doc_markdown_name = "{_dir}/wiki/doc/{_docname}".format(_dir=MEDIA_ROOT,_docname="abc")
+#        #doc_html_name = 
+#        with open("{}.md".format(doc_markdown_name), 'w') as f :
+#            f.write(doc_markdown)  
+#            f.close()
+#        return HttpResponseRedirect('/wiki/adddoc.html')
+#    return render(request, "wiki/adddoc.html")
 
 
 
@@ -109,10 +109,18 @@ def deldoc(request):
     pass
 
 
-
+"""查看文章"""
+def showdoc(request):
+    pass
 
 
 
 """编辑文档"""
 def editdoc(request):
-    pass
+    doc_id = request.GET.get("id",None) 
+    if doc_id != None:
+        docinfo =  doc.objects.all().filter(id=doc_id)
+        content = {"docinfo":docinfo}
+    else:
+        return HttpResponse("文章不存在，不能编辑")
+    return render(request, "wiki/adddoc.html",content) 

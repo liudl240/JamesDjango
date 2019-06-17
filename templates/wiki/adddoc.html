@@ -1,38 +1,41 @@
 <!DOCTYPE html>
 <html lang="zh">
     <head>
+        {% for doc in docinfo %}
         <meta charset="utf-8" />
-        <title>Form get textarea value - Editor.md examples</title>
+        <title>{{ doc.title}}</title>
         <link rel="stylesheet" href="/static/markdown/examples//css/style.css" />
         <link rel="stylesheet" href="/static/markdown/css/editormd.css" />
-        <link rel="shortcut icon" href="https://pandao.github.io/editor.md/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="/static/cat.jpg" type="image/ico">
+        <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/static/css/materialdesignicons.min.css" rel="stylesheet">
     </head>
     <body>
-            {% for doc in docinfo %}
         <div id="layout">
-            <header>
-                <h1>添加文章</h1>   
-            </header>
+          <ul class="nav nav-tabs page-tabs">
+           <li> <a href="/wiki/wikilist">文章列表</a> </li>
+           <li class="active"> <a href="#!">编辑文章</a> </li>
+           <li> <a onclick="javascript:history.back(-1);return false;">返回</a> </li>
+          </ul>
             <form method="post" action="/wiki/savedoc?doc_id={{ doc.id }}">
                 <input type="text" class="form-control" id="title" name="title" value="{{ doc.title }}" placeholder="请输入标题" />
                 <div id="test-editormd">
                     <!-- Custom textarea name attribute <textarea style="display:none;" name="test-textarea-name"> -->
-                    <textarea style="display:none;">
-</textarea>
+                    <textarea style="display:none;"></textarea>
                 </div>
                 <div style="width:90%;margin: 10px auto;">
-                    <input type="submit" name="submit" value="提交表单 Submit" style="padding: 5px;" /> 
+                    <input class="btn  btn-success" type="submit" name="submit" value="发布文章" style="padding: 5px;" /> 
                 </div>               
             </form>
-        </div>        
+         </div>        
         <script src="/static/markdown/examples/js/jquery.min.js"></script>
         <script src="/static/markdown/editormd.js"></script>   
         <script type="text/javascript">
             $(function() {
                 $.get("/media/wiki/doc/{{ doc.content }}", function(md) {
                     var testEditor = editormd("test-editormd", {
-                        width  : "90%",
-                        height : 640,
+                        width  : "100%",
+                        height : 800,
                         path   : "/static/markdown/lib/",
                         appendMarkdown : md,
                         saveHTMLToTextarea : true
@@ -44,6 +47,6 @@
                 //testEditor.getPreviewedHTML();  // 获取预览窗口里的 HTML，在开启 watch 且没有开启 saveHTMLToTextarea 时使用
             });
         </script>
-            {% endfor %}
+      {% endfor %}
     </body>
 </html>
