@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <title>JamesOps 自动化运维文档</title>
+<link rel="icon" href="/static/cat.jpg" type="image/ico">
+<link href="/static/css/bootstrap.min.css" rel="stylesheet">
+<link href="/static/css/materialdesignicons.min.css" rel="stylesheet">
+<link href="/static/css/style.min.css" rel="stylesheet">
+
+ <style>
+ body{
+ background-color: #F0F0F0;
+ }
+ *{
+ border: 0px;
+ padding: 0px;
+ margin: 0px;
+ font-size: 14px;
+ }
+ a:hover{color:red;text-decoration:none;}
+ #top{
+ width: 100%;
+ height: 90px;
+ background-color: white;
+ border-bottom: 1px solid #bbbbbb;
+ }
+ #menu{
+ width: 1000px;
+ overflow: hidden;
+ margin: 0 auto;
+
+ }
+ #menu img{
+ height: 90px;
+ }
+ #menu ul{
+ list-style-type: none;
+
+ }
+ #menu ul li{
+ float: left;
+ height: 90px;
+ line-height: 90px;
+ margin-right: 50px;
+
+ }
+ #menu ul li a{
+ color: black;text-decoration: none;
+ display: inline-block;
+
+ }
+ #menu ul li a:hover{color: #65b5ff;text-decoration: none}
+ #box{
+ width: 900px;
+ height: 370px;
+ background-color: white;
+ margin: 0 auto;
+ margin-top: 50px;
+ padding: 50px;
+ }
+ #box p{
+ text-align: center;
+ }
+ #box-form{
+
+ text-align: center;
+ }
+ .p_line{
+ border-bottom: 1px solid #bbbbbb;
+ height: 40px;
+ line-height: 50px;
+ }
+ .txtBox{
+ border: 1px solid #bbbbbb;
+ width: 350px;
+ margin-top: 30px;
+ height: 50px;
+ padding-left: 10px;
+ border-radius: 5px;
+ }
+ .btn {
+ width: 365px;
+ height: 50px;;
+ color: white;
+ background-color: #DD0000;
+ margin-top: 25px;
+ }
+ #bottom{
+ width:100%;
+ background-color:#323333;
+ height:300px;
+ margin-top:70px;
+ }
+ #bottom-content{
+ width:1000px;
+ overflow:hidden;
+ margin:0 auto;
+ color:white;
+ height:280px;
+ }
+ #content-left{
+ width:460px;
+ float:left;
+ height:280px;
+ }
+ #bottom-content p{
+ margin-top:10px;
+ }
+ #content-right{
+ width:460px;
+ float:right;
+ height:280px;
+ text-align: center;
+ margin-top: 40px;
+ }
+ .color{
+ color: #323333;
+ }
+ #blog{
+ width: 1000px;
+ overflow: hidden;
+ margin: 0 auto;
+
+ margin-top: 20px;
+ }
+ #blog ul{
+ list-style-type: none;
+ }
+ #blog ul li{
+ background-color: white;
+ padding: 20px;
+ width: 100%;
+ overflow: hidden;
+ margin-top: 15px;
+ }
+ .blog-left{
+ float: left;
+ width: 680px;
+ overflow: hidden;
+
+ }
+ .blog-right{
+ float: left;
+ margin-left: 10px;
+
+ width: 280px;
+ overflow: hidden;
+ }
+ .blog-right img{
+ width: 280px;
+ height: 200px;
+ }
+ .title{
+ text-decoration:none;
+ font-size: 26px;
+ }
+ .blog-left p{
+ color: gray;
+ }
+ .blog-left img{
+ width: 20px;
+ margin-right: 10px;
+ vertical-align: middle;
+ }
+ .page{
+ height: 40px;
+ margin-top: 10px;
+ text-align: center;
+ padding-top: 20px;
+ }
+ .page a{
+ border: 1px solid #71b0bb;
+ text-decoration: none;
+ margin: 5px;
+ padding: 5px 10px;
+ }
+ .page a:link,.page a:visited{
+ color: #000000;
+ }
+ .page a:hover,.page a:active{
+ color: #FFF;
+ background-color: #bbac5c;
+ }
+ .mi{
+ padding-left: 90px;
+
+ }
+ #blog-content{
+ width: 940px;
+ overflow: hidden;
+ padding: 30px;
+ background-color: white;
+ margin: 0 auto;
+ border-top: 2px solid #e2b709;
+ margin-top: 30px;
+ }
+ .siztitle{
+ font-size: 28px;
+ text-align: center;
+
+ }
+ #blog-content p{
+ color: black;
+ }
+ #blog-content img{
+ width: 20px;
+ margin-right: 10px;
+ vertical-align: middle;
+ }
+ .rev{
+ border-left: 2px solid #e2b709;
+ width: 100%;
+ overflow: hidden;
+
+ margin-top: 20px;
+ padding-left: 10px;
+
+ }
+ .content{
+ margin-top: 20px;
+ line-height: 28px;
+ }
+ .pl-p{
+ width: 1000px;
+ overflow: hidden;
+ margin: 0 auto;
+ margin-top: 20px;
+ font-size: 20px;
+ padding-left: 20px;
+ }
+ #pl-div{
+ width: 920px;
+ padding: 40px;
+ background-color: white;
+ overflow: hidden;
+ margin: 0 auto;
+ margin-top: 30px;
+ }
+ #pl-left{
+ float: left;
+ width: 100px;
+ overflow: hidden;
+ text-align: center;
+ }
+ #pl-right{
+ float: left;
+ margin-left: 30px;
+ width: 700px;
+ overflow: hidden;
+ }
+ .pl-txt{
+ border: 1px solid #777777;padding: 20px
+ }
+ .pl-input1{
+ border: 1px solid #777777;width: 150px;height:30px;margin-top: 30px
+ ;
+ }
+ .pl-input2{
+ background-color: #65b5ff;color: white;width: 110px;height: 40px;margin-left: 580px
+ }
+* {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    height: 30px;
+    width: 800px;
+    margin: 10px auto 0 auto;
+}
+.parent {
+    position: relative;
+}
+.search {
+    width: 800px;
+    height: 40px;
+    border-radius: 18px;
+    outline: none;
+    border: 1px solid #ccc;
+    padding-left: 20px;
+    position: absolute;
+}
+.btn {
+    height: 35px;
+    width: 35px;
+    position: absolute;
+    background: url("images/topbar.png") no-repeat -2px -99px;
+    top: 6px;
+    left: 285px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+ </style>
+</head>
+<body>
+<div id="top">
+ <div id="menu">
+ <ul>
+ <li><img src=/static/cat.jpg ></li>
+ <li><a href="/">首页</a></li>
+ <li><a href="/task/tasklist">任务列表</a></li>
+ <li> <a  onclick="javascript:history.back(-1);return false;">返回</a> </li>
+ </div>
+</div>
+<div class="container" action="/wiki/wikilist">
+    <form action="" class="parent">
+        <input type="text" name="search" class="search" placeholder="搜索">
+        <input type="button" name="" id="" class="btn">
+    </form>
+</div>
+<div id="blog">
+ <ul>
+  {% for docinfo in page.object_list %}
+ <li>
+ <div class="blog">
+ <p ><a href="/wiki/showdoc?doc_id={{ docinfo.id}}" class="title">{{docinfo.title}}</a></p>
+ <p style="margin-top: 20px">{{ docinfo.description|safe|truncatechars:200}}</p>
+</dev>
+ <div class="blog-left">
+ <p style="margin-top: 20px"><img src="/static/images/avator.png" >{{ docinfo.username }}<img src="/static/images/time.png" style="margin-left: 20px">{{ docinfo.c_time }}</p>
+ </div>
+ </li>
+{% endfor %}
+ </ul>
+</div>
+         </form>
+                <ul class="pager ">
+                  {# 如果当前页还有上一页 #}
+                  {% if page.has_previous %}
+                      <li>
+                          {# 点击a标签，跳转到上一页链接 ?index  为地址后面拼接的参数 #}
+                          <a href="?index={{page.previous_page_number}}">上一页</a>
+                      </li>
+                  {% else %}
+                      {# 如果没有上一页， 则上一页按钮不可点击 #}
+                      <li class="disabled">
+                          <a href="#">上一页</a>
+                      </li>
+                  {% endif %}
+                  {% for page_number in paginator.page_range %}
+                  {# 获取当前页的页码 #}
+            {% if page_number == page.number %}
+                {# 如果是当前页的话，选中 #}
+                <li class="active">
+                    <a href="?index={{page_number}}">{{page_number}}</a>
+                </li>
+            {% else %}
+                <li>
+                    <a href="?index={{page_number}}">{{page_number}}</a>
+                </li>
+            {% endif %}
+        {% endfor %}
+
+        {% if page.has_next %}
+            <li>
+                <a href="?index={{page.next_page_number}}">下一页</a>
+            </li>
+        {% else %}
+        <li class="disabled">
+            <a href="#">下一页</a>
+        </li>
+        {% endif %}
+</body>
+</html>

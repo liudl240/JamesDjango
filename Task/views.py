@@ -23,26 +23,25 @@ def tasklist(request):
     input_title = request.POST.get('title') 
     input_username = request.POST.get('username') 
     input_status = request.POST.get('status') 
-    input_search_field = None
-    input_keyword = None
+    input_search_field = "title"
+    input_keyword = ""
     if request.method == "POST":
         input_search_field = request.POST.get("search_field")
         input_keyword = request.POST.get("keyword",None)
-        if input_keyword != None:
-            """标题检索"""
-            if input_search_field == "title":
-                taskinfolist = tasks.objects.all().filter(title__icontains=input_keyword)
-            """作者检索"""
-            if input_search_field == "username":
-                taskinfolist = tasks.objects.all().filter(username=input_keyword)
-            """状态检索"""
-            if input_search_field == "status":
-                status_code = choices_switch("GENDER_CHOICES1",input_keyword)
-                taskinfolist = tasks.objects.all().filter(status=status_code )  
-            """类型检索"""
-            if input_search_field == "tasktype":
-                tasktype_code = choices_switch("GENDER_CHOICES",input_keyword)
-                taskinfolist = tasks.objects.all().filter(tasktype=tasktype_code)
+        """标题检索"""
+        if input_search_field == "title":
+            taskinfolist = tasks.objects.all().filter(title__icontains=input_keyword)
+        """作者检索"""
+        if input_search_field == "username":
+            taskinfolist = tasks.objects.all().filter(username=input_keyword)
+        """状态检索"""
+        if input_search_field == "status":
+            status_code = choices_switch("GENDER_CHOICES1",input_keyword)
+            taskinfolist = tasks.objects.all().filter(status=status_code )  
+        """类型检索"""
+        if input_search_field == "tasktype":
+            tasktype_code = choices_switch("GENDER_CHOICES",input_keyword)
+            taskinfolist = tasks.objects.all().filter(tasktype=tasktype_code)
 
     tasklist_json = tag_tagcolor(taskinfolist)
 
@@ -69,7 +68,7 @@ def tasklist(request):
 
 @login_require
 def taskinfo(request):
-    username = request.session.get("username", None)
+    username = request.session.get("username",None)
     userinfo = UserInfo.objects.filter(username=username)
     input_task_id = request.GET.get("task_id",None)
     taskinfo = tasks.objects.all().filter(id=input_task_id)
@@ -219,7 +218,7 @@ def add_task_point(request):
             input_status = request.POST.get("type",None)
             input_title = request.POST.get("title",None) 
             if input_title != None:
-                if input_status == 2:
+                if input_status != 2:
                     new_task_point = task_point(
                         title = input_title,
                         c_time = input_ctime,

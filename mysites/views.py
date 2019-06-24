@@ -39,7 +39,7 @@ def index(request):
         json_dict = model_to_dict(task)
         tasklist_json.append(json_dict)
         """没有子任务的时候，进度则为0%,点击完成则100%"""
-    context = {"userinfo":userinfo[0],"tasklist":taskinfolist}
+    context = {"userinfo":userinfo[0],"tasklist":taskinfolist[:9]}
     return render_to_response('index.html',context)
 
 
