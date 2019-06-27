@@ -14,7 +14,10 @@ import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+TMP_DIR = os.path.join(BASE_DIR, 'tmp')
 
+if not os.path.isdir(TMP_DIR):
+    os.makedirs(TMP_DIR)
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
@@ -43,6 +46,8 @@ INSTALLED_APPS = [
     'Task',
     'wiki',
     'upload',
+    'jumpserver',
+    'channels',
 ]
 
 MIDDLEWARE = [
@@ -55,7 +60,9 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+ASGI_APPLICATION = 'jumpserver.routing.application'
 ROOT_URLCONF = 'JamesDjango.urls'
+
 
 TEMPLATES = [
     {
@@ -73,7 +80,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'JamesDjango.wsgi.application'
+WSGI_APPLICATION = 'jumpserver.wsgi.application'
 
 
 # Database
