@@ -1,0 +1,93 @@
+{% extends "bases/sidebar.html" %}
+{% block content %} 
+    </header>
+    <!--End 头部信息-->
+    
+    <!--页面主要内容-->
+    <main class="lyear-layout-content">
+      
+      <div class="container-fluid">
+        
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="card">
+              <ul class="nav nav-tabs page-tabs">
+                <li> <a href="/monitor/company/addinfo">添加信息</a> </li>
+                <li class="active"> <a href="/monitor/company/editinfo">修改信息</a> </li>
+              </ul>
+              <div class="tab-content">
+                <div class="tab-pane active">
+                  <form action="#!" method="post" name="edit-form" class="edit-form">
+                 {% for info in companyinfo %} 
+                    <div class="form-group">
+                      <label for="company">公司</label>
+                      <input class="form-control" type="text" id="company" name="company" value="{{ info.company }}" placeholder="" >
+                      <small class="help-block"><code>从那个公司购买的服务</code></small>
+                   </div>
+                    <div class="form-group">
+                      <label for="product">产品</label>
+                      <input class="form-control" type="text" id="product" name="product" value="{{ info.product }}" placeholder="" >
+                    </div>
+                    <div class="form-group">
+                      <label for="price">价格</label>
+                      <input class="form-control" type="text" id="price" name="price" value="{{ info.price }}" placeholder="" >
+                    </div>
+
+                   <div class="form-group"><h4>时间</h4></div>
+                     <div class="input-daterange input-group">
+                      <input class="form-control js-datepicker" data-date-format="yyyy-mm-dd" type="text" id="buy_time" name="buy_time" placeholder="" value={{info.buy_time}}>
+                      <span class="input-group-addon"><i class="mdi mdi-chevron-right"></i></span>
+                       <input class="form-control js-datepicker" data-date-format="yyyy-mm-dd" type="text" id="exprie_time" name="exprie_time" placeholder="" value="{{info.exprie_time}}">
+                    </div>
+                  </div>
+                    <div class="form-group">
+                      <label for="application">用途</label>
+                      <textarea class="form-control" id="application" rows="5" name="application" placeholder="购买产品主要用来干嘛" >{{ info.application }}</textarea>
+                    </div>
+                    <div class="form-group">
+                      <label for="num">购买数量</label>
+                      <input class="form-control" type="text" id="num" name="num" value="{{ info.num }}" placeholder="" >
+                    </div>
+
+                    <div class="form-group">
+                      <label for="urladdress">查询详情的地址</label>
+                      <input class="form-control" type="text" id="urladdress" name="urladdress" value="{{ info.urladdress }}" placeholder="请输入查找详情的地址" >
+                    </div>
+                      <button type="submit" class="btn btn-primary m-r-5">确 定</button>
+                      <button type="button" class="btn btn-default" onclick="javascript:history.back(-1);return false;">返 回</button>
+                    </div>
+                {% endfor %}    
+                  </form>
+                  
+                </div>
+              </div>
+
+            </div>
+          </div>
+          
+        </div>
+        
+      </div>
+      
+    </main>
+    <!--End 页面主要内容-->
+  </div>
+</div>
+
+<script type="text/javascript" src="/static/js/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/static/js/perfect-scrollbar.min.js"></script>
+<!--时间选择插件-->
+<script src="/static/js/bootstrap-datetimepicker/moment.min.js"></script>
+<script src="/static/js/bootstrap-datetimepicker/bootstrap-datetimepicker.min.js"></script>
+<script src="/static/js/bootstrap-datetimepicker/locale/zh-cn.js"></script>
+<!--日期选择插件-->
+<script src="/static/js/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+<script src="/static/js/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min.js"></script>
+<script type="text/javascript" src="/static/js/main.min.js"></script>
+
+<script type="text/javascript">
+
+</body>
+</html>
+{% endblock content %} 

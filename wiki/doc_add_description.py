@@ -18,5 +18,4 @@ def doc_add_description(docinfolist):
                  if line[0] == ">": 
                      description = description + line
         docinfo["description"] = description
-        print(docinfo["description"])
     return docinfo_json 

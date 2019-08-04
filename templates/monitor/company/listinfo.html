@@ -1,0 +1,161 @@
+{% extends "bases/sidebar.html" %}
+{% block content %} 
+    <!--页面主要内容-->
+    <main class="lyear-layout-content">
+      
+      <div class="container-fluid">
+        
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="card">
+
+         <ul class="nav nav-tabs page-tabs">
+           <li class="active"> <a href="/monitor/company/listinfo">所有购买产品</a> </li>
+           <li> <a href="/monitor/company/addinfo">添加产品信息</a> </li>
+           <li> <a  onclick="javascript:history.back(-1);return false;">返回</a> </li>
+         </ul>       
+              <div class="card-toolbar clearfix">
+                <form class="pull-right search-bar" method="POST" action="" role="form">
+                   {% csrf_token %}
+                  <div class="input-group">
+                    <div class="input-group-btn">
+                      <input type="hidden" name="search_field" id="search-field" value="title">
+                      <button class="btn btn-default dropdown-toggle" id="search-btn" data-toggle="dropdown" type="button" aria-haspopup="true" aria-expanded="false">
+                          产品 <span class="caret"></span>
+                      </button>
+                      <ul class="dropdown-menu">
+                        <li> <a tabindex="-1" href="javascript:void(0)" data-field="company">公司</a> </li>
+                        <li> <a tabindex="-1" href="javascript:void(0)" data-field="application">用途</a> </li>
+                        <li> <a tabindex="-1" href="javascript:void(0)" data-field="product">产品</a> </li>
+                      </ul>
+                    </div>
+                    <input type="text" class="form-control" value="{{ input_keyword }}" name="keyword" placeholder="请输入需要检索的内容">
+                  </div>
+                </form>
+                <form name="form1">   
+                <div class="toolbar-btn-action">
+                  <a class="btn btn-primary m-r-5" href="/monitor/company/addinfo"><i class="mdi mdi-plus"></i> 新增</a>
+                  <button type="submit" class="btn btn-info m-r-5 mdi mdi-window-close" onclick="delinfo();">移除</button>
+                </div>
+              </div>
+              <div class="card-body"> 
+                <div class="table-responsive">
+                  <table class="table table-bordered">
+                    <thead>
+                      <tr>
+                        <th>
+                          <label class="lyear-checkbox checkbox-primary">
+                            <input type="checkbox" id="check-all"><span></span>
+                          </label>
+                        </th>
+                        <th>公司</th>
+                        <th>产品</th>
+                        <th>价格</th>
+                        <th>购买时间</th>
+                        <th>过期时间</th>
+                        <th>用途</th>
+                        <th>购买数量</th>
+                        <th>查询数量地址</th>
+                        <th>操作</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {% for info in page.object_list %}
+                      <tr>
+                        <td>
+                          <label class="lyear-checkbox checkbox-primary">
+                            <input type="checkbox" name="ids[]" value="{{info.id}}"><span></span>
+                          </label>
+                        </td>
+                        <td>{{ info.company  }}</td>
+                        <td>{{ info.product }}</td>
+                        <td>{{ info.price }}</td>
+                        <td>{{ info.buy_time }}</td>
+                        <td>{{ info.exprie_time }}</td>
+                        <td>{{ info.application }}</td>
+                        <td>{{ info.num }}</td>
+                        <td>{{ info.urladdress }}</td>
+                        <td>
+                          <div class="btn-group">
+                            <a class="btn btn-xs btn-default" href="monitor/company/editinfo?edit_id={{ info.id }}" title="编辑" data-toggle="tooltip"><i class="mdi mdi-pencil"></i></a>
+                          </div>
+                        </td>
+                        {% endfor %}
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </form>
+
+                <ul class="pagination">
+                  {# 如果当前页还有上一页 #}
+                  {% if page.has_previous %}
+                      <li>
+                          {# 点击a标签，跳转到上一页链接 ?index  为地址后面拼接的参数 #}
+                          <a href="?index={{page.previous_page_number}}">上一页</a>
+                      </li>
+                  {% else %}
+                      {# 如果没有上一页， 则上一页按钮不可点击 #}
+                      <li class="disabled">
+                          <a href="#">上一页</a>
+                      </li>
+                  {% endif %}
+                  {% for page_number in paginator.page_range %}
+                  {# 获取当前页的页码 #}
+            {% if page_number == page.number %}
+                {# 如果是当前页的话，选中 #}
+                <li class="active">
+                    <a href="?index={{page_number}}">{{page_number}}</a>
+                </li>
+            {% else %}
+                <li>
+                    <a href="?index={{page_number}}">{{page_number}}</a>
+                </li>
+            {% endif %}
+        {% endfor %}
+ 
+        {% if page.has_next %}
+            <li>
+                <a href="?index={{page.next_page_number}}">下一页</a>
+            </li>
+        {% else %}
+        <li class="disabled">
+            <a href="#">下一页</a>
+        </li>
+        {% endif %}
+      
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        
+      </div>
+      
+    </main>
+    <!--End 页面主要内容-->
+  </div>
+</div>
+
+<script type="text/javascript" src="/static/js/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/static/js/perfect-scrollbar.min.js"></script>
+<script type="text/javascript" src="/static/js/main.min.js"></script>
+<script type="text/javascript">
+$(function(){
+    $('.search-bar .dropdown-menu a').click(function() {
+        var field = $(this).data('field') || '';
+        $('#search-field').val(field);
+        $('#search-btn').html($(this).text() + ' <span class="caret"></span>');
+    });
+});
+</script>
+<script> 
+    function delinfo(){ 
+    document.form1.action="/monitor/company/delinfo"; 
+    document.form1.submit(); 
+    } 
+    </script>
+</body>
+</html>
+{% endblock content %}

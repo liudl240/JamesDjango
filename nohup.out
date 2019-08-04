@@ -1,0 +1,2371 @@
+Watching for file changes with StatReloader
+HTTP GET / 200 [0.06, 127.0.0.1:51028]
+HTTP GET /users/captcha 200 [0.12, 127.0.0.1:51028]
+HTTP GET / 200 [0.00, 127.0.0.1:51042]
+HTTP GET /static/css/bootstrap.min.css 200 [0.00, 127.0.0.1:51044]
+HTTP GET /static/css/style.min.css 200 [0.00, 127.0.0.1:51042]
+HTTP GET /static/css/materialdesignicons.min.css 200 [0.00, 127.0.0.1:51052]
+HTTP GET /static/js/bootstrap.min.js 200 [0.00, 127.0.0.1:51056]
+HTTP GET /static/js/jquery.min.js 200 [0.00, 127.0.0.1:51062]
+HTTP GET /static/cat.jpg 200 [0.00, 127.0.0.1:51044]
+HTTP GET /static/cat.jpg 200 [0.00, 127.0.0.1:51062]
+HTTP GET /users/captcha 200 [0.02, 127.0.0.1:51056]
+HTTP GET / 200 [0.01, 127.0.0.1:51072]
+HTTP GET /static/css/materialdesignicons.min.css 200 [0.00, 127.0.0.1:51076]
+HTTP GET /static/cat.jpg 200 [0.00, 127.0.0.1:51072]
+HTTP GET /static/cat.jpg 200 [0.00, 127.0.0.1:51076]
+HTTP GET /users/captcha 200 [0.01, 127.0.0.1:51078]
+HTTP GET /static/fonts/materialdesignicons.woff2?v=2.0.46 200 [0.00, 127.0.0.1:51088]
+HTTP POST /users/login 200 [0.60, 127.0.0.1:51088]
+HTTP GET /users/captcha 200 [0.02, 127.0.0.1:51088]
+HTTP POST /users/login 200 [0.21, 127.0.0.1:51088]
+HTTP GET /users/captcha 200 [0.01, 127.0.0.1:51088]
+HTTP POST /users/login 200 [0.01, 127.0.0.1:51120]
+HTTP POST /users/login 200 [0.02, 127.0.0.1:51130]
+HTTP GET /users/captcha 200 [0.01, 127.0.0.1:51138]
+HTTP GET /users/captcha 200 [0.01, 127.0.0.1:51146]
+HTTP POST /users/login 302 [0.30, 127.0.0.1:51146]
+HTTP POST /users/login 302 [0.21, 127.0.0.1:51130]
+HTTP GET / 200 [0.08, 127.0.0.1:51130]
+HTTP POST /users/login 200 [0.01, 127.0.0.1:51170]
+HTTP GET /static/css/bootstrap.min.css 304 [0.00, 127.0.0.1:51178]
+HTTP GET /static/css/style.min.css 304 [0.00, 127.0.0.1:51170]
+HTTP GET /static/css/materialdesignicons.min.css 304 [0.00, 127.0.0.1:51182]
+HTTP GET /static/cat.jpg 304 [0.00, 127.0.0.1:51182]
+HTTP GET /media/Avatar/cat.jpg 200 [0.01, 127.0.0.1:51130]
+HTTP GET /static/js/bootstrap.min.js 304 [0.00, 127.0.0.1:51194]
+HTTP GET /static/js/jquery.min.js 304 [0.00, 127.0.0.1:51198]
+HTTP GET /static/cat.jpg 200 [0.00, 127.0.0.1:51178]
+HTTP POST /users/login 200 [0.01, 127.0.0.1:51170]
+HTTP GET /static/css/bootstrap.min.css 304 [0.00, 127.0.0.1:51178]
+HTTP GET /static/css/style.min.css 304 [0.00, 127.0.0.1:51198]
+HTTP GET /static/css/materialdesignicons.min.css 304 [0.00, 127.0.0.1:51194]
+HTTP GET /static/js/jquery.min.js 304 [0.00, 127.0.0.1:51182]
+HTTP GET /static/cat.jpg 304 [0.00, 127.0.0.1:51178]
+HTTP GET /static/js/bootstrap.min.js 304 [0.00, 127.0.0.1:51170]
+HTTP GET /users/login 200 [0.02, 127.0.0.1:51170]
+HTTP GET /users/captcha 200 [0.01, 127.0.0.1:51212]
+HTTP POST /users/login 302 [0.21, 127.0.0.1:51212]
+HTTP GET / 200 [0.06, 127.0.0.1:51212]
+HTTP GET /static/js/jquery-tags-input/jquery.tagsinput.min.css 200 [0.00, 127.0.0.1:51228]
+HTTP GET /static/js/perfect-scrollbar.min.js 200 [0.01, 127.0.0.1:51212]
+HTTP GET /static/upload/webuploader.css 200 [0.00, 127.0.0.1:51240]
+HTTP GET /static/js/main.min.js 200 [0.00, 127.0.0.1:51228]
+HTTP GET /static/upload/style.css 200 [0.00, 127.0.0.1:51244]
+HTTP GET /static/js/Chart.js 200 [0.00, 127.0.0.1:51250]
+HTTP GET /static/js/bootstrap-datetimepicker/bootstrap-datetimepicker.min.css 200 [0.00, 127.0.0.1:51252]
+HTTP GET /media/Avatar/cat.jpg 200 [0.01, 127.0.0.1:51212]
+HTTP GET / 200 [0.07, 127.0.0.1:51212]
+HTTP GET /static/js/Chart.js 200 [0.00, 127.0.0.1:51212]
+HTTP GET / 200 [0.08, 127.0.0.1:51264]
+HTTP GET / 200 [0.10, 127.0.0.1:51274]
+HTTP GET / 200 [0.06, 127.0.0.1:51280]
+HTTP GET /static/js/Chart.js 200 [0.00, 127.0.0.1:51290]
+HTTP GET / 200 [0.06, 127.0.0.1:51294]
+HTTP GET /static/js/Chart.js 200 [0.00, 127.0.0.1:51304]
+HTTP GET / 200 [0.16, 127.0.0.1:51294]
+HTTP GET /static/js/Chart.js 200 [0.00, 127.0.0.1:51312]
+HTTP GET / 200 [0.06, 127.0.0.1:51294]
+HTTP GET /static/js/Chart.js 200 [0.00, 127.0.0.1:51320]
+HTTP GET /wiki/wikilist 200 [0.08, 127.0.0.1:51326]
+HTTP GET /static/images/avator.png 200 [0.00, 127.0.0.1:51338]
+HTTP GET /static/images/time.png 200 [0.00, 127.0.0.1:51340]
+HTTP GET /wiki/images/topbar.png 200 [0.06, 127.0.0.1:51338]
+HTTP GET /wiki/wikilist?index=2 200 [0.02, 127.0.0.1:51326]
+HTTP GET /wiki/images/topbar.png 200 [0.07, 127.0.0.1:51340]
+HTTP GET /wiki/images/topbar.png 200 [0.06, 127.0.0.1:51326]
+HTTP GET /static/js/Chart.js 200 [0.00, 127.0.0.1:51360]
+HTTP GET /users/login 200 [0.00, 127.0.0.1:51366]
+HTTP GET /static/css/bootstrap.min.css 200 [0.00, 127.0.0.1:51366]
+HTTP GET /static/css/materialdesignicons.min.css 200 [0.00, 127.0.0.1:51368]
+HTTP GET /static/css/style.min.css 200 [0.00, 127.0.0.1:51378]
+HTTP GET /static/js/jquery.min.js 200 [0.00, 127.0.0.1:51382]
+HTTP GET /static/js/bootstrap.min.js 200 [0.00, 127.0.0.1:51388]
+HTTP GET /static/cat.jpg 200 [0.00, 127.0.0.1:51368]
+HTTP GET /static/fonts/materialdesignicons.woff2?v=2.0.46 200 [0.00, 127.0.0.1:51378]
+HTTP GET /users/captcha 200 [0.03, 127.0.0.1:51382]
+HTTP GET /static/cat.jpg 200 [0.00, 127.0.0.1:51388]
+HTTP GET /users/reviewuser 200 [0.02, 127.0.0.1:51396]
+Not Found: /media/Avatar/
+HTTP GET /media/Avatar/ 404 [0.02, 127.0.0.1:51408]
+HTTP GET /users/reviewuser 200 [0.01, 127.0.0.1:51414]
+HTTP GET /static/css/bootstrap.min.css 200 [0.00, 127.0.0.1:51414]
+HTTP GET /static/css/style.min.css 200 [0.00, 127.0.0.1:51418]
+HTTP GET /static/js/jquery.min.js 200 [0.00, 127.0.0.1:51428]
+HTTP GET /static/css/materialdesignicons.min.css 200 [0.00, 127.0.0.1:51430]
+HTTP GET /static/js/bootstrap.min.js 200 [0.00, 127.0.0.1:51418]
+HTTP GET /static/cat.jpg 200 [0.00, 127.0.0.1:51414]
+HTTP GET /users/captcha 200 [0.02, 127.0.0.1:51428]
+HTTP GET /static/fonts/materialdesignicons.woff2?v=2.0.46 200 [0.00, 127.0.0.1:51430]
+HTTP GET /users/captcha 200 [0.02, 127.0.0.1:51440]
+HTTP GET / 200 [0.06, 127.0.0.1:51450]
+HTTP GET / 200 [0.00, 127.0.0.1:51468]
+HTTP GET /static/css/bootstrap.min.css 200 [0.00, 127.0.0.1:51468]
+HTTP GET /static/css/materialdesignicons.min.css 200 [0.00, 127.0.0.1:51482]
+HTTP GET /static/css/style.min.css 200 [0.00, 127.0.0.1:51486]
+HTTP GET /static/js/jquery.min.js 200 [0.01, 127.0.0.1:51492]
+HTTP GET /static/cat.jpg 200 [0.00, 127.0.0.1:51494]
+HTTP GET /users/captcha 200 [0.01, 127.0.0.1:51500]
+HTTP GET /static/js/bootstrap.min.js 200 [0.00, 127.0.0.1:51494]
+HTTP GET /static/fonts/materialdesignicons.woff2?v=2.0.46 200 [0.01, 127.0.0.1:51492]
+HTTP POST /users/login 302 [0.30, 127.0.0.1:51492]
+HTTP GET / 200 [0.06, 127.0.0.1:51492]
+HTTP GET /static/js/jquery-tags-input/jquery.tagsinput.min.css 200 [0.00, 127.0.0.1:51494]
+HTTP GET /static/upload/webuploader.css 200 [0.01, 127.0.0.1:51486]
+HTTP GET /static/js/bootstrap-datetimepicker/bootstrap-datetimepicker.min.css 200 [0.01, 127.0.0.1:51482]
+HTTP GET /static/upload/style.css 200 [0.00, 127.0.0.1:51500]
+HTTP GET /static/js/perfect-scrollbar.min.js 200 [0.00, 127.0.0.1:51482]
+HTTP GET /static/js/main.min.js 200 [0.00, 127.0.0.1:51486]
+HTTP GET /static/js/Chart.js 200 [0.01, 127.0.0.1:51494]
+HTTP GET /media/Avatar/cat.jpg 200 [0.01, 127.0.0.1:51500]
+HTTP GET /favicon.ico 200 [0.14, 127.0.0.1:51494]
+HTTP GET /users/userinfo 200 [0.01, 127.0.0.1:51494]
+HTTP GET /static/Avatar/bootstrap.min.css 200 [0.01, 127.0.0.1:51482]
+HTTP GET /static/Avatar/cropper.min.css 200 [0.01, 127.0.0.1:51494]
+HTTP GET /static/upload/jquery.js 200 [0.00, 127.0.0.1:51500]
+HTTP GET /static/upload/webuploader.js 200 [0.00, 127.0.0.1:51486]
+HTTP GET /static/upload/upload.js 200 [0.01, 127.0.0.1:51494]
+HTTP GET /static/Avatar/cropper.min.js 200 [0.01, 127.0.0.1:51468]
+HTTP GET /static/Avatar/jquery.min.js 200 [0.01, 127.0.0.1:51492]
+HTTP GET /static/Avatar/bootstrap.min.js 200 [0.00, 127.0.0.1:51494]
+HTTP GET /favicon.ico 200 [0.06, 127.0.0.1:51494]
+HTTP GET /users/userinfo 200 [0.01, 127.0.0.1:51494]
+HTTP GET /favicon.ico 200 [0.06, 127.0.0.1:51494]
+HTTP GET / 200 [0.06, 127.0.0.1:51494]
+HTTP GET /favicon.ico 200 [0.06, 127.0.0.1:51494]
+HTTP GET /wiki/wikilist 200 [0.02, 127.0.0.1:51494]
+HTTP GET /static/images/avator.png 200 [0.01, 127.0.0.1:51494]
+HTTP GET /static/images/time.png 200 [0.01, 127.0.0.1:51486]
+HTTP GET /wiki/images/topbar.png 200 [0.12, 127.0.0.1:51492]
+HTTP GET /wiki/showdoc?doc_id=17 200 [0.02, 127.0.0.1:51494]
+HTTP GET /static/markdown/examples/css/style.css 200 [0.00, 127.0.0.1:51494]
+HTTP GET /static/markdown/css/editormd.preview.css 200 [0.01, 127.0.0.1:51486]
+HTTP GET /static/markdown/lib/marked.min.js 200 [0.02, 127.0.0.1:51468]
+HTTP GET /static/markdown/js/jquery.min.js 200 [0.01, 127.0.0.1:51500]
+HTTP GET /static/markdown/lib/prettify.min.js 200 [0.01, 127.0.0.1:51482]
+HTTP GET /static/markdown/lib/underscore.min.js 200 [0.00, 127.0.0.1:51494]
+HTTP GET /static/markdown/lib/sequence-diagram.min.js 200 [0.00, 127.0.0.1:51468]
+HTTP GET /static/markdown/lib/flowchart.min.js 200 [0.00, 127.0.0.1:51482]
+HTTP GET /static/markdown/lib/raphael.min.js 200 [0.00, 127.0.0.1:51560]
+HTTP GET /static/markdown/lib/jquery.flowchart.min.js 200 [0.01, 127.0.0.1:51486]
+HTTP GET /static/markdown/editormd.js 200 [0.01, 127.0.0.1:51494]
+HTTP GET /media/wiki/doc/217d8798af7c750ce0358ffd4d05afaf.md 200 [0.01, 127.0.0.1:51560]
+HTTP GET /wiki/showdoc?doc_id=17 200 [0.00, 127.0.0.1:51570]
+HTTP GET /users/login 200 [0.02, 127.0.0.1:51578]
+HTTP GET /wiki/showdoc?doc_id=17 200 [0.00, 127.0.0.1:51588]
+HTTP GET /users/captcha 200 [0.01, 127.0.0.1:51588]
+HTTP GET /static/cat.jpg 200 [0.00, 127.0.0.1:51588]
+HTTP POST /users/login 302 [0.21, 127.0.0.1:51588]
+HTTP GET / 200 [0.06, 127.0.0.1:51588]
+HTTP GET /static/upload/webuploader.css 304 [0.00, 127.0.0.1:51612]
+HTTP GET /static/upload/style.css 304 [0.00, 127.0.0.1:51616]
+HTTP GET /static/js/bootstrap-datetimepicker/bootstrap-datetimepicker.min.css 304 [0.00, 127.0.0.1:51620]
+HTTP GET /media/Avatar/cat.jpg 304 [0.01, 127.0.0.1:51622]
+HTTP GET /static/js/jquery-tags-input/jquery.tagsinput.min.css 304 [0.00, 127.0.0.1:51628]
+HTTP GET /static/js/perfect-scrollbar.min.js 304 [0.00, 127.0.0.1:51622]
+HTTP GET /static/js/main.min.js 304 [0.00, 127.0.0.1:51628]
+HTTP GET /static/js/Chart.js 304 [0.00, 127.0.0.1:51588]
+HTTP GET /favicon.ico 200 [0.06, 127.0.0.1:51628]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:51642]
+HTTP GET / 200 [0.00, 127.0.0.1:51654]
+HTTP GET /static/css/bootstrap.min.css 200 [0.00, 127.0.0.1:51654]
+HTTP GET /static/css/materialdesignicons.min.css 200 [0.00, 127.0.0.1:51670]
+HTTP GET /static/cat.jpg 200 [0.01, 127.0.0.1:51676]
+HTTP GET /static/js/jquery.min.js 200 [0.00, 127.0.0.1:51684]
+HTTP GET /static/js/bootstrap.min.js 200 [0.00, 127.0.0.1:51690]
+HTTP GET /static/css/style.min.css 200 [0.00, 127.0.0.1:51694]
+HTTP GET /users/captcha 200 [0.08, 127.0.0.1:51674]
+HTTP GET /static/fonts/materialdesignicons.woff2?v=2.0.46 200 [0.00, 127.0.0.1:51698]
+HTTP GET /users/adduser 200 [0.01, 127.0.0.1:51698]
+HTTP GET /users/captcha 200 [0.01, 127.0.0.1:51698]
+HTTP GET / 200 [0.00, 127.0.0.1:51714]
+HTTP GET /static/css/materialdesignicons.min.css 304 [0.00, 127.0.0.1:51716]
+HTTP GET /static/cat.jpg 304 [0.00, 127.0.0.1:51716]
+HTTP GET /static/css/bootstrap.min.css 304 [0.00, 127.0.0.1:51714]
+HTTP GET /static/css/style.min.css 304 [0.00, 127.0.0.1:51716]
+HTTP GET /static/js/jquery.min.js 304 [0.00, 127.0.0.1:51720]
+HTTP GET /users/captcha 200 [0.01, 127.0.0.1:51726]
+HTTP GET /static/js/bootstrap.min.js 304 [0.00, 127.0.0.1:51714]
+HTTP GET /static/fonts/materialdesignicons.woff2?v=2.0.46 304 [0.00, 127.0.0.1:51716]
+HTTP POST /users/login 302 [0.22, 127.0.0.1:51716]
+HTTP GET / 200 [0.07, 127.0.0.1:51716]
+HTTP GET /static/js/jquery-tags-input/jquery.tagsinput.min.css 304 [0.01, 127.0.0.1:51720]
+HTTP GET /static/upload/style.css 304 [0.00, 127.0.0.1:51726]
+HTTP GET /static/upload/webuploader.css 304 [0.00, 127.0.0.1:51714]
+HTTP GET /static/js/bootstrap-datetimepicker/bootstrap-datetimepicker.min.css 304 [0.00, 127.0.0.1:51726]
+HTTP GET /media/Avatar/cat.jpg 304 [0.01, 127.0.0.1:51720]
+HTTP GET /static/js/perfect-scrollbar.min.js 304 [0.00, 127.0.0.1:51720]
+HTTP GET /static/js/Chart.js 304 [0.00, 127.0.0.1:51726]
+HTTP GET /static/js/main.min.js 304 [0.00, 127.0.0.1:51714]
+HTTP GET /favicon.ico 200 [0.06, 127.0.0.1:51720]
+HTTP GET /users/login 200 [0.01, 127.0.0.1:51720]
+HTTP GET /users/captcha 200 [0.01, 127.0.0.1:51726]
+HTTP GET /static/cat.jpg 200 [0.00, 127.0.0.1:51726]
+HTTP POST /users/login 302 [0.21, 127.0.0.1:51726]
+HTTP GET / 200 [0.16, 127.0.0.1:51726]
+HTTP GET /favicon.ico 200 [0.06, 127.0.0.1:51726]
+HTTP GET /wiki/wikilist 200 [0.02, 127.0.0.1:51726]
+HTTP GET /static/images/time.png 304 [0.01, 127.0.0.1:51720]
+HTTP GET /static/images/avator.png 304 [0.00, 127.0.0.1:51726]
+HTTP GET /wiki/images/topbar.png 200 [0.20, 127.0.0.1:51714]
+HTTP GET /wiki/showdoc?doc_id=17 200 [0.06, 127.0.0.1:51720]
+HTTP GET /static/markdown/css/editormd.preview.css 304 [0.00, 127.0.0.1:51726]
+HTTP GET /static/markdown/examples/css/style.css 304 [0.00, 127.0.0.1:51716]
+HTTP GET /static/markdown/lib/underscore.min.js 304 [0.00, 127.0.0.1:51720]
+HTTP GET /static/markdown/lib/marked.min.js 304 [0.00, 127.0.0.1:51726]
+HTTP GET /static/markdown/lib/sequence-diagram.min.js 304 [0.00, 127.0.0.1:51716]
+HTTP GET /static/markdown/lib/flowchart.min.js 304 [0.00, 127.0.0.1:51720]
+HTTP GET /static/markdown/lib/jquery.flowchart.min.js 304 [0.00, 127.0.0.1:51726]
+HTTP GET /static/markdown/editormd.js 304 [0.00, 127.0.0.1:51716]
+HTTP GET /static/markdown/lib/raphael.min.js 304 [0.00, 127.0.0.1:51790]
+HTTP GET /static/markdown/lib/prettify.min.js 304 [0.00, 127.0.0.1:51794]
+HTTP GET /static/markdown/js/jquery.min.js 304 [0.00, 127.0.0.1:51796]
+HTTP GET /media/wiki/doc/217d8798af7c750ce0358ffd4d05afaf.md 304 [0.01, 127.0.0.1:51796]
+HTTP GET /task/tasklist 200 [0.03, 127.0.0.1:51796]
+HTTP GET /favicon.ico 200 [0.06, 127.0.0.1:51796]
+HTTP GET /task/tasklist 200 [0.00, 127.0.0.1:51816]
+HTTP GET /users/captcha 200 [0.04, 127.0.0.1:51816]
+HTTP GET / 200 [0.00, 127.0.0.1:51826]
+HTTP GET /static/css/bootstrap.min.css 200 [0.00, 127.0.0.1:51826]
+HTTP GET /static/css/materialdesignicons.min.css 200 [0.00, 127.0.0.1:51840]
+HTTP GET /static/css/style.min.css 200 [0.00, 127.0.0.1:51844]
+HTTP GET /static/js/jquery.min.js 200 [0.00, 127.0.0.1:51846]
+HTTP GET /static/cat.jpg 200 [0.00, 127.0.0.1:51858]
+HTTP GET /users/captcha 200 [0.02, 127.0.0.1:51852]
+HTTP GET /static/js/bootstrap.min.js 200 [0.00, 127.0.0.1:51826]
+HTTP GET /static/fonts/materialdesignicons.woff2?v=2.0.46 200 [0.01, 127.0.0.1:51846]
+HTTP GET / 200 [0.00, 127.0.0.1:51864]
+HTTP GET /users/captcha 200 [0.01, 127.0.0.1:51864]
+HTTP POST /users/login 302 [0.23, 127.0.0.1:51864]
+HTTP GET / 200 [0.07, 127.0.0.1:51864]
+HTTP GET /media/Avatar/cat.jpg 200 [0.01, 127.0.0.1:51864]
+HTTP GET /static/js/jquery-tags-input/jquery.tagsinput.min.css 200 [0.00, 127.0.0.1:51892]
+HTTP GET /static/js/main.min.js 200 [0.00, 127.0.0.1:51864]
+HTTP GET /static/js/Chart.js 200 [0.00, 127.0.0.1:51892]
+HTTP GET /static/upload/webuploader.css 200 [0.00, 127.0.0.1:51896]
+HTTP GET /static/upload/style.css 200 [0.00, 127.0.0.1:51902]
+HTTP GET /static/js/bootstrap-datetimepicker/bootstrap-datetimepicker.min.css 200 [0.01, 127.0.0.1:51904]
+HTTP GET /static/js/perfect-scrollbar.min.js 200 [0.01, 127.0.0.1:51906]
+HTTP GET /favicon.ico 200 [0.06, 127.0.0.1:51892]
+HTTP GET / 200 [0.16, 127.0.0.1:51892]
+HTTP GET /favicon.ico 200 [0.06, 127.0.0.1:51892]
+HTTP GET /wiki/wikilist 200 [0.02, 127.0.0.1:51892]
+HTTP GET /static/images/time.png 200 [0.00, 127.0.0.1:51906]
+HTTP GET /static/images/avator.png 200 [0.00, 127.0.0.1:51892]
+HTTP GET /wiki/images/topbar.png 200 [0.06, 127.0.0.1:51902]
+HTTP GET /task/tasklist 200 [0.03, 127.0.0.1:51892]
+HTTP GET /favicon.ico 200 [0.06, 127.0.0.1:51892]
+HTTP GET /wiki/Solve_doc?task_id=10 200 [0.02, 127.0.0.1:51892]
+HTTP GET /static/markdown/examples/css/style.css 200 [0.00, 127.0.0.1:51906]
+HTTP GET /static/markdown/css/editormd.preview.css 200 [0.00, 127.0.0.1:51904]
+HTTP GET /static/markdown/js/jquery.min.js 200 [0.01, 127.0.0.1:51896]
+HTTP GET /static/markdown/lib/marked.min.js 200 [0.01, 127.0.0.1:51864]
+HTTP GET /static/markdown/lib/prettify.min.js 200 [0.00, 127.0.0.1:51892]
+HTTP GET /static/markdown/lib/raphael.min.js 200 [0.00, 127.0.0.1:51944]
+HTTP GET /static/markdown/lib/underscore.min.js 200 [0.00, 127.0.0.1:51906]
+HTTP GET /static/markdown/lib/sequence-diagram.min.js 200 [0.00, 127.0.0.1:51864]
+HTTP GET /static/markdown/lib/flowchart.min.js 200 [0.00, 127.0.0.1:51904]
+HTTP GET /static/markdown/lib/jquery.flowchart.min.js 200 [0.00, 127.0.0.1:51896]
+HTTP GET /static/markdown/editormd.js 200 [0.01, 127.0.0.1:51892]
+HTTP GET /favicon.ico 200 [0.06, 127.0.0.1:51896]
+HTTP GET /task/addtask 200 [0.02, 127.0.0.1:51896]
+HTTP GET /static/upload/upload.js 200 [0.01, 127.0.0.1:51906]
+HTTP GET /static/upload/webuploader.js 200 [0.01, 127.0.0.1:51864]
+HTTP GET /static/js/jquery-tags-input/jquery.tagsinput.min.js 200 [0.01, 127.0.0.1:51944]
+HTTP GET /static/upload/image.png 200 [0.00, 127.0.0.1:51904]
+HTTP GET /static/upload/jquery.js 200 [0.00, 127.0.0.1:51896]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:51864]
+HTTP GET /static/upload/progress.png 200 [0.01, 127.0.0.1:51896]
+HTTP GET /static/upload/icons.png 200 [0.01, 127.0.0.1:51944]
+HTTP GET /static/upload/bg.png 200 [0.01, 127.0.0.1:51864]
+HTTP POST /task/addtask 302 [0.03, 127.0.0.1:51944]
+HTTP GET /task/task/tasklist.html 200 [0.05, 127.0.0.1:51944]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:51944]
+HTTP GET /task/task/tasklist.html?index=2 200 [0.02, 127.0.0.1:51944]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:51944]
+HTTP GET /task/add_task_point?task_id=26 200 [0.02, 127.0.0.1:51944]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:51944]
+HTTP POST /task/add_task_point?task_id=26 200 [0.02, 127.0.0.1:51944]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:51944]
+HTTP POST /task/add_task_point?task_id=26 200 [0.02, 127.0.0.1:51944]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:51944]
+HTTP GET /task/edit_task_point?task_id=26&task_point_id=4 200 [0.02, 127.0.0.1:51944]
+HTTP GET /static/js/bootstrap-datetimepicker/moment.min.js 200 [0.01, 127.0.0.1:51944]
+HTTP GET /static/js/bootstrap-datepicker/bootstrap-datepicker.min.js 200 [0.01, 127.0.0.1:52020]
+HTTP GET /static/js/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min.js 200 [0.01, 127.0.0.1:52018]
+HTTP GET /static/js/bootstrap-datetimepicker/locale/zh-cn.js 200 [0.01, 127.0.0.1:52016]
+HTTP GET /static/js/bootstrap-datetimepicker/bootstrap-datetimepicker.min.js 200 [0.00, 127.0.0.1:52022]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:52022]
+HTTP POST /task/edit_task_point?task_id=26&task_point_id=4 200 [0.02, 127.0.0.1:52020]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:52020]
+HTTP GET /task/done_task_point?task_id=26&task_point_id=4 302 [0.03, 127.0.0.1:52020]
+HTTP GET /task/add_task_point/?task_id=26 200 [0.06, 127.0.0.1:52020]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:52020]
+HTTP GET /task/taskinfo/?task_id=26 200 [0.02, 127.0.0.1:52020]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:52020]
+HTTP GET /task/taskinfo/?task_id=26 200 [0.02, 127.0.0.1:52020]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:52020]
+HTTP GET /task/tasklist 200 [0.09, 127.0.0.1:52020]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:52020]
+HTTP GET /task/tasklist?index=2 200 [0.03, 127.0.0.1:52020]
+HTTP GET /favicon.ico 200 [0.16, 127.0.0.1:52020]
+HTTP GET /task/edittask?task_id=26 200 [0.02, 127.0.0.1:52020]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:52020]
+HTTP POST /upload/uploadimg 200 [0.02, 127.0.0.1:52020]
+HTTP GET /static/upload/success.png 200 [0.00, 127.0.0.1:52020]
+HTTP POST /task/edittask?task_id=26 302 [0.02, 127.0.0.1:52020]
+HTTP GET /task/tasklist.html 200 [0.03, 127.0.0.1:52020]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:52020]
+HTTP GET /task/taskinfo?task_id=19 200 [0.02, 127.0.0.1:52020]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:52020]
+HTTP GET /task/tasklist 200 [0.03, 127.0.0.1:52020]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:52020]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:52020]
+HTTP GET /wiki/wikilist 200 [0.02, 127.0.0.1:52020]
+HTTP GET /wiki/images/topbar.png 200 [0.07, 127.0.0.1:52140]
+HTTP GET /task/tasklist 200 [0.03, 127.0.0.1:52020]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:52020]
+HTTP GET /task/tasklist?index=2 200 [0.02, 127.0.0.1:52020]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:52020]
+HTTP GET /wiki/Solve_doc?task_id=26 200 [0.02, 127.0.0.1:52020]
+HTTP GET /static/markdown/css/editormd.css 200 [0.01, 127.0.0.1:52020]
+HTTP GET /static/markdown/examples//css/style.css 200 [0.00, 127.0.0.1:52170]
+HTTP GET /static/markdown/examples/js/jquery.min.js 200 [0.01, 127.0.0.1:52176]
+HTTP GET /static/markdown/editormd.js 200 [0.00, 127.0.0.1:52180]
+HTTP GET /media/wiki/doc/e81b370111db5b86c8494b15867e9740.md 200 [0.01, 127.0.0.1:52180]
+HTTP GET /static/markdown/lib/codemirror/codemirror.min.css 200 [0.01, 127.0.0.1:52180]
+HTTP GET /static/markdown/lib/codemirror/addon/dialog/dialog.css 200 [0.01, 127.0.0.1:52176]
+HTTP GET /static/markdown/lib/codemirror/addon/search/matchesonscrollbar.css 200 [0.01, 127.0.0.1:52020]
+HTTP GET /static/markdown/lib/codemirror/codemirror.min.js 200 [0.01, 127.0.0.1:52188]
+HTTP GET /static/markdown/images/loading.gif 200 [0.00, 127.0.0.1:52194]
+HTTP GET /static/markdown/lib/codemirror/addon/fold/foldgutter.css 200 [0.00, 127.0.0.1:52170]
+HTTP GET /static/markdown/lib/codemirror/modes.min.js 200 [0.01, 127.0.0.1:52188]
+HTTP GET /static/markdown/lib/codemirror/addons.min.js 200 [0.00, 127.0.0.1:52188]
+HTTP GET /static/markdown/lib/codemirror/theme/pastel-on-dark.css 200 [0.00, 127.0.0.1:52188]
+HTTP GET /static/markdown/fonts/fontawesome-webfont.woff2?v=4.3.0 200 [0.00, 127.0.0.1:52170]
+HTTP POST /wiki/savedoc?doc_id=28 302 [0.02, 127.0.0.1:52170]
+HTTP GET /task/tasklist 200 [0.03, 127.0.0.1:52170]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:52170]
+HTTP GET /task/tasklist?index=2 200 [0.03, 127.0.0.1:52170]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:52170]
+HTTP GET /wiki/Solve_doc?task_id=26 200 [0.02, 127.0.0.1:52170]
+HTTP GET /media/wiki/doc/e81b370111db5b86c8494b15867e9740.md 200 [0.09, 127.0.0.1:52170]
+HTTP GET /wiki/editdoc?id=28 200 [0.01, 127.0.0.1:52170]
+HTTP GET /media/wiki/doc/e81b370111db5b86c8494b15867e9740.md 304 [0.01, 127.0.0.1:52170]
+HTTP GET /wiki/wikilist 200 [0.02, 127.0.0.1:52170]
+HTTP GET /wiki/images/topbar.png 200 [0.07, 127.0.0.1:52170]
+HTTP GET /wiki/wikilist?index=3 200 [0.02, 127.0.0.1:52242]
+HTTP GET /wiki/images/topbar.png 200 [0.07, 127.0.0.1:52242]
+HTTP GET /wiki/showdoc?doc_id=28 200 [0.02, 127.0.0.1:52254]
+HTTP GET /media/wiki/doc/e81b370111db5b86c8494b15867e9740.md 304 [0.01, 127.0.0.1:52254]
+HTTP GET /task/tasklist 200 [0.03, 127.0.0.1:52254]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:52254]
+HTTP GET /wiki/wikilist 200 [0.02, 127.0.0.1:52254]
+HTTP GET /wiki/images/topbar.png 200 [0.07, 127.0.0.1:52254]
+HTTP GET /wiki/wikilist?search=%E6%A0%91 200 [0.02, 127.0.0.1:52282]
+HTTP GET /wiki/images/topbar.png 200 [0.07, 127.0.0.1:52282]
+HTTP GET /wiki/showdoc?doc_id=28 200 [0.02, 127.0.0.1:52296]
+HTTP GET /media/wiki/doc/e81b370111db5b86c8494b15867e9740.md 304 [0.09, 127.0.0.1:52296]
+HTTP GET /wiki/wikilist 200 [0.02, 127.0.0.1:52306]
+HTTP GET /wiki/images/topbar.png 200 [0.14, 127.0.0.1:52306]
+HTTP GET / 200 [0.07, 127.0.0.1:52318]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:52318]
+HTTP GET /favicon.ico 200 [0.08, 127.0.0.1:52318]
+HTTP GET /favicon.ico 200 [0.16, 127.0.0.1:52318]
+HTTP GET /jumpserver/connection_host 200 [0.02, 127.0.0.1:52318]
+HTTP GET /static/webssh/xterm/xterm.css 200 [0.00, 127.0.0.1:52342]
+HTTP GET /static/webssh/jquery.min.js 200 [0.00, 127.0.0.1:52318]
+HTTP GET /static/webssh/xterm/style.css 200 [0.00, 127.0.0.1:52354]
+HTTP GET /static/webssh/bootstrap.min.css 200 [0.00, 127.0.0.1:52358]
+HTTP GET /static/webssh/xterm/xterm.js 200 [0.00, 127.0.0.1:52362]
+HTTP GET /static/webssh/webssh.js 200 [0.00, 127.0.0.1:52366]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:52362]
+HTTP GET / 200 [0.07, 127.0.0.1:52376]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:52376]
+HTTP GET /users/userinfo 200 [0.02, 127.0.0.1:52376]
+HTTP GET /static/Avatar/cropper.min.css 200 [0.00, 127.0.0.1:52392]
+HTTP GET /static/Avatar/bootstrap.min.css 200 [0.00, 127.0.0.1:52376]
+HTTP GET /static/Avatar/jquery.min.js 200 [0.00, 127.0.0.1:52404]
+HTTP GET /static/Avatar/cropper.min.js 200 [0.00, 127.0.0.1:52408]
+HTTP GET /static/Avatar/bootstrap.min.js 200 [0.00, 127.0.0.1:52412]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:52412]
+HTTP POST /users/Avatar 200 [0.03, 127.0.0.1:52412]
+HTTP GET /users/userinfo 200 [0.01, 127.0.0.1:52412]
+HTTP GET /media/Avatar/9d1adfb9322919887756afd8c50e3899.png 200 [0.10, 127.0.0.1:52412]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:52412]
+HTTP GET / 200 [0.08, 127.0.0.1:52436]
+HTTP GET /media/Avatar/9d1adfb9322919887756afd8c50e3899.png 304 [0.01, 127.0.0.1:52448]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:52448]
+HTTP GET / 200 [0.01, 127.0.0.1:52460]
+HTTP GET /users/captcha 200 [0.01, 127.0.0.1:52460]
+HTTP POST /users/login 200 [0.01, 127.0.0.1:52460]
+HTTP GET /users/captcha 200 [0.01, 127.0.0.1:52460]
+HTTP POST /users/login 302 [0.22, 127.0.0.1:52460]
+HTTP GET / 200 [0.07, 127.0.0.1:52460]
+HTTP GET /media/Avatar/9d1adfb9322919887756afd8c50e3899.png 304 [0.01, 127.0.0.1:52490]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:52490]
+HTTP GET /wiki/wikilist 200 [0.05, 127.0.0.1:52490]
+HTTP GET /wiki/images/topbar.png 200 [0.06, 127.0.0.1:52490]
+HTTP GET /wiki/showdoc?doc_id=17 200 [0.02, 127.0.0.1:52460]
+HTTP GET /media/wiki/doc/217d8798af7c750ce0358ffd4d05afaf.md 200 [0.01, 127.0.0.1:52460]
+HTTP GET /task/tasklist 200 [0.03, 127.0.0.1:52460]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:52460]
+HTTP GET /task/addtask 200 [0.02, 127.0.0.1:52460]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:52460]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:52460]
+HTTP GET /task/add_task_point?task_id=19 200 [0.02, 127.0.0.1:52460]
+HTTP GET /favicon.ico 200 [0.06, 127.0.0.1:52460]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:52460]
+HTTP GET /task/taskinfo?task_id=19 200 [0.02, 127.0.0.1:52460]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:52460]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:52460]
+HTTP GET /wiki/Solve_doc?task_id=19 200 [0.02, 127.0.0.1:52460]
+HTTP GET /media/wiki/doc/226f5da42574f00d25097550056a9853.md 200 [0.01, 127.0.0.1:52460]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:52460]
+HTTP GET / 200 [0.07, 127.0.0.1:52460]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:52460]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:52460]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:52460]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:52460]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:52460]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:52460]
+HTTP GET /jumpserver/connection_host 200 [0.01, 127.0.0.1:52460]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:52460]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:52460]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:52460]
+HTTP GET /favicon.ico 200 [0.09, 127.0.0.1:52460]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:52460]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:52626]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:52460]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:52460]
+HTTP GET /favicon.ico 200 [0.12, 127.0.0.1:52460]
+HTTP GET / 200 [0.07, 127.0.0.1:52648]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:52648]
+HTTP GET / 200 [0.00, 127.0.0.1:52916]
+HTTP GET /static/css/bootstrap.min.css 200 [0.00, 127.0.0.1:52916]
+HTTP GET /static/css/materialdesignicons.min.css 200 [0.00, 127.0.0.1:52932]
+HTTP GET /static/css/style.min.css 200 [0.00, 127.0.0.1:52934]
+HTTP GET /static/js/jquery.min.js 200 [0.00, 127.0.0.1:52940]
+HTTP GET /static/cat.jpg 200 [0.00, 127.0.0.1:52942]
+HTTP GET /static/js/bootstrap.min.js 200 [0.00, 127.0.0.1:52916]
+HTTP GET /users/captcha 200 [0.01, 127.0.0.1:52948]
+HTTP GET /static/fonts/materialdesignicons.woff2?v=2.0.46 200 [0.00, 127.0.0.1:52934]
+Internal Server Error: /jumpserver/jumpserver
+Traceback (most recent call last):
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/mnt/JamesDjango/jumpserver/views.py", line 65, in jumpserver
+    token=json.loads(response.text)['token']
+  File "/root/.pyenv/versions/3.6.5/lib/python3.6/json/__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "/root/.pyenv/versions/3.6.5/lib/python3.6/json/decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/root/.pyenv/versions/3.6.5/lib/python3.6/json/decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+HTTP GET /jumpserver/jumpserver 500 [0.08, 192.168.0.3:56198]
+HTTP GET /favicon.ico 200 [0.00, 192.168.0.3:56198]
+HTTP GET / 200 [0.00, 127.0.0.1:52966]
+HTTP GET /static/css/bootstrap.min.css 200 [0.00, 127.0.0.1:52966]
+HTTP GET /static/css/materialdesignicons.min.css 200 [0.00, 127.0.0.1:52982]
+HTTP GET /static/css/style.min.css 200 [0.00, 127.0.0.1:52984]
+HTTP GET /static/js/jquery.min.js 200 [0.00, 127.0.0.1:52988]
+HTTP GET /static/cat.jpg 200 [0.00, 127.0.0.1:52992]
+HTTP GET /users/captcha 200 [0.02, 127.0.0.1:52998]
+HTTP GET /static/js/bootstrap.min.js 200 [0.00, 127.0.0.1:52966]
+HTTP GET /static/fonts/materialdesignicons.woff2?v=2.0.46 200 [0.01, 127.0.0.1:52988]
+HTTP POST /users/login 200 [0.02, 127.0.0.1:52988]
+HTTP GET /users/captcha 200 [0.01, 127.0.0.1:52988]
+HTTP POST /users/login 200 [0.01, 127.0.0.1:52988]
+HTTP GET /users/captcha 200 [0.01, 127.0.0.1:52988]
+HTTP POST /users/login 200 [0.02, 127.0.0.1:52988]
+HTTP GET /users/captcha 200 [0.01, 127.0.0.1:52988]
+HTTP GET /users/captcha?d=0.6874485796154219 200 [0.01, 127.0.0.1:52988]
+HTTP GET /users/captcha?d=0.6874485796154219?d=0.018099774685959913 200 [0.02, 127.0.0.1:52988]
+HTTP GET /users/captcha?d=0.6874485796154219?d=0.018099774685959913?d=0.8481269414769756 200 [0.01, 127.0.0.1:52988]
+HTTP GET /users/captcha?d=0.6874485796154219?d=0.018099774685959913?d=0.8481269414769756?d=0.883569508581826 200 [0.02, 127.0.0.1:52988]
+HTTP POST /users/login 302 [0.30, 127.0.0.1:52988]
+HTTP GET / 200 [0.07, 127.0.0.1:52988]
+HTTP GET /static/upload/webuploader.css 200 [0.00, 127.0.0.1:52966]
+HTTP GET /static/js/jquery-tags-input/jquery.tagsinput.min.css 200 [0.00, 127.0.0.1:52984]
+HTTP GET /static/upload/style.css 200 [0.01, 127.0.0.1:52988]
+HTTP GET /static/js/bootstrap-datetimepicker/bootstrap-datetimepicker.min.css 200 [0.00, 127.0.0.1:52998]
+HTTP GET /static/js/perfect-scrollbar.min.js 200 [0.00, 127.0.0.1:52992]
+HTTP GET /media/Avatar/9d1adfb9322919887756afd8c50e3899.png 200 [0.02, 127.0.0.1:52982]
+HTTP GET /static/js/main.min.js 200 [0.00, 127.0.0.1:52966]
+HTTP GET /static/js/Chart.js 200 [0.00, 127.0.0.1:52984]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:52984]
+HTTP GET /static/css/materialdesignicons.min.css.map 404 [0.01, 127.0.0.1:52984]
+HTTP GET /wiki/wikilist 200 [0.02, 127.0.0.1:53062]
+HTTP GET /static/images/avator.png 200 [0.00, 127.0.0.1:53062]
+HTTP GET /static/images/time.png 200 [0.00, 127.0.0.1:53074]
+HTTP GET /wiki/images/topbar.png 200 [0.07, 127.0.0.1:53078]
+HTTP GET /wiki/showdoc?doc_id=18 200 [0.02, 127.0.0.1:53074]
+HTTP GET /static/markdown/examples/css/style.css 200 [0.00, 127.0.0.1:53074]
+HTTP GET /static/markdown/css/editormd.preview.css 200 [0.01, 127.0.0.1:53062]
+HTTP GET /static/markdown/js/jquery.min.js 200 [0.00, 127.0.0.1:53090]
+HTTP GET /static/markdown/lib/marked.min.js 200 [0.00, 127.0.0.1:53094]
+HTTP GET /static/markdown/lib/underscore.min.js 200 [0.00, 127.0.0.1:53074]
+HTTP GET /static/markdown/lib/prettify.min.js 200 [0.00, 127.0.0.1:53102]
+HTTP GET /static/markdown/lib/sequence-diagram.min.js 200 [0.00, 127.0.0.1:53094]
+HTTP GET /static/markdown/lib/flowchart.min.js 200 [0.00, 127.0.0.1:53062]
+HTTP GET /static/markdown/lib/jquery.flowchart.min.js 200 [0.00, 127.0.0.1:53074]
+HTTP GET /static/markdown/editormd.js 200 [0.00, 127.0.0.1:53102]
+HTTP GET /static/markdown/lib/raphael.min.js 200 [0.00, 127.0.0.1:53106]
+HTTP GET /media/wiki/doc/0e9309b62486140d4f561dd305590a6c.md 200 [0.01, 127.0.0.1:53106]
+HTTP GET /wiki/images/topbar.png 200 [0.07, 127.0.0.1:53106]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:53102]
+HTTP GET /wiki/adddoc 200 [0.07, 127.0.0.1:53122]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:53122]
+HTTP GET /wiki/wikilist 200 [0.02, 127.0.0.1:53122]
+HTTP GET /wiki/images/topbar.png 200 [0.07, 127.0.0.1:53122]
+HTTP GET /task/tasklist 200 [0.03, 127.0.0.1:53142]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:53142]
+HTTP GET /task/edittask?task_id=19 200 [0.06, 127.0.0.1:53142]
+HTTP GET /static/upload/webuploader.js 200 [0.01, 127.0.0.1:53158]
+HTTP GET /static/upload/jquery.js 200 [0.01, 127.0.0.1:53142]
+HTTP GET /static/upload/upload.js 200 [0.00, 127.0.0.1:53168]
+HTTP GET /static/js/jquery-tags-input/jquery.tagsinput.min.js 200 [0.00, 127.0.0.1:53174]
+HTTP GET /static/upload/image.png 200 [0.00, 127.0.0.1:53176]
+HTTP GET /favicon.ico 200 [0.11, 127.0.0.1:53158]
+HTTP GET /task/taskinfo/?task_id=19 200 [0.08, 127.0.0.1:53158]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:53158]
+HTTP GET /favicon.ico 200 [0.06, 127.0.0.1:53158]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:53158]
+HTTP GET /task/addtask 200 [0.01, 127.0.0.1:53202]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:53202]
+HTTP GET / 200 [0.07, 127.0.0.1:53202]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:53202]
+HTTP GET /wiki/wikilist 200 [0.04, 127.0.0.1:53202]
+HTTP GET /wiki/images/topbar.png 200 [0.07, 127.0.0.1:53202]
+HTTP GET /wiki/showdoc?doc_id=17 200 [0.02, 127.0.0.1:53232]
+HTTP GET /media/wiki/doc/217d8798af7c750ce0358ffd4d05afaf.md 200 [0.01, 127.0.0.1:53232]
+HTTP GET /wiki/editdoc?id=17 200 [0.01, 127.0.0.1:53232]
+HTTP GET /static/markdown/css/editormd.css 200 [0.00, 127.0.0.1:53248]
+HTTP GET /static/markdown/examples//css/style.css 200 [0.01, 127.0.0.1:53232]
+HTTP GET /static/markdown/examples/js/jquery.min.js 200 [0.00, 127.0.0.1:53252]
+HTTP GET /static/markdown/lib/codemirror/codemirror.min.css 200 [0.01, 127.0.0.1:53252]
+HTTP GET /static/markdown/lib/codemirror/addon/search/matchesonscrollbar.css 200 [0.01, 127.0.0.1:53232]
+HTTP GET /static/markdown/lib/codemirror/addon/dialog/dialog.css 200 [0.01, 127.0.0.1:53248]
+HTTP GET /static/markdown/lib/codemirror/codemirror.min.js 200 [0.01, 127.0.0.1:53256]
+HTTP GET /static/markdown/lib/codemirror/addon/fold/foldgutter.css 200 [0.00, 127.0.0.1:53262]
+HTTP GET /static/markdown/images/loading.gif 200 [0.00, 127.0.0.1:53266]
+HTTP GET /static/markdown/lib/codemirror/modes.min.js 200 [0.00, 127.0.0.1:53256]
+HTTP GET /static/markdown/lib/codemirror/addons.min.js 200 [0.00, 127.0.0.1:53256]
+HTTP GET /static/markdown/lib/codemirror/theme/pastel-on-dark.css 200 [0.00, 127.0.0.1:53256]
+HTTP GET /static/markdown/fonts/fontawesome-webfont.woff2?v=4.3.0 200 [0.00, 127.0.0.1:53266]
+HTTP GET /wiki/images/topbar.png 200 [0.07, 127.0.0.1:53266]
+HTTP GET /favicon.ico 200 [0.08, 127.0.0.1:53256]
+HTTP GET /wiki/wikilist 200 [0.03, 127.0.0.1:53256]
+HTTP GET /wiki/images/topbar.png 200 [0.06, 127.0.0.1:53256]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:53262]
+HTTP GET /wiki/adddoc 200 [0.13, 127.0.0.1:53262]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:53262]
+HTTP GET /wiki/wikilist 200 [0.02, 127.0.0.1:53262]
+HTTP GET /wiki/images/topbar.png 200 [0.13, 127.0.0.1:53262]
+HTTP GET /wiki/showdoc?doc_id=18 200 [0.02, 127.0.0.1:53308]
+HTTP GET /wiki/images/topbar.png 200 [0.07, 127.0.0.1:53308]
+HTTP GET /wiki/showdoc?doc_id=18 200 [0.11, 127.0.0.1:53320]
+HTTP GET /task/tasklist 200 [0.03, 127.0.0.1:53320]
+HTTP GET /favicon.ico 200 [0.06, 127.0.0.1:53320]
+HTTP GET /task/tasklist?index=2 200 [0.03, 127.0.0.1:53320]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:53320]
+HTTP GET /wiki/Solve_doc?task_id=24 200 [0.02, 127.0.0.1:53320]
+HTTP GET /media/wiki/doc/48748fbb40b57fbfb40df80ed16181a4.md 200 [0.02, 127.0.0.1:53320]
+HTTP GET /favicon.ico 200 [0.00, 192.168.0.11:59223]
+HTTP GET / 200 [0.00, 192.168.0.11:59226]
+HTTP GET /static/css/bootstrap.min.css 200 [0.01, 192.168.0.11:59226]
+HTTP GET /static/css/materialdesignicons.min.css 200 [0.02, 192.168.0.11:59227]
+HTTP GET /static/css/style.min.css 200 [0.02, 192.168.0.11:59228]
+HTTP GET /static/js/jquery.min.js 200 [0.02, 192.168.0.11:59231]
+HTTP GET /static/cat.jpg 200 [0.02, 192.168.0.11:59229]
+HTTP GET /static/js/bootstrap.min.js 200 [0.02, 192.168.0.11:59232]
+HTTP GET /users/captcha 200 [0.03, 192.168.0.11:59230]
+HTTP GET /static/fonts/materialdesignicons.eot? 200 [0.00, 192.168.0.11:59228]
+HTTP GET /favicon.ico 200 [0.20, 192.168.0.11:59223]
+HTTP GET / 200 [0.00, 127.0.0.1:53364]
+HTTP GET / 200 [0.00, 192.168.0.252:49586]
+HTTP GET /static/css/materialdesignicons.min.css 200 [0.00, 192.168.0.252:49588]
+HTTP GET /static/css/bootstrap.min.css 200 [0.00, 192.168.0.252:49586]
+HTTP GET /static/css/style.min.css 200 [0.00, 192.168.0.252:49638]
+HTTP GET /static/js/jquery.min.js 200 [0.00, 192.168.0.252:49642]
+HTTP GET /static/cat.jpg 200 [0.01, 192.168.0.252:49586]
+HTTP GET /static/js/bootstrap.min.js 200 [0.01, 192.168.0.252:49638]
+HTTP GET /users/captcha 200 [0.02, 192.168.0.252:49642]
+HTTP GET /static/fonts/materialdesignicons.woff2?v=2.0.46 200 [0.00, 192.168.0.252:49642]
+HTTP GET /static/js/jquery.min.js 200 [0.00, 127.0.0.1:53364]
+HTTP POST /users/login 302 [0.39, 192.168.0.252:49642]
+HTTP GET / 200 [0.07, 192.168.0.252:49642]
+HTTP GET /static/js/jquery-tags-input/jquery.tagsinput.min.css 200 [0.00, 192.168.0.252:49642]
+HTTP GET /static/upload/webuploader.css 200 [0.01, 192.168.0.252:49638]
+HTTP GET /static/upload/style.css 200 [0.01, 192.168.0.252:49586]
+HTTP GET /static/js/bootstrap-datetimepicker/bootstrap-datetimepicker.min.css 200 [0.01, 192.168.0.252:49588]
+HTTP GET /static/js/perfect-scrollbar.min.js 200 [0.01, 192.168.0.252:49588]
+HTTP GET /static/js/main.min.js 200 [0.01, 192.168.0.252:49638]
+HTTP GET /static/js/Chart.js 200 [0.01, 192.168.0.252:49586]
+HTTP GET /media/Avatar/9d1adfb9322919887756afd8c50e3899.png 200 [0.02, 192.168.0.252:49642]
+HTTP GET /favicon.ico 200 [0.07, 192.168.0.252:49586]
+HTTP GET /favicon.ico 200 [0.08, 192.168.0.252:49586]
+HTTP GET /static/js/bootstrap.min.js 200 [0.00, 127.0.0.1:53394]
+HTTP GET / 200 [0.00, 192.168.0.240:52738]
+HTTP GET /static/css/bootstrap.min.css 200 [0.00, 192.168.0.240:52738]
+HTTP GET /static/css/materialdesignicons.min.css 200 [0.00, 192.168.0.240:52741]
+HTTP GET /static/cat.jpg 200 [0.00, 192.168.0.240:52743]
+HTTP GET /static/css/style.min.css 200 [0.00, 192.168.0.240:52742]
+HTTP GET /static/js/jquery.min.js 200 [0.00, 192.168.0.240:52743]
+HTTP GET /static/js/bootstrap.min.js 200 [0.00, 192.168.0.240:52738]
+HTTP GET /users/captcha 200 [0.01, 192.168.0.240:52741]
+HTTP GET /static/fonts/materialdesignicons.woff2?v=2.0.46 200 [0.00, 192.168.0.240:52738]
+HTTP GET / 200 [0.00, 192.168.0.252:50018]
+HTTP GET / 200 [0.00, 192.168.0.252:50018]
+HTTP GET /users/captcha 200 [0.01, 192.168.0.252:50018]
+HTTP GET /static/cat.jpg 200 [0.00, 192.168.0.252:50018]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:53406]
+HTTP GET /task/taskinfo?task_id=25 200 [0.03, 127.0.0.1:53406]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:53406]
+HTTP GET /task/tasklist 200 [0.03, 127.0.0.1:53406]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:53406]
+HTTP GET /task/tasklist?index=2 200 [0.02, 127.0.0.1:53406]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:53406]
+HTTP GET /task/tasklist 200 [0.03, 127.0.0.1:53406]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:53406]
+HTTP GET / 200 [0.00, 192.168.0.240:53897]
+HTTP GET /static/css/bootstrap.min.css 200 [0.00, 192.168.0.240:53897]
+HTTP GET /static/css/materialdesignicons.min.css 200 [0.01, 192.168.0.240:53899]
+HTTP GET /static/css/style.min.css 200 [0.01, 192.168.0.240:53900]
+HTTP GET /static/cat.jpg 200 [0.01, 192.168.0.240:53901]
+HTTP GET /static/js/jquery.min.js 200 [0.00, 192.168.0.240:53901]
+HTTP GET /static/js/bootstrap.min.js 200 [0.00, 192.168.0.240:53897]
+HTTP GET /users/captcha 200 [0.01, 192.168.0.240:53899]
+HTTP GET /static/fonts/materialdesignicons.woff2?v=2.0.46 200 [0.00, 192.168.0.240:53897]
+HTTP GET / 200 [0.00, 127.0.0.1:53460]
+HTTP GET /static/css/bootstrap.min.css 200 [0.00, 127.0.0.1:53460]
+HTTP GET /static/css/materialdesignicons.min.css 200 [0.00, 127.0.0.1:53474]
+HTTP GET /static/css/style.min.css 200 [0.00, 127.0.0.1:53478]
+HTTP GET /static/js/jquery.min.js 200 [0.00, 127.0.0.1:53482]
+HTTP GET /users/captcha 200 [0.01, 127.0.0.1:53486]
+HTTP GET /static/cat.jpg 200 [0.00, 127.0.0.1:53494]
+HTTP GET /static/js/bootstrap.min.js 200 [0.01, 127.0.0.1:53460]
+HTTP GET /users/captcha 200 [0.01, 127.0.0.1:53486]
+HTTP GET /static/fonts/materialdesignicons.woff2?v=2.0.46 200 [0.01, 127.0.0.1:53460]
+HTTP GET / 200 [0.00, 127.0.0.1:53502]
+HTTP GET /static/css/style.min.css 200 [0.00, 127.0.0.1:53506]
+HTTP GET /static/css/materialdesignicons.min.css 200 [0.00, 127.0.0.1:53512]
+HTTP GET /static/js/jquery.min.js 200 [0.00, 127.0.0.1:53514]
+HTTP GET /static/cat.jpg 200 [0.01, 127.0.0.1:53518]
+HTTP GET /users/captcha 200 [0.02, 127.0.0.1:53520]
+HTTP GET /static/css/bootstrap.min.css 200 [0.00, 127.0.0.1:53502]
+HTTP GET /static/js/bootstrap.min.js 200 [0.00, 127.0.0.1:53518]
+HTTP GET /static/fonts/materialdesignicons.woff2?v=2.0.46 200 [0.01, 127.0.0.1:53502]
+HTTP POST /users/login 200 [0.01, 127.0.0.1:53502]
+HTTP GET /users/captcha 200 [0.01, 127.0.0.1:53502]
+HTTP POST /users/login 200 [0.02, 127.0.0.1:53502]
+HTTP GET /users/captcha 200 [0.01, 127.0.0.1:53502]
+HTTP GET /users/captcha?d=0.1390195124603073 200 [0.01, 127.0.0.1:53502]
+HTTP GET /users/captcha?d=0.1390195124603073?d=0.8624322750929223 200 [0.01, 127.0.0.1:53502]
+HTTP POST /users/login 302 [0.22, 127.0.0.1:53502]
+HTTP GET / 200 [0.07, 127.0.0.1:53502]
+HTTP GET /static/js/jquery-tags-input/jquery.tagsinput.min.css 200 [0.00, 127.0.0.1:53502]
+HTTP GET /static/js/main.min.js 200 [0.00, 127.0.0.1:53502]
+HTTP GET /static/js/Chart.js 200 [0.00, 127.0.0.1:53502]
+HTTP GET /static/upload/webuploader.css 200 [0.00, 127.0.0.1:53572]
+HTTP GET /static/upload/style.css 200 [0.00, 127.0.0.1:53578]
+HTTP GET /static/js/bootstrap-datetimepicker/bootstrap-datetimepicker.min.css 200 [0.00, 127.0.0.1:53582]
+HTTP GET /static/js/perfect-scrollbar.min.js 200 [0.00, 127.0.0.1:53584]
+HTTP GET /media/Avatar/9d1adfb9322919887756afd8c50e3899.png 200 [0.01, 127.0.0.1:53588]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:53502]
+HTTP GET /users/userinfo 200 [0.02, 127.0.0.1:53502]
+HTTP GET /static/Avatar/bootstrap.min.css 200 [0.01, 127.0.0.1:53588]
+HTTP GET /static/Avatar/cropper.min.css 200 [0.01, 127.0.0.1:53502]
+HTTP GET /static/upload/upload.js 200 [0.01, 127.0.0.1:53578]
+HTTP GET /static/Avatar/jquery.min.js 200 [0.01, 127.0.0.1:53572]
+HTTP GET /static/upload/webuploader.js 200 [0.01, 127.0.0.1:53582]
+HTTP GET /static/upload/jquery.js 200 [0.01, 127.0.0.1:53584]
+HTTP GET /static/Avatar/cropper.min.js 200 [0.00, 127.0.0.1:53502]
+HTTP GET /static/Avatar/bootstrap.min.js 200 [0.00, 127.0.0.1:53578]
+HTTP GET /favicon.ico 200 [0.08, 127.0.0.1:53572]
+HTTP GET / 200 [0.07, 127.0.0.1:53572]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:53572]
+HTTP GET /users/userinfo 200 [0.03, 127.0.0.1:53572]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:53572]
+HTTP GET / 200 [0.12, 127.0.0.1:53628]
+HTTP GET /favicon.ico 200 [0.17, 127.0.0.1:53628]
+HTTP GET /favicon.ico 200 [0.00, 192.168.0.3:61180]
+HTTP GET /favicon.ico 200 [0.00, 192.168.0.3:61953]
+HTTP GET /favicon.ico 200 [0.00, 192.168.0.3:61953]
+HTTP GET /favicon.ico 200 [0.00, 192.168.0.3:62130]
+HTTP GET /favicon.ico 200 [0.00, 192.168.0.3:62130]
+HTTP GET / 200 [0.01, 127.0.0.1:53644]
+HTTP GET /users/captcha 200 [0.01, 127.0.0.1:53658]
+HTTP GET /static/js/jquery.min.js 304 [0.00, 127.0.0.1:53644]
+HTTP GET /static/js/bootstrap.min.js 304 [0.00, 127.0.0.1:53658]
+HTTP GET /static/css/bootstrap.min.css 304 [0.00, 127.0.0.1:53668]
+HTTP GET /static/css/style.min.css 304 [0.00, 127.0.0.1:53670]
+HTTP GET /static/cat.jpg 304 [0.00, 127.0.0.1:53672]
+HTTP GET /static/css/materialdesignicons.min.css 304 [0.00, 127.0.0.1:53678]
+HTTP GET /static/fonts/materialdesignicons.woff2?v=2.0.46 304 [0.00, 127.0.0.1:53678]
+HTTP GET / 200 [0.00, 127.0.0.1:53682]
+HTTP GET /static/css/style.min.css 200 [0.01, 127.0.0.1:53686]
+HTTP GET /static/css/materialdesignicons.min.css 200 [0.01, 127.0.0.1:53690]
+HTTP GET /static/css/bootstrap.min.css 200 [0.01, 127.0.0.1:53682]
+HTTP GET /static/js/jquery.min.js 200 [0.01, 127.0.0.1:53694]
+HTTP GET /static/cat.jpg 200 [0.01, 127.0.0.1:53696]
+HTTP GET /users/captcha 200 [0.02, 127.0.0.1:53704]
+HTTP GET /static/js/bootstrap.min.js 200 [0.00, 127.0.0.1:53696]
+HTTP GET /static/fonts/materialdesignicons.woff2?v=2.0.46 200 [0.00, 127.0.0.1:53682]
+HTTP GET /users/adduser 200 [0.01, 127.0.0.1:53682]
+HTTP GET /users/captcha 200 [0.01, 127.0.0.1:53682]
+HTTP GET /users/userlist 200 [0.01, 127.0.0.1:53682]
+HTTP GET /users/captcha 200 [0.01, 127.0.0.1:53682]
+HTTP POST /users/login 302 [0.21, 127.0.0.1:53682]
+HTTP GET / 200 [0.07, 127.0.0.1:53682]
+HTTP GET /static/upload/webuploader.css 200 [0.00, 127.0.0.1:53694]
+HTTP GET /static/js/bootstrap-datetimepicker/bootstrap-datetimepicker.min.css 200 [0.00, 127.0.0.1:53690]
+HTTP GET /media/Avatar/9d1adfb9322919887756afd8c50e3899.png 200 [0.02, 127.0.0.1:53690]
+HTTP GET /static/upload/style.css 200 [0.00, 127.0.0.1:53696]
+HTTP GET /static/js/jquery-tags-input/jquery.tagsinput.min.css 200 [0.00, 127.0.0.1:53686]
+HTTP GET /static/js/main.min.js 200 [0.01, 127.0.0.1:53686]
+HTTP GET /static/js/perfect-scrollbar.min.js 200 [0.01, 127.0.0.1:53696]
+HTTP GET /static/js/Chart.js 200 [0.01, 127.0.0.1:53694]
+HTTP GET /favicon.ico 200 [0.16, 127.0.0.1:53694]
+HTTP GET / 200 [0.00, 127.0.0.1:53742]
+HTTP GET /static/js/jquery.min.js 200 [0.00, 127.0.0.1:53742]
+HTTP GET /static/js/bootstrap.min.js 200 [0.00, 127.0.0.1:53742]
+HTTP GET /users/userlist 200 [0.02, 127.0.0.1:53694]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:53694]
+HTTP GET /task/tasklist 200 [0.03, 127.0.0.1:53756]
+HTTP GET /service/servicelist 200 [0.10, 127.0.0.1:53766]
+HTTP GET /users/userlist 200 [0.02, 127.0.0.1:53774]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:53774]
+HTTP GET /favicon.ico 200 [0.09, 127.0.0.1:53774]
+HTTP GET /favicon.ico 200 [0.06, 127.0.0.1:53792]
+HTTP GET /favicon.ico 200 [0.06, 127.0.0.1:53774]
+HTTP GET /favicon.ico 200 [0.06, 127.0.0.1:53792]
+HTTP GET /favicon.ico 200 [0.06, 127.0.0.1:53774]
+HTTP GET /favicon.ico 200 [0.06, 127.0.0.1:53792]
+HTTP GET /favicon.ico 200 [0.06, 127.0.0.1:53774]
+HTTP GET /favicon.ico 200 [0.06, 127.0.0.1:53792]
+HTTP GET /favicon.ico 200 [0.06, 127.0.0.1:53774]
+HTTP GET /jumpserver/connection_host 200 [0.02, 127.0.0.1:53792]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:53830]
+HTTP GET /static/webssh/xterm/style.css 200 [0.01, 127.0.0.1:53792]
+HTTP GET /static/webssh/xterm/xterm.css 200 [0.00, 127.0.0.1:53774]
+HTTP GET /static/webssh/bootstrap.min.css 200 [0.00, 127.0.0.1:53838]
+HTTP GET /static/webssh/jquery.min.js 200 [0.01, 127.0.0.1:53792]
+HTTP GET /static/webssh/webssh.js 200 [0.01, 127.0.0.1:53774]
+HTTP GET /static/webssh/xterm/xterm.js 200 [0.01, 127.0.0.1:53844]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:53774]
+HTTP GET /wiki/wikilist 200 [0.02, 127.0.0.1:53774]
+HTTP GET /wiki/adddoc 200 [0.07, 127.0.0.1:53854]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:53854]
+HTTP GET /service/servicelist 200 [0.02, 127.0.0.1:53854]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:53854]
+HTTP GET /task/tasklist 200 [0.03, 127.0.0.1:53854]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:53854]
+HTTP GET /users/userlist 200 [0.02, 127.0.0.1:53854]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:53854]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:53854]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:53894]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:53854]
+HTTP GET /wiki/wikilist 200 [0.02, 127.0.0.1:53854]
+HTTP GET /static/images/avator.png 200 [0.00, 127.0.0.1:53894]
+HTTP GET /wiki/adddoc 200 [0.07, 127.0.0.1:53854]
+HTTP GET /static/images/time.png 200 [0.01, 127.0.0.1:53914]
+HTTP GET /wiki/images/topbar.png 200 [0.07, 127.0.0.1:53916]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:53854]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:53932]
+HTTP GET /favicon.ico 200 [0.16, 127.0.0.1:53942]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:53932]
+HTTP GET /jumpserver/connection_host 200 [0.02, 127.0.0.1:53962]
+HTTP GET /jumpserver/add_host 200 [0.01, 127.0.0.1:53932]
+HTTP GET /favicon.ico 200 [0.06, 127.0.0.1:53972]
+Not Found: /media/Avatar/
+HTTP GET /media/Avatar/ 404 [0.05, 127.0.0.1:53942]
+HTTP GET /jumpserver/js/jquery.min.js 200 [0.11, 127.0.0.1:53932]
+HTTP GET /jumpserver/js/bootstrap.min.js 200 [0.11, 127.0.0.1:54004]
+HTTP GET /jumpserver/js/perfect-scrollbar.min.js 200 [0.11, 127.0.0.1:54010]
+HTTP GET /jumpserver/js/jquery.bootstrap.wizard.min.js 200 [0.06, 127.0.0.1:54018]
+HTTP GET /jumpserver/js/main.min.js 200 [0.07, 127.0.0.1:54024]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:54024]
+HTTP GET / 200 [0.07, 127.0.0.1:54024]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:54024]
+HTTP GET /task/tasklist 200 [0.03, 127.0.0.1:54024]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:54024]
+HTTP GET /task/edittask?task_id=10 200 [0.02, 127.0.0.1:54024]
+HTTP GET /static/upload/upload.js 200 [0.01, 127.0.0.1:54010]
+HTTP GET /static/upload/webuploader.js 200 [0.01, 127.0.0.1:54018]
+HTTP GET /static/js/jquery-tags-input/jquery.tagsinput.min.js 200 [0.01, 127.0.0.1:54004]
+HTTP GET /static/upload/image.png 200 [0.00, 127.0.0.1:53932]
+HTTP GET /static/upload/jquery.js 200 [0.01, 127.0.0.1:54024]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:54018]
+HTTP GET /service/servicelist 200 [0.02, 127.0.0.1:54018]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:54018]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:54018]
+HTTP GET /wiki/wikilist 200 [0.02, 127.0.0.1:54018]
+HTTP GET / 200 [0.07, 127.0.0.1:54024]
+HTTP GET /favicon.ico 200 [0.13, 127.0.0.1:54024]
+HTTP GET / 200 [0.14, 127.0.0.1:54010]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:54010]
+HTTP GET /task/tasklist 200 [0.03, 127.0.0.1:54010]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:54010]
+HTTP GET /task/taskinfo?task_id=10 200 [0.02, 127.0.0.1:54010]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:54010]
+HTTP GET /task/add_task_point?task_id=10 200 [0.02, 127.0.0.1:54010]
+HTTP GET /task/addtask?task_id=10 200 [0.01, 127.0.0.1:54004]
+HTTP GET /service/servicelist 200 [0.02, 127.0.0.1:54152]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:54152]
+HTTP GET /service/servicelist 200 [0.02, 127.0.0.1:54152]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:54152]
+HTTP GET /users/userlist 200 [0.02, 127.0.0.1:54152]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:54152]
+HTTP GET /users/adduser 200 [0.01, 127.0.0.1:54152]
+HTTP GET /users/captcha 200 [0.01, 127.0.0.1:54152]
+HTTP GET /users/userlist 200 [0.02, 127.0.0.1:54152]
+HTTP GET /favicon.ico 200 [0.07, 127.0.0.1:54152]
+HTTP GET / 200 [0.00, 192.168.0.3:51211]
+HTTP GET /static/css/bootstrap.min.css 200 [0.01, 192.168.0.3:51211]
+HTTP GET /static/css/materialdesignicons.min.css 200 [0.01, 192.168.0.3:51212]
+HTTP GET /static/js/jquery.min.js 200 [0.01, 192.168.0.3:51213]
+HTTP GET /static/css/style.min.css 200 [0.01, 192.168.0.3:51214]
+HTTP GET /static/cat.jpg 200 [0.01, 192.168.0.3:51215]
+HTTP GET /users/captcha 200 [0.02, 192.168.0.3:51216]
+HTTP GET /static/js/bootstrap.min.js 200 [0.00, 192.168.0.3:51215]
+HTTP GET /static/fonts/materialdesignicons.woff2?v=2.0.46 200 [0.00, 192.168.0.3:51211]
+HTTP GET / 200 [0.00, 127.0.0.1:54268]
+HTTP GET /static/css/bootstrap.min.css 304 [0.00, 127.0.0.1:54268]
+HTTP GET /static/js/bootstrap.min.js 304 [0.00, 127.0.0.1:54268]
+HTTP GET /static/css/materialdesignicons.min.css 304 [0.00, 127.0.0.1:54280]
+HTTP GET /static/css/style.min.css 304 [0.00, 127.0.0.1:54292]
+HTTP GET /users/captcha 200 [0.02, 127.0.0.1:54284]
+HTTP GET /static/js/jquery.min.js 304 [0.00, 127.0.0.1:54296]
+HTTP GET /static/cat.jpg 304 [0.00, 127.0.0.1:54302]
+HTTP GET /static/fonts/materialdesignicons.woff2?v=2.0.46 200 [0.00, 127.0.0.1:54284]
+HTTP GET /favicon.ico 200 [0.00, 192.168.0.3:61190]
+HTTP GET /favicon.ico 200 [0.00, 192.168.0.3:61191]
+HTTP GET /favicon.ico 200 [0.01, 192.168.0.3:61191]
+HTTP GET /favicon.ico 200 [0.01, 192.168.0.3:61190]
+HTTP GET /favicon.ico 200 [0.00, 192.168.0.3:61406]
+HTTP GET /favicon.ico 200 [0.01, 192.168.0.3:61404]
+HTTP GET /favicon.ico 200 [0.01, 192.168.0.3:61406]
+HTTP GET /favicon.ico 200 [0.01, 192.168.0.3:61404]
+HTTP GET /favicon.ico 200 [0.00, 192.168.0.3:63583]
+HTTP GET /favicon.ico 200 [0.01, 192.168.0.3:63582]
+HTTP GET /favicon.ico 200 [0.00, 192.168.0.3:63582]
+HTTP GET /favicon.ico 200 [0.00, 192.168.0.3:63583]
+HTTP GET /favicon.ico 200 [0.00, 192.168.0.3:63763]
+HTTP GET /favicon.ico 200 [0.01, 192.168.0.3:63761]
+HTTP GET /favicon.ico 200 [0.01, 192.168.0.3:63993]
+HTTP GET /favicon.ico 200 [0.01, 192.168.0.3:63991]
+HTTP GET /favicon.ico 200 [0.00, 192.168.0.3:64427]
+HTTP GET /favicon.ico 200 [0.01, 192.168.0.3:64426]
+HTTP GET /favicon.ico 200 [0.01, 192.168.0.3:65234]
+HTTP GET /favicon.ico 200 [0.01, 192.168.0.3:65233]
+HTTP GET /favicon.ico 200 [0.01, 192.168.0.3:65234]
+HTTP GET /favicon.ico 200 [0.01, 192.168.0.3:65233]
+HTTP GET /favicon.ico 200 [0.00, 192.168.0.3:50120]
+HTTP GET /favicon.ico 200 [0.00, 192.168.0.3:50121]
+HTTP GET /favicon.ico 200 [0.01, 192.168.0.3:50204]
+HTTP GET /favicon.ico 200 [0.01, 192.168.0.3:50203]
+HTTP GET /favicon.ico 200 [0.00, 192.168.0.3:57126]
+HTTP GET /favicon.ico 200 [0.01, 192.168.0.3:57125]
+HTTP GET /favicon.ico 200 [0.01, 192.168.0.3:57126]
+HTTP GET /favicon.ico 200 [0.01, 192.168.0.3:57125]
+HTTP GET /favicon.ico 200 [0.00, 192.168.0.3:57385]
+HTTP GET /favicon.ico 200 [0.01, 192.168.0.3:57384]
+HTTP GET /favicon.ico 200 [0.01, 192.168.0.3:57385]
+HTTP GET /favicon.ico 200 [0.01, 192.168.0.3:57384]
+HTTP GET /favicon.ico 200 [0.01, 192.168.0.3:58240]
+HTTP GET /favicon.ico 200 [0.01, 192.168.0.3:58239]
+HTTP GET /favicon.ico 200 [0.01, 192.168.0.3:60274]
+HTTP GET /favicon.ico 200 [0.00, 192.168.0.3:60438]
+HTTP GET /favicon.ico 200 [0.00, 192.168.0.3:61130]
+HTTP GET /favicon.ico 200 [0.01, 192.168.0.3:64286]
+HTTP GET /favicon.ico 200 [0.01, 192.168.0.3:64285]
+HTTP GET /favicon.ico 200 [0.01, 192.168.0.3:64286]
+HTTP GET /favicon.ico 200 [0.01, 192.168.0.3:64285]
+HTTP GET /favicon.ico 200 [0.01, 192.168.0.3:64286]
+HTTP GET /favicon.ico 200 [0.01, 192.168.0.3:64285]
+HTTP GET /favicon.ico 200 [0.01, 192.168.0.3:64605]
+HTTP GET /favicon.ico 200 [0.01, 192.168.0.3:64604]
+HTTP GET /favicon.ico 200 [0.01, 192.168.0.3:51782]
+HTTP GET /favicon.ico 200 [0.01, 192.168.0.3:51784]
+HTTP GET /favicon.ico 200 [0.01, 192.168.0.3:51782]
+HTTP GET /favicon.ico 200 [0.01, 192.168.0.3:51784]
+HTTP GET /favicon.ico 200 [0.02, 192.168.0.3:51784]
+HTTP GET /favicon.ico 200 [0.02, 192.168.0.3:51782]
+HTTP GET /favicon.ico 200 [0.01, 192.168.0.3:51782]
+HTTP GET /favicon.ico 200 [0.01, 192.168.0.3:51784]
+HTTP GET / 200 [0.01, 192.168.0.3:50064]
+HTTP GET /static/css/style.min.css 200 [0.16, 192.168.0.3:50070]
+HTTP GET /static/cat.jpg 200 [0.16, 192.168.0.3:50071]
+HTTP GET /static/css/bootstrap.min.css 200 [0.16, 192.168.0.3:50064]
+HTTP GET /static/js/bootstrap.min.js 200 [0.01, 192.168.0.3:50071]
+HTTP GET /static/js/jquery.min.js 200 [0.08, 192.168.0.3:50073]
+HTTP GET /static/css/materialdesignicons.min.css 200 [0.84, 192.168.0.3:50063]
+HTTP GET /static/fonts/materialdesignicons.woff2?v=2.0.46 200 [0.01, 192.168.0.3:50063]
+HTTP GET /users/captcha 200 [1.58, 192.168.0.3:50072]
+HTTP POST /users/login 302 [0.24, 192.168.0.3:50072]
+HTTP GET / 200 [0.44, 192.168.0.3:50072]
+HTTP GET /static/js/bootstrap-datetimepicker/bootstrap-datetimepicker.min.css 200 [0.01, 192.168.0.3:50064]
+HTTP GET /static/upload/style.css 200 [0.01, 192.168.0.3:50073]
+HTTP GET /static/js/perfect-scrollbar.min.js 200 [0.01, 192.168.0.3:50071]
+HTTP GET /static/upload/webuploader.css 200 [0.02, 192.168.0.3:50063]
+HTTP GET /static/js/main.min.js 200 [0.02, 192.168.0.3:50070]
+HTTP GET /static/js/jquery-tags-input/jquery.tagsinput.min.css 200 [0.06, 192.168.0.3:50072]
+HTTP GET /static/js/Chart.js 200 [0.64, 192.168.0.3:50064]
+HTTP GET /media/Avatar/6b0e8f05a9423378ca6a82a50b357650.png 200 [0.66, 192.168.0.3:50071]
+HTTP GET /favicon.ico 200 [0.09, 192.168.0.3:50064]
+HTTP GET /wiki/wikilist 200 [0.07, 192.168.0.3:50064]
+HTTP GET /static/images/time.png 200 [0.01, 192.168.0.3:50071]
+HTTP GET /static/images/avator.png 200 [0.01, 192.168.0.3:50064]
+HTTP GET /wiki/images/topbar.png 200 [0.09, 192.168.0.3:50072]
+HTTP GET /wiki/showdoc?doc_id=17 200 [0.02, 192.168.0.3:50064]
+HTTP GET /static/markdown/lib/marked.min.js 200 [0.02, 192.168.0.3:50063]
+HTTP GET /static/markdown/lib/prettify.min.js 200 [0.02, 192.168.0.3:50073]
+HTTP GET /static/markdown/lib/raphael.min.js 200 [0.03, 192.168.0.3:50100]
+HTTP GET /static/markdown/examples/css/style.css 200 [0.04, 192.168.0.3:50064]
+HTTP GET /static/markdown/lib/sequence-diagram.min.js 200 [0.02, 192.168.0.3:50073]
+HTTP GET /static/markdown/lib/flowchart.min.js 200 [0.01, 192.168.0.3:50064]
+HTTP GET /static/markdown/lib/underscore.min.js 200 [0.02, 192.168.0.3:50063]
+HTTP GET /static/markdown/lib/jquery.flowchart.min.js 200 [0.01, 192.168.0.3:50100]
+HTTP GET /static/markdown/editormd.js 200 [0.00, 192.168.0.3:50063]
+HTTP GET /static/markdown/css/editormd.preview.css 200 [0.14, 192.168.0.3:50071]
+HTTP GET /static/markdown/js/jquery.min.js 200 [0.15, 192.168.0.3:50070]
+HTTP GET /media/wiki/doc/217d8798af7c750ce0358ffd4d05afaf.md 200 [0.02, 192.168.0.3:50070]
+HTTP GET /wiki/images/topbar.png 200 [0.09, 192.168.0.3:50070]
+HTTP GET /wiki/wikilist?search=%E6%B5%8B%E8%AF%953 200 [0.15, 192.168.0.3:50063]
+HTTP GET /wiki/images/topbar.png 200 [0.08, 192.168.0.3:50063]
+HTTP GET / 200 [0.03, 192.168.0.3:54525]
+HTTP GET /users/captcha 200 [0.02, 192.168.0.3:54525]
+HTTP POST /users/login 200 [0.03, 192.168.0.3:54525]
+HTTP GET /users/captcha 200 [0.02, 192.168.0.3:54525]
+HTTP POST /users/login 302 [0.22, 192.168.0.3:54525]
+HTTP GET / 200 [0.08, 192.168.0.3:54525]
+HTTP GET /favicon.ico 200 [0.08, 192.168.0.3:54525]
+HTTP GET /users/userlist 200 [0.03, 192.168.0.3:54525]
+HTTP GET /favicon.ico 200 [3.17, 192.168.0.3:54525]
+HTTP GET /task/tasklist 200 [0.31, 192.168.0.3:54525]
+HTTP GET /favicon.ico 200 [0.08, 192.168.0.3:54525]
+HTTP GET /task/tasklist?index=2 200 [0.04, 192.168.0.3:54525]
+HTTP GET /favicon.ico 200 [0.08, 192.168.0.3:54525]
+HTTP GET /task/tasklist?index=1 200 [0.05, 192.168.0.3:54525]
+HTTP GET /favicon.ico 200 [0.08, 192.168.0.3:54525]
+HTTP GET /task/addtask 200 [0.04, 192.168.0.3:54525]
+HTTP GET /static/upload/upload.js 200 [0.01, 192.168.0.3:54571]
+HTTP GET /static/js/jquery-tags-input/jquery.tagsinput.min.js 200 [0.01, 192.168.0.3:54570]
+HTTP GET /static/upload/jquery.js 200 [0.02, 192.168.0.3:54525]
+HTTP GET /static/upload/webuploader.js 200 [0.02, 192.168.0.3:54569]
+HTTP GET /static/upload/image.png 200 [0.01, 192.168.0.3:54572]
+HTTP GET /favicon.ico 200 [0.08, 192.168.0.3:54569]
+HTTP GET /task/tasklist 200 [0.04, 192.168.0.3:54569]
+HTTP GET /favicon.ico 200 [0.08, 192.168.0.3:54569]
+HTTP GET /wiki/wikilist 200 [0.02, 192.168.0.3:54569]
+HTTP GET /wiki/images/topbar.png 200 [0.08, 192.168.0.3:54569]
+HTTP GET /favicon.ico 200 [0.08, 192.168.0.3:54569]
+HTTP GET /favicon.ico 200 [0.08, 192.168.0.3:54569]
+HTTP GET /favicon.ico 200 [0.08, 192.168.0.3:54569]
+HTTP GET /favicon.ico 200 [0.17, 192.168.0.3:54569]
+HTTP GET /users/userlist 200 [0.02, 192.168.0.3:54569]
+HTTP GET /favicon.ico 200 [0.08, 192.168.0.3:54569]
+HTTP GET /task/tasklist 200 [0.05, 192.168.0.3:54569]
+HTTP GET /favicon.ico 200 [0.08, 192.168.0.3:54569]
+HTTP GET /task/taskinfo?task_id=10 200 [0.03, 192.168.0.3:54569]
+HTTP GET /favicon.ico 200 [0.08, 192.168.0.3:54569]
+HTTP GET /favicon.ico 200 [0.11, 192.168.0.3:54569]
+HTTP GET /static/css/materialdesignicons.min.css.map 404 [0.01, 192.168.0.3:54569]
+HTTP GET /task/taskinfo?task_id=10 200 [0.06, 192.168.0.3:54569]
+HTTP GET /static/css/bootstrap.min.css 200 [0.02, 192.168.0.3:54569]
+HTTP GET /static/css/materialdesignicons.min.css 200 [0.02, 192.168.0.3:54647]
+HTTP GET /static/css/style.min.css 200 [0.02, 192.168.0.3:54648]
+HTTP GET /static/js/jquery-tags-input/jquery.tagsinput.min.css 200 [0.02, 192.168.0.3:54649]
+HTTP GET /static/upload/style.css 200 [0.02, 192.168.0.3:54651]
+HTTP GET /static/upload/webuploader.css 200 [0.02, 192.168.0.3:54650]
+HTTP GET /static/js/bootstrap-datetimepicker/bootstrap-datetimepicker.min.css 200 [0.00, 192.168.0.3:54649]
+HTTP GET /static/js/jquery.min.js 200 [0.01, 192.168.0.3:54651]
+HTTP GET /static/js/bootstrap.min.js 200 [0.02, 192.168.0.3:54650]
+HTTP GET /static/js/perfect-scrollbar.min.js 200 [0.02, 192.168.0.3:54648]
+HTTP GET /static/js/main.min.js 200 [0.02, 192.168.0.3:54649]
+HTTP GET /static/cat.jpg 200 [0.02, 192.168.0.3:54647]
+HTTP GET /media/Avatar/6b0e8f05a9423378ca6a82a50b357650.png 200 [0.02, 192.168.0.3:54651]
+HTTP GET /static/fonts/materialdesignicons.woff2?v=2.0.46 200 [0.00, 192.168.0.3:54649]
+HTTP GET /static/css/materialdesignicons.min.css.map 404 [0.01, 192.168.0.3:54651]
+HTTP GET /favicon.ico 200 [0.08, 192.168.0.3:54651]
+HTTP GET / 200 [0.03, 192.168.0.3:56974]
+HTTP GET /users/captcha 200 [0.02, 192.168.0.3:56974]
+HTTP POST /users/login 200 [0.02, 192.168.0.3:56974]
+HTTP GET /users/captcha 200 [0.01, 192.168.0.3:56974]
+HTTP POST /users/login 200 [0.03, 192.168.0.3:56974]
+HTTP GET /users/captcha 200 [0.02, 192.168.0.3:56974]
+HTTP POST /users/login 302 [0.37, 192.168.0.3:56974]
+HTTP GET / 200 [0.08, 192.168.0.3:56974]
+HTTP GET /favicon.ico 200 [0.08, 192.168.0.3:56974]
+HTTP GET /wiki/wikilist 200 [0.02, 192.168.0.3:56974]
+HTTP GET /wiki/images/topbar.png 200 [0.21, 192.168.0.3:56974]
+HTTP GET / 200 [0.08, 192.168.0.3:56974]
+HTTP GET /favicon.ico 200 [0.16, 192.168.0.3:56974]
+HTTP GET /wiki/wikilist 200 [0.04, 192.168.0.3:56974]
+HTTP GET /wiki/images/topbar.png 200 [0.21, 192.168.0.3:56974]
+HTTP GET / 200 [0.09, 192.168.0.3:56974]
+HTTP GET /favicon.ico 200 [0.08, 192.168.0.3:56974]
+HTTP GET /wiki/wikilist 200 [0.02, 192.168.0.3:56974]
+HTTP GET /wiki/images/topbar.png 200 [0.14, 192.168.0.3:56974]
+HTTP GET /wiki/showdoc?doc_id=18 200 [0.02, 192.168.0.3:57012]
+HTTP GET /media/wiki/doc/0e9309b62486140d4f561dd305590a6c.md 200 [0.02, 192.168.0.3:57012]
+HTTP GET /wiki/wikilist 200 [0.03, 192.168.0.3:57012]
+HTTP GET /wiki/images/topbar.png 200 [0.08, 192.168.0.3:57012]
+HTTP GET /task/tasklist 200 [0.11, 192.168.0.3:57012]
+HTTP GET /favicon.ico 200 [0.08, 192.168.0.3:57012]
+HTTP GET /task/edittask?task_id=10 200 [0.03, 192.168.0.3:57012]
+HTTP GET /favicon.ico 200 [0.09, 192.168.0.3:57012]
+HTTP POST /task/edittask?task_id=10 302 [0.06, 192.168.0.3:57012]
+HTTP GET /task/tasklist.html 200 [0.06, 192.168.0.3:57012]
+HTTP GET /favicon.ico 200 [0.08, 192.168.0.3:57012]
+HTTP GET /task/edittask?task_id=10 200 [0.05, 192.168.0.3:57012]
+HTTP GET /favicon.ico 200 [0.08, 192.168.0.3:57012]
+HTTP POST /task/edittask?task_id=10 302 [0.05, 192.168.0.3:57012]
+HTTP GET /task/tasklist.html 200 [0.03, 192.168.0.3:57012]
+HTTP GET /favicon.ico 200 [0.13, 192.168.0.3:57012]
+HTTP GET /wiki/Solve_doc?task_id=10 200 [0.02, 192.168.0.3:57012]
+HTTP GET /wiki/editdoc?id=18 200 [0.03, 192.168.0.3:57012]
+HTTP GET /static/markdown/examples//css/style.css 200 [0.01, 192.168.0.3:57012]
+HTTP GET /static/markdown/css/editormd.css 200 [0.31, 192.168.0.3:57098]
+HTTP GET /static/markdown/examples/js/jquery.min.js 200 [0.33, 192.168.0.3:57104]
+HTTP GET /static/markdown/lib/codemirror/addon/search/matchesonscrollbar.css 200 [0.01, 192.168.0.3:57012]
+HTTP GET /static/markdown/lib/codemirror/codemirror.min.css 200 [0.01, 192.168.0.3:57104]
+HTTP GET /static/markdown/lib/codemirror/addon/dialog/dialog.css 200 [0.02, 192.168.0.3:57098]
+HTTP GET /static/markdown/lib/codemirror/codemirror.min.js 200 [0.03, 192.168.0.3:57106]
+HTTP GET /static/markdown/images/loading.gif 200 [0.03, 192.168.0.3:57107]
+HTTP GET /static/markdown/lib/codemirror/addon/fold/foldgutter.css 200 [0.04, 192.168.0.3:57105]
+HTTP GET /static/markdown/lib/codemirror/modes.min.js 200 [0.02, 192.168.0.3:57106]
+HTTP GET /static/markdown/lib/codemirror/addons.min.js 200 [0.05, 192.168.0.3:57106]
+HTTP GET /static/markdown/fonts/fontawesome-webfont.woff2?v=4.3.0 200 [0.00, 192.168.0.3:57105]
+HTTP GET /static/markdown/lib/codemirror/theme/pastel-on-dark.css 200 [0.32, 192.168.0.3:57106]
+HTTP POST /wiki/savedoc?doc_id=18 302 [0.04, 192.168.0.3:57755]
+HTTP GET /task/tasklist 200 [0.03, 192.168.0.3:57755]
+HTTP GET /favicon.ico 200 [0.08, 192.168.0.3:57755]
+HTTP GET /wiki/Solve_doc?task_id=10 200 [0.02, 192.168.0.3:57755]
+HTTP GET /wiki/wikilist 200 [0.03, 192.168.0.3:57755]
+HTTP GET /wiki/images/topbar.png 200 [0.09, 192.168.0.3:57755]
+HTTP GET /task/tasklist 200 [0.04, 192.168.0.3:57756]
+HTTP GET /favicon.ico 200 [0.20, 192.168.0.3:57756]
+HTTP GET /wiki/Solve_doc?task_id=10 200 [0.04, 192.168.0.3:57756]
+HTTP GET /wiki/editdoc?id=18 200 [0.02, 192.168.0.3:57756]
+HTTP GET /task/tasklist 200 [0.04, 192.168.0.3:57756]
+HTTP GET /favicon.ico 200 [0.08, 192.168.0.3:57756]
+HTTP GET /wiki/wikilist 200 [0.03, 192.168.0.3:57756]
+HTTP GET /wiki/images/topbar.png 200 [0.09, 192.168.0.3:57756]
+HTTP GET /wiki/showdoc?doc_id=18 200 [0.02, 192.168.0.3:57770]
+HTTP GET /wiki/images/topbar.png 200 [0.09, 192.168.0.3:57770]
+HTTP GET /favicon.ico 200 [0.08, 192.168.0.3:57775]
+HTTP GET /favicon.ico 200 [0.10, 192.168.0.3:57775]
+HTTP GET /wiki/images/topbar.png 200 [0.08, 192.168.0.3:57775]
+HTTP GET /favicon.ico 200 [0.08, 192.168.0.3:57778]
+HTTP GET /favicon.ico 200 [0.15, 192.168.0.3:57778]
+HTTP GET /task/edittask?task_id=10 200 [0.03, 192.168.0.3:57778]
+HTTP GET /favicon.ico 200 [0.08, 192.168.0.3:57778]
+HTTP GET /favicon.ico 200 [0.18, 192.168.0.3:57778]
+HTTP GET /favicon.ico 200 [0.08, 192.168.0.3:57778]
+HTTP GET /favicon.ico 200 [0.08, 192.168.0.3:57778]
+HTTP GET /favicon.ico 200 [0.08, 192.168.0.3:57778]
+HTTP GET /favicon.ico 200 [0.08, 192.168.0.3:57778]
+HTTP GET /favicon.ico 200 [0.08, 192.168.0.3:57778]
+HTTP POST /wiki/savedoc?doc_id=18 302 [0.17, 192.168.0.3:57778]
+HTTP GET /task/tasklist 200 [0.04, 192.168.0.3:57778]
+HTTP GET /favicon.ico 200 [0.08, 192.168.0.3:57778]
+HTTP GET /wiki/Solve_doc?task_id=10 200 [0.03, 192.168.0.3:57778]
+HTTP GET /wiki/editdoc?id=18 200 [0.03, 192.168.0.3:57778]
+HTTP POST /wiki/savedoc?doc_id=18 302 [0.02, 192.168.0.3:57778]
+HTTP GET /task/tasklist 200 [0.03, 192.168.0.3:57778]
+HTTP GET /favicon.ico 200 [0.08, 192.168.0.3:57778]
+HTTP GET /wiki/Solve_doc?task_id=10 200 [0.03, 192.168.0.3:57778]
+HTTP GET /favicon.ico 200 [0.01, 192.168.0.3:65302]
+HTTP GET /favicon.ico 200 [0.01, 192.168.0.3:65304]
+HTTP GET /favicon.ico 200 [0.01, 192.168.0.3:65304]
+HTTP GET /favicon.ico 200 [0.01, 192.168.0.3:65302]
+HTTP GET /favicon.ico 200 [0.02, 192.168.0.3:65304]
+HTTP GET /favicon.ico 200 [0.02, 192.168.0.3:65302]
+HTTP GET /favicon.ico 200 [0.01, 192.168.0.3:49234]
+HTTP GET /favicon.ico 200 [0.01, 192.168.0.3:49236]
+HTTP GET /favicon.ico 200 [0.02, 192.168.0.3:49236]
+HTTP GET /favicon.ico 200 [0.02, 192.168.0.3:49234]
+HTTP GET /favicon.ico 200 [0.01, 192.168.0.3:49234]
+HTTP GET /favicon.ico 200 [0.01, 192.168.0.3:49236]
+HTTP GET /favicon.ico 200 [0.42, 192.168.0.3:65438]
+HTTP GET /favicon.ico 200 [0.71, 192.168.0.3:65436]
+HTTP GET /favicon.ico 200 [0.16, 192.168.0.3:65438]
+HTTP GET /favicon.ico 200 [0.16, 192.168.0.3:65436]
+HTTP GET /favicon.ico 200 [0.02, 192.168.0.3:65522]
+HTTP GET /favicon.ico 200 [0.02, 192.168.0.3:65521]
+HTTP GET /favicon.ico 200 [0.01, 192.168.0.3:49209]
+HTTP GET /favicon.ico 200 [0.01, 192.168.0.3:49207]
+HTTP GET /favicon.ico 200 [0.01, 192.168.0.3:49308]
+HTTP GET /favicon.ico 200 [0.02, 192.168.0.3:49306]
+HTTP GET /favicon.ico 200 [0.01, 192.168.0.3:49486]
+HTTP GET /favicon.ico 200 [0.09, 192.168.0.3:49485]
+HTTP GET /favicon.ico 200 [0.01, 192.168.0.3:53520]
+HTTP GET /favicon.ico 200 [0.01, 192.168.0.3:53521]
+HTTP GET /favicon.ico 200 [0.02, 192.168.0.3:55085]
+HTTP GET /favicon.ico 200 [0.02, 192.168.0.3:55084]
+HTTP GET /favicon.ico 200 [0.01, 192.168.0.3:55085]
+HTTP GET /favicon.ico 200 [0.01, 192.168.0.3:55084]
+HTTP GET /favicon.ico 200 [0.03, 192.168.0.3:55330]
+HTTP GET /favicon.ico 200 [0.04, 192.168.0.3:55328]
+HTTP GET /favicon.ico 200 [0.01, 192.168.0.3:53767]
+HTTP GET /favicon.ico 200 [0.01, 192.168.0.3:53770]
+HTTP GET /favicon.ico 200 [0.01, 192.168.0.3:53840]
+HTTP GET /favicon.ico 200 [0.01, 192.168.0.3:53841]
+HTTP GET /favicon.ico 200 [0.01, 192.168.0.3:53897]
+HTTP GET /favicon.ico 200 [0.02, 192.168.0.3:53896]
+HTTP GET /favicon.ico 200 [0.03, 192.168.0.3:61306]
+HTTP GET /favicon.ico 200 [0.03, 192.168.0.3:61307]
+HTTP GET /favicon.ico 200 [0.02, 192.168.0.3:53791]
+HTTP GET /favicon.ico 200 [0.02, 192.168.0.3:53790]
+HTTP GET / 200 [0.01, 192.168.0.3:54580]
+HTTP GET /static/cat.jpg 200 [3.66, 192.168.0.3:54583]
+HTTP GET /static/css/materialdesignicons.min.css 200 [5.07, 192.168.0.3:54581]
+HTTP GET /static/css/bootstrap.min.css 200 [5.27, 192.168.0.3:54580]
+HTTP GET /static/css/style.min.css 200 [4.94, 192.168.0.3:54582]
+HTTP GET /static/js/jquery.min.js 200 [4.94, 192.168.0.3:54585]
+HTTP GET /static/js/bootstrap.min.js 200 [1.28, 192.168.0.3:54583]
+HTTP GET /static/fonts/materialdesignicons.woff2?v=2.0.46 200 [0.40, 192.168.0.3:54583]
+HTTP GET /users/captcha 200 [12.11, 192.168.0.3:54584]
+HTTP POST /users/login 302 [0.99, 192.168.0.3:54584]
+HTTP GET / 200 [1.27, 192.168.0.3:54584]
+HTTP GET /static/js/jquery-tags-input/jquery.tagsinput.min.css 200 [0.74, 192.168.0.3:54584]
+HTTP GET /static/upload/style.css 200 [0.75, 192.168.0.3:54585]
+HTTP GET /static/js/bootstrap-datetimepicker/bootstrap-datetimepicker.min.css 200 [0.75, 192.168.0.3:54582]
+HTTP GET /static/js/perfect-scrollbar.min.js 200 [0.59, 192.168.0.3:54581]
+HTTP GET /static/js/main.min.js 200 [0.98, 192.168.0.3:54580]
+HTTP GET /static/upload/webuploader.css 200 [1.56, 192.168.0.3:54583]
+HTTP GET /static/js/Chart.js 200 [2.10, 192.168.0.3:54584]
+HTTP GET /media/Avatar/6b0e8f05a9423378ca6a82a50b357650.png 200 [2.52, 192.168.0.3:54582]
+HTTP GET /favicon.ico 200 [0.97, 192.168.0.3:54582]
+HTTP GET / 200 [0.24, 192.168.0.3:54612]
+HTTP GET /favicon.ico 200 [0.85, 192.168.0.3:54612]
+HTTP GET / 200 [1.45, 192.168.0.3:54622]
+HTTP GET /favicon.ico 200 [0.23, 192.168.0.3:54622]
+HTTP GET /favicon.ico 200 [0.10, 192.168.0.3:54622]
+HTTP GET /favicon.ico 200 [0.78, 192.168.0.3:54622]
+HTTP GET / 200 [0.12, 192.168.0.3:54622]
+HTTP GET /favicon.ico 200 [0.33, 192.168.0.3:54622]
+HTTP GET / 200 [0.21, 192.168.0.3:54622]
+HTTP GET /favicon.ico 200 [0.09, 192.168.0.3:54622]
+HTTP GET /favicon.ico 200 [0.08, 192.168.0.3:54622]
+HTTP GET /favicon.ico 200 [0.09, 192.168.0.3:54622]
+HTTP GET / 200 [0.16, 192.168.0.3:54622]
+HTTP GET /favicon.ico 200 [0.28, 192.168.0.3:54622]
+HTTP GET / 200 [0.46, 192.168.0.3:54622]
+HTTP GET /favicon.ico 200 [0.09, 192.168.0.3:54622]
+HTTP GET /favicon.ico 200 [0.26, 192.168.0.3:54622]
+HTTP GET /favicon.ico 200 [0.11, 192.168.0.3:54622]
+HTTP GET /favicon.ico 200 [0.14, 192.168.0.3:54622]
+HTTP GET /jumpserver/connection_host 200 [1.03, 192.168.0.3:54622]
+HTTP GET /static/webssh/jquery.min.js 200 [0.56, 192.168.0.3:54634]
+HTTP GET /static/webssh/bootstrap.min.css 200 [0.58, 192.168.0.3:54633]
+HTTP GET /static/webssh/webssh.js 200 [0.74, 192.168.0.3:54635]
+HTTP GET /static/webssh/xterm/style.css 200 [0.75, 192.168.0.3:54632]
+HTTP GET /static/webssh/xterm/xterm.css 200 [1.17, 192.168.0.3:54622]
+HTTP GET /static/webssh/xterm/xterm.js 200 [1.63, 192.168.0.3:54636]
+HTTP GET /favicon.ico 200 [0.09, 192.168.0.3:54636]
+HTTP GET /favicon.ico 200 [0.11, 192.168.0.3:54636]
+HTTP GET /favicon.ico 200 [0.09, 192.168.0.3:54636]
+HTTP GET / 200 [0.12, 192.168.0.3:54636]
+HTTP GET /favicon.ico 200 [1.81, 192.168.0.3:54636]
+HTTP GET /favicon.ico 200 [0.08, 192.168.0.3:54636]
+HTTP GET /favicon.ico 200 [0.16, 192.168.0.3:54636]
+HTTP GET /favicon.ico 200 [0.12, 192.168.0.3:54636]
+HTTP GET /favicon.ico 200 [4.72, 192.168.0.3:54636]
+HTTP GET /favicon.ico 200 [0.11, 192.168.0.3:54622]
+HTTP GET /favicon.ico 200 [0.54, 192.168.0.3:54636]
+HTTP GET / 200 [0.16, 192.168.0.3:54636]
+HTTP GET / 200 [0.10, 192.168.0.3:54636]
+HTTP GET /favicon.ico 200 [0.08, 192.168.0.3:54636]
+HTTP GET /favicon.ico 200 [0.08, 192.168.0.3:54636]
+HTTP GET /favicon.ico 200 [0.08, 192.168.0.3:54636]
+/mnt/JamesDjango/JamesDjango/settings.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 29, 2019 - 18:14:26
+Django version 2.2.1, using settings 'JamesDjango.settings'
+Starting ASGI/Channels version 2.1.5 development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+a7Cs a7cs
+密码错误
+Zeve Zeve
+密码错误
+jY97 OeDB
+8fu1 8fui
+I2RK i2rk
+登陆成功
+I2RK i2rk
+登陆成功
+67mK OeDB
+67mK OeDB
+6rWL 6rWL
+登陆成功
+sCHh schh
+登陆成功
+kNJV knjv
+登陆成功
+G8AZ g8az
+登陆成功
+xIX6 xix6
+登陆成功
+qAsk qask
+登陆成功
+*____________________*____________________*____________________
+*____________________*____________________*____________________
+图片名字：image.png
+这是图片名字:image.png
+这是图片UID:123
+这是图片ID:WU_FILE_0
+这是图片类型:image/png
+这是图片最后修改时间:Sun Jun 30 2019 17:25:05 GMT+0800 (中国标准时间)
+这是图片大小:127544
+******************************
+4a26b2208e080bf76ae77372045d8703.png
+<QueryDict: {'uid': ['123'], 'id': ['WU_FILE_0'], 'name': ['image.png'], 'type': ['image/png'], 'lastModifiedDate': ['Sun Jun 30 2019 17:25:05 GMT+0800 (中国标准时间)'], 'size': ['127544']}>
+<QueryDict: {}>
+9d1adfb9322919887756afd8c50e3899.png
+UJy1 ujyl
+YAKY yaky
+登陆成功
+*____________________*____________________*____________________
+u0bT uobt
+pF0b pfob
+M9mc mqmc
+OkGm okgm
+登陆成功
+*____________________*____________________*____________________
+CVEa cvea
+登陆成功
+j6za j62a
+zD5Y 2d5y
+eYXk eyxk
+登陆成功
+DVT4 DVT4
+登陆成功
+*____________________*____________________*____________________
+kORG korg
+登陆成功
+H1L1 hili
+CFVI cfvi
+登陆成功
+*____________________*____________________*____________________
+KW2P kw
+7xVC zxvc
+Ydpg ydpg
+登陆成功
+HtYm htym
+登陆成功
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/root/.pyenv/versions/3.6.5/lib/python3.6/threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "/root/.pyenv/versions/3.6.5/lib/python3.6/threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/utils/autoreload.py", line 54, in wrapper
+    fn(*args, **kwargs)
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/channels/management/commands/runserver.py", line 69, in inner_run
+    self.check(display_num_errors=True)
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/core/management/base.py", line 390, in check
+    include_deployment_checks=include_deployment_checks,
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/core/management/base.py", line 377, in _run_checks
+    return checks.run_checks(**kwargs)
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/core/checks/registry.py", line 72, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/core/checks/urls.py", line 13, in check_url_config
+    return check_resolver(resolver)
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/core/checks/urls.py", line 23, in check_resolver
+    return check_method()
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/urls/resolvers.py", line 398, in check
+    for pattern in self.url_patterns:
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/utils/functional.py", line 80, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/urls/resolvers.py", line 579, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/utils/functional.py", line 80, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/urls/resolvers.py", line 572, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/root/.pyenv/versions/3.6.5/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/mnt/JamesDjango/JamesDjango/urls.py", line 29, in <module>
+    path('monitor/', include('monitor.urls')),
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/root/.pyenv/versions/3.6.5/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/mnt/JamesDjango/monitor/urls.py", line 8, in <module>
+    url('/company/all', views.companyall, name='companyall'),
+AttributeError: module 'upload.views' has no attribute 'companyall'
+
+/mnt/JamesDjango/monitor/urls.py changed, reloading.
+Performing system checks...
+
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/root/.pyenv/versions/3.6.5/lib/python3.6/threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "/root/.pyenv/versions/3.6.5/lib/python3.6/threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/utils/autoreload.py", line 54, in wrapper
+    fn(*args, **kwargs)
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/channels/management/commands/runserver.py", line 69, in inner_run
+    self.check(display_num_errors=True)
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/core/management/base.py", line 390, in check
+    include_deployment_checks=include_deployment_checks,
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/core/management/base.py", line 377, in _run_checks
+    return checks.run_checks(**kwargs)
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/core/checks/registry.py", line 72, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/core/checks/urls.py", line 13, in check_url_config
+    return check_resolver(resolver)
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/core/checks/urls.py", line 23, in check_resolver
+    return check_method()
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/urls/resolvers.py", line 398, in check
+    for pattern in self.url_patterns:
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/utils/functional.py", line 80, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/urls/resolvers.py", line 579, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/utils/functional.py", line 80, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/urls/resolvers.py", line 572, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/root/.pyenv/versions/3.6.5/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/mnt/JamesDjango/JamesDjango/urls.py", line 29, in <module>
+    path('monitor/', include('monitor.urls')),
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/root/.pyenv/versions/3.6.5/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/mnt/JamesDjango/monitor/urls.py", line 8, in <module>
+    url('/company/all', views.companyall, name='companyall'),
+AttributeError: module 'upload.views' has no attribute 'companyall'
+
+/mnt/JamesDjango/monitor/urls.py changed, reloading.
+Performing system checks...
+
+Watching for file changes with StatReloader
+System check identified some issues:
+
+WARNINGS:
+?: (urls.W002) Your URL pattern '/company/addinfo' [name='addinfo'] has a route beginning with a '/'. Remove this slash as it is unnecessary. If this pattern is targeted in an include(), ensure the include() pattern has a trailing '/'.
+?: (urls.W002) Your URL pattern '/company/all' [name='companyall'] has a route beginning with a '/'. Remove this slash as it is unnecessary. If this pattern is targeted in an include(), ensure the include() pattern has a trailing '/'.
+?: (urls.W002) Your URL pattern '/company/editinfo' [name='editinfo'] has a route beginning with a '/'. Remove this slash as it is unnecessary. If this pattern is targeted in an include(), ensure the include() pattern has a trailing '/'.
+
+System check identified 3 issues (0 silenced).
+/mnt/JamesDjango/monitor/urls.py changed, reloading.
+Performing system checks...
+
+August 01, 2019 - 15:11:03
+Django version 2.2.1, using settings 'JamesDjango.settings'
+Starting ASGI/Channels version 2.1.5 development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+Listen failure: Couldn't listen on 0.0.0.0:80: [Errno 98] Address already in use.
+/mnt/JamesDjango/monitor/urls.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 01, 2019 - 15:12:24
+Django version 2.2.1, using settings 'JamesDjango.settings'
+Starting ASGI/Channels version 2.1.5 development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+/mnt/JamesDjango/monitor/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 01, 2019 - 15:12:43
+Django version 2.2.1, using settings 'JamesDjango.settings'
+Starting ASGI/Channels version 2.1.5 development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+Listen failure: Couldn't listen on 0.0.0.0:80: [Errno 98] Address already in use.
+/mnt/JamesDjango/monitor/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 01, 2019 - 15:14:33
+Django version 2.2.1, using settings 'JamesDjango.settings'
+Starting ASGI/Channels version 2.1.5 development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/root/.pyenv/versions/3.6.5/lib/python3.6/threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "/root/.pyenv/versions/3.6.5/lib/python3.6/threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/utils/autoreload.py", line 54, in wrapper
+    fn(*args, **kwargs)
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/channels/management/commands/runserver.py", line 69, in inner_run
+    self.check(display_num_errors=True)
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/core/management/base.py", line 390, in check
+    include_deployment_checks=include_deployment_checks,
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/core/management/base.py", line 377, in _run_checks
+    return checks.run_checks(**kwargs)
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/core/checks/registry.py", line 72, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/core/checks/urls.py", line 13, in check_url_config
+    return check_resolver(resolver)
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/core/checks/urls.py", line 23, in check_resolver
+    return check_method()
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/urls/resolvers.py", line 398, in check
+    for pattern in self.url_patterns:
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/utils/functional.py", line 80, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/urls/resolvers.py", line 579, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/utils/functional.py", line 80, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/urls/resolvers.py", line 572, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/root/.pyenv/versions/3.6.5/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/mnt/JamesDjango/JamesDjango/urls.py", line 29, in <module>
+    path('monitor/', include('monitor.urls')),
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/root/.pyenv/versions/3.6.5/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/mnt/JamesDjango/monitor/urls.py", line 8, in <module>
+    url('company/all', views.companyall, name='companyall'),
+AttributeError: module 'monitor.views' has no attribute 'companyall'
+
+/mnt/JamesDjango/monitor/urls.py changed, reloading.
+Performing system checks...
+
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/root/.pyenv/versions/3.6.5/lib/python3.6/threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "/root/.pyenv/versions/3.6.5/lib/python3.6/threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/utils/autoreload.py", line 54, in wrapper
+    fn(*args, **kwargs)
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/channels/management/commands/runserver.py", line 69, in inner_run
+    self.check(display_num_errors=True)
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/core/management/base.py", line 390, in check
+    include_deployment_checks=include_deployment_checks,
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/core/management/base.py", line 377, in _run_checks
+    return checks.run_checks(**kwargs)
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/core/checks/registry.py", line 72, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/core/checks/urls.py", line 13, in check_url_config
+    return check_resolver(resolver)
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/core/checks/urls.py", line 23, in check_resolver
+    return check_method()
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/urls/resolvers.py", line 398, in check
+    for pattern in self.url_patterns:
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/utils/functional.py", line 80, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/urls/resolvers.py", line 579, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/utils/functional.py", line 80, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/urls/resolvers.py", line 572, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/root/.pyenv/versions/3.6.5/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/mnt/JamesDjango/JamesDjango/urls.py", line 29, in <module>
+    path('monitor/', include('monitor.urls')),
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/root/.pyenv/versions/3.6.5/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/mnt/JamesDjango/monitor/urls.py", line 8, in <module>
+    url('company/listinfo', views.listinfo, name='listinfo'),
+AttributeError: module 'monitor.views' has no attribute 'listinfo'
+
+/mnt/JamesDjango/monitor/views.py changed, reloading.
+Performing system checks...
+
+Watching for file changes with StatReloader
+Listen failure: Couldn't listen on 0.0.0.0:80: [Errno 98] Address already in use.
+/mnt/JamesDjango/monitor/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 01, 2019 - 15:16:40
+Django version 2.2.1, using settings 'JamesDjango.settings'
+Starting ASGI/Channels version 2.1.5 development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+Listen failure: Couldn't listen on 0.0.0.0:80: [Errno 98] Address already in use.
+/mnt/JamesDjango/monitor/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 01, 2019 - 15:17:31
+Django version 2.2.1, using settings 'JamesDjango.settings'
+Starting ASGI/Channels version 2.1.5 development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+HTTP GET /monitor/commanpy/listinfo 200 [1.03, 192.168.0.3:55189]
+HTTP GET /static/css/bootstrap.min.css 200 [0.02, 192.168.0.3:55189]
+HTTP GET /static/upload/webuploader.css 200 [0.02, 192.168.0.3:55193]
+HTTP GET /static/css/materialdesignicons.min.css 200 [0.02, 192.168.0.3:55190]
+HTTP GET /static/css/style.min.css 200 [0.02, 192.168.0.3:55191]
+HTTP GET /static/js/jquery-tags-input/jquery.tagsinput.min.css 200 [0.01, 192.168.0.3:55192]
+HTTP GET /static/upload/style.css 200 [0.01, 192.168.0.3:55194]
+HTTP GET /static/js/bootstrap-datetimepicker/bootstrap-datetimepicker.min.css 200 [0.00, 192.168.0.3:55193]
+HTTP GET /static/js/jquery.min.js 200 [0.02, 192.168.0.3:55191]
+HTTP GET /static/js/bootstrap.min.js 200 [0.02, 192.168.0.3:55190]
+HTTP GET /static/js/perfect-scrollbar.min.js 200 [0.02, 192.168.0.3:55189]
+HTTP GET /static/js/main.min.js 200 [0.02, 192.168.0.3:55194]
+HTTP GET /static/js/Chart.js 200 [0.02, 192.168.0.3:55192]
+HTTP GET /static/cat.jpg 200 [0.02, 192.168.0.3:55193]
+HTTP GET /media/Avatar/6b0e8f05a9423378ca6a82a50b357650.png 200 [0.03, 192.168.0.3:55190]
+HTTP GET /static/css/materialdesignicons.min.css.map 404 [0.01, 192.168.0.3:55191]
+HTTP GET /static/fonts/materialdesignicons.woff2?v=2.0.46 200 [0.00, 192.168.0.3:55193]
+HTTP GET /favicon.ico 200 [0.08, 192.168.0.3:55193]
+HTTP GET /monitor/company/listinfo 200 [0.09, 192.168.0.3:55193]
+HTTP GET /static/css/bootstrap.min.css 200 [0.02, 192.168.0.3:55193]
+HTTP GET /static/css/materialdesignicons.min.css 200 [0.02, 192.168.0.3:55190]
+HTTP GET /static/css/style.min.css 200 [0.02, 192.168.0.3:55192]
+HTTP GET /static/js/jquery-tags-input/jquery.tagsinput.min.css 200 [0.02, 192.168.0.3:55191]
+HTTP GET /static/upload/webuploader.css 200 [0.02, 192.168.0.3:55194]
+HTTP GET /static/upload/style.css 200 [0.02, 192.168.0.3:55189]
+HTTP GET /static/js/bootstrap-datetimepicker/bootstrap-datetimepicker.min.css 200 [0.01, 192.168.0.3:55194]
+HTTP GET /static/js/jquery.min.js 200 [0.01, 192.168.0.3:55191]
+HTTP GET /static/js/bootstrap.min.js 200 [0.01, 192.168.0.3:55189]
+HTTP GET /static/js/perfect-scrollbar.min.js 200 [0.00, 192.168.0.3:55193]
+HTTP GET /static/js/main.min.js 200 [0.03, 192.168.0.3:55192]
+HTTP GET /static/cat.jpg 200 [0.03, 192.168.0.3:55190]
+HTTP GET /static/fonts/materialdesignicons.woff2?v=2.0.46 200 [0.09, 192.168.0.3:55192]
+HTTP GET /static/css/materialdesignicons.min.css.map 404 [0.01, 192.168.0.3:55192]
+Not Found: /media/Avatar/
+HTTP GET /media/Avatar/ 404 [0.38, 192.168.0.3:55189]
+HTTP GET /favicon.ico 200 [0.45, 192.168.0.3:55189]
+HTTP GET /task/tasklist 200 [0.04, 192.168.0.3:55189]
+HTTP GET /favicon.ico 200 [0.18, 192.168.0.3:55189]
+HTTP GET /monitor/company/listinfo 200 [0.09, 192.168.0.3:55189]
+Not Found: /media/Avatar/
+HTTP GET /media/Avatar/ 404 [0.13, 192.168.0.3:55189]
+HTTP GET /favicon.ico 200 [0.08, 192.168.0.3:55189]
+/mnt/JamesDjango/monitor/urls.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 01, 2019 - 15:24:32
+Django version 2.2.1, using settings 'JamesDjango.settings'
+Starting ASGI/Channels version 2.1.5 development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+Listen failure: Couldn't listen on 0.0.0.0:80: [Errno 98] Address already in use.
+/mnt/JamesDjango/monitor/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 01, 2019 - 15:31:30
+Django version 2.2.1, using settings 'JamesDjango.settings'
+Starting ASGI/Channels version 2.1.5 development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+HTTP GET /monitor/company/listinfo 200 [0.17, 192.168.0.3:55245]
+Not Found: /media/Avatar/
+HTTP GET /media/Avatar/ 404 [0.03, 192.168.0.3:55245]
+HTTP GET /favicon.ico 200 [0.51, 192.168.0.3:55245]
+HTTP GET /monitor/company/listinfo 200 [0.04, 192.168.0.3:55268]
+Not Found: /media/Avatar/
+HTTP GET /media/Avatar/ 404 [0.11, 192.168.0.3:55268]
+HTTP GET /favicon.ico 200 [0.08, 192.168.0.3:55268]
+/mnt/JamesDjango/monitor/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 01, 2019 - 15:32:04
+Django version 2.2.1, using settings 'JamesDjango.settings'
+Starting ASGI/Channels version 2.1.5 development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+Listen failure: Couldn't listen on 0.0.0.0:80: [Errno 98] Address already in use.
+/mnt/JamesDjango/monitor/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 01, 2019 - 15:36:55
+Django version 2.2.1, using settings 'JamesDjango.settings'
+Starting ASGI/Channels version 2.1.5 development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+HTTP GET /monitor/company/listinfo 200 [0.07, 192.168.0.3:55303]
+Not Found: /media/Avatar/
+HTTP GET /media/Avatar/ 404 [0.02, 192.168.0.3:55303]
+HTTP GET /favicon.ico 200 [0.09, 192.168.0.3:55303]
+HTTP GET /monitor/company/listinfo 200 [0.04, 192.168.0.3:55336]
+Not Found: /media/Avatar/
+HTTP GET /media/Avatar/ 404 [0.17, 192.168.0.3:55336]
+HTTP GET /favicon.ico 200 [0.08, 192.168.0.3:55336]
+HTTP GET /monitor/company/listinfo 200 [0.03, 192.168.0.3:55336]
+Not Found: /media/Avatar/
+HTTP GET /media/Avatar/ 404 [0.02, 192.168.0.3:55336]
+HTTP GET /favicon.ico 200 [0.08, 192.168.0.3:55336]
+/mnt/JamesDjango/monitor/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 01, 2019 - 15:37:06
+Django version 2.2.1, using settings 'JamesDjango.settings'
+Starting ASGI/Channels version 2.1.5 development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+/mnt/JamesDjango/monitor/models.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 01, 2019 - 15:46:53
+Django version 2.2.1, using settings 'JamesDjango.settings'
+Starting ASGI/Channels version 2.1.5 development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/root/.pyenv/versions/3.6.5/lib/python3.6/threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "/root/.pyenv/versions/3.6.5/lib/python3.6/threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/utils/autoreload.py", line 54, in wrapper
+    fn(*args, **kwargs)
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/core/management/commands/runserver.py", line 109, in inner_run
+    autoreload.raise_last_exception()
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/utils/autoreload.py", line 77, in raise_last_exception
+    raise _exception[0](_exception[1]).with_traceback(_exception[2])
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/utils/autoreload.py", line 54, in wrapper
+    fn(*args, **kwargs)
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/apps/registry.py", line 114, in populate
+    app_config.import_models()
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/apps/config.py", line 211, in import_models
+    self.models_module = import_module(models_module_name)
+  File "/root/.pyenv/versions/3.6.5/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/mnt/JamesDjango/monitor/models.py", line 5, in <module>
+    class company(models.Model):
+  File "/mnt/JamesDjango/monitor/models.py", line 16, in company
+    urladdress = models.SmallIntegerField(choices=GENDER_CHOICES1, default=0, verbose_name='任务状态')
+NameError: name 'GENDER_CHOICES1' is not defined
+
+/mnt/JamesDjango/monitor/models.py changed, reloading.
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/root/.pyenv/versions/3.6.5/lib/python3.6/threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "/root/.pyenv/versions/3.6.5/lib/python3.6/threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/utils/autoreload.py", line 54, in wrapper
+    fn(*args, **kwargs)
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/core/management/commands/runserver.py", line 109, in inner_run
+    autoreload.raise_last_exception()
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/utils/autoreload.py", line 77, in raise_last_exception
+    raise _exception[0](_exception[1]).with_traceback(_exception[2])
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/utils/autoreload.py", line 54, in wrapper
+    fn(*args, **kwargs)
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/apps/registry.py", line 114, in populate
+    app_config.import_models()
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/apps/config.py", line 211, in import_models
+    self.models_module = import_module(models_module_name)
+  File "/root/.pyenv/versions/3.6.5/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/mnt/JamesDjango/monitor/models.py", line 5, in <module>
+    class company(models.Model):
+  File "/mnt/JamesDjango/monitor/models.py", line 16, in company
+    urladdress = models.SmallIntegerField(choices=GENDER_CHOICES1, default=0, verbose_name='任务状态')
+NameError: name 'GENDER_CHOICES1' is not defined
+
+/mnt/JamesDjango/monitor/views.py changed, reloading.
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/root/.pyenv/versions/3.6.5/lib/python3.6/threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "/root/.pyenv/versions/3.6.5/lib/python3.6/threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/utils/autoreload.py", line 54, in wrapper
+    fn(*args, **kwargs)
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/core/management/commands/runserver.py", line 109, in inner_run
+    autoreload.raise_last_exception()
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/utils/autoreload.py", line 77, in raise_last_exception
+    raise _exception[0](_exception[1]).with_traceback(_exception[2])
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/utils/autoreload.py", line 54, in wrapper
+    fn(*args, **kwargs)
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/apps/registry.py", line 114, in populate
+    app_config.import_models()
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/apps/config.py", line 211, in import_models
+    self.models_module = import_module(models_module_name)
+  File "/root/.pyenv/versions/3.6.5/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/mnt/JamesDjango/monitor/models.py", line 5, in <module>
+    class company(models.Model):
+  File "/mnt/JamesDjango/monitor/models.py", line 16, in company
+    urladdress = models.SmallIntegerField(choices=GENDER_CHOICES1, default=0, verbose_name='任务状态')
+NameError: name 'GENDER_CHOICES1' is not defined
+
+/mnt/JamesDjango/monitor/views.py changed, reloading.
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/root/.pyenv/versions/3.6.5/lib/python3.6/threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "/root/.pyenv/versions/3.6.5/lib/python3.6/threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/utils/autoreload.py", line 54, in wrapper
+    fn(*args, **kwargs)
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/core/management/commands/runserver.py", line 109, in inner_run
+    autoreload.raise_last_exception()
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/utils/autoreload.py", line 77, in raise_last_exception
+    raise _exception[0](_exception[1]).with_traceback(_exception[2])
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/utils/autoreload.py", line 54, in wrapper
+    fn(*args, **kwargs)
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/apps/registry.py", line 114, in populate
+    app_config.import_models()
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/apps/config.py", line 211, in import_models
+    self.models_module = import_module(models_module_name)
+  File "/root/.pyenv/versions/3.6.5/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/mnt/JamesDjango/monitor/models.py", line 5, in <module>
+    class company(models.Model):
+  File "/mnt/JamesDjango/monitor/models.py", line 16, in company
+    urladdress = models.SmallIntegerField(choices=GENDER_CHOICES1, default=0, verbose_name='任务状态')
+NameError: name 'GENDER_CHOICES1' is not defined
+
+/mnt/JamesDjango/monitor/views.py changed, reloading.
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/root/.pyenv/versions/3.6.5/lib/python3.6/threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "/root/.pyenv/versions/3.6.5/lib/python3.6/threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/utils/autoreload.py", line 54, in wrapper
+    fn(*args, **kwargs)
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/core/management/commands/runserver.py", line 109, in inner_run
+    autoreload.raise_last_exception()
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/utils/autoreload.py", line 77, in raise_last_exception
+    raise _exception[0](_exception[1]).with_traceback(_exception[2])
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/utils/autoreload.py", line 54, in wrapper
+    fn(*args, **kwargs)
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/apps/registry.py", line 114, in populate
+    app_config.import_models()
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/apps/config.py", line 211, in import_models
+    self.models_module = import_module(models_module_name)
+  File "/root/.pyenv/versions/3.6.5/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/mnt/JamesDjango/monitor/models.py", line 5, in <module>
+    class company(models.Model):
+  File "/mnt/JamesDjango/monitor/models.py", line 16, in company
+    urladdress = models.SmallIntegerField(choices=GENDER_CHOICES1, default=0, verbose_name='任务状态')
+NameError: name 'GENDER_CHOICES1' is not defined
+
+/mnt/JamesDjango/monitor/models.py changed, reloading.
+Watching for file changes with StatReloader
+Listen failure: Couldn't listen on 0.0.0.0:80: [Errno 98] Address already in use.
+/mnt/JamesDjango/monitor/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 01, 2019 - 16:26:47
+Django version 2.2.1, using settings 'JamesDjango.settings'
+Starting ASGI/Channels version 2.1.5 development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+HTTP GET /monitor/company/listinfo 200 [0.04, 192.168.0.3:55718]
+HTTP GET /static/css/style.min.css 200 [0.01, 192.168.0.3:55718]
+HTTP GET /static/js/jquery.min.js 200 [0.01, 192.168.0.3:55719]
+HTTP GET /static/cat.jpg 200 [0.01, 192.168.0.3:55720]
+HTTP GET /static/js/main.min.js 200 [0.01, 192.168.0.3:55721]
+HTTP GET /static/js/perfect-scrollbar.min.js 200 [0.01, 192.168.0.3:55722]
+HTTP GET /static/js/bootstrap.min.js 200 [0.01, 192.168.0.3:55723]
+HTTP GET /static/fonts/materialdesignicons.woff2?v=2.0.46 200 [0.00, 192.168.0.3:55723]
+HTTP GET /favicon.ico 200 [0.21, 192.168.0.3:55723]
+/mnt/JamesDjango/monitor/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 01, 2019 - 16:28:08
+Django version 2.2.1, using settings 'JamesDjango.settings'
+Starting ASGI/Channels version 2.1.5 development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+HTTP GET /monitor/company/listinfo 200 [0.24, 192.168.0.3:55742]
+HTTP GET /favicon.ico 200 [0.09, 192.168.0.3:55742]
+HTTP GET /monitor/company/listinfo 200 [0.03, 192.168.0.3:55742]
+HTTP GET /favicon.ico 200 [0.07, 192.168.0.3:55742]
+/mnt/JamesDjango/monitor/models.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 01, 2019 - 16:29:52
+Django version 2.2.1, using settings 'JamesDjango.settings'
+Starting ASGI/Channels version 2.1.5 development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+Listen failure: Couldn't listen on 0.0.0.0:80: [Errno 98] Address already in use.
+/mnt/JamesDjango/monitor/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 01, 2019 - 16:31:40
+Django version 2.2.1, using settings 'JamesDjango.settings'
+Starting ASGI/Channels version 2.1.5 development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+Listen failure: Couldn't listen on 0.0.0.0:80: [Errno 98] Address already in use.
+/mnt/JamesDjango/monitor/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 01, 2019 - 16:41:44
+Django version 2.2.1, using settings 'JamesDjango.settings'
+Starting ASGI/Channels version 2.1.5 development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+HTTP GET /monitor/company/addinfo 200 [0.04, 192.168.0.3:55865]
+HTTP GET /monitor/company/js/bootstrap.min.js 200 [0.29, 192.168.0.3:55866]
+HTTP GET /monitor/company/js/jquery.min.js 200 [0.30, 192.168.0.3:55865]
+HTTP GET /monitor/company/js/main.min.js 200 [0.29, 192.168.0.3:55868]
+HTTP GET /monitor/company/js/perfect-scrollbar.min.js 200 [0.29, 192.168.0.3:55867]
+HTTP GET /favicon.ico 200 [0.08, 192.168.0.3:55867]
+/mnt/JamesDjango/monitor/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 01, 2019 - 16:44:14
+Django version 2.2.1, using settings 'JamesDjango.settings'
+Starting ASGI/Channels version 2.1.5 development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+/mnt/JamesDjango/monitor/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 01, 2019 - 16:45:28
+Django version 2.2.1, using settings 'JamesDjango.settings'
+Starting ASGI/Channels version 2.1.5 development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+HTTP GET /monitor/company/addinfo 200 [0.07, 192.168.0.3:55878]
+HTTP GET /monitor/company/js/jquery.min.js 200 [0.30, 192.168.0.3:55878]
+HTTP GET /monitor/company/js/bootstrap.min.js 200 [0.29, 192.168.0.3:55879]
+HTTP GET /monitor/company/js/main.min.js 200 [0.30, 192.168.0.3:55881]
+HTTP GET /monitor/company/js/perfect-scrollbar.min.js 200 [0.30, 192.168.0.3:55880]
+HTTP GET /favicon.ico 200 [0.08, 192.168.0.3:55880]
+HTTP GET /monitor/company/addinfo 200 [0.06, 192.168.0.3:55890]
+HTTP GET /monitor/company/js/perfect-scrollbar.min.js 200 [0.28, 192.168.0.3:55892]
+HTTP GET /monitor/company/js/jquery.min.js 200 [0.29, 192.168.0.3:55890]
+HTTP GET /monitor/company/js/main.min.js 200 [0.29, 192.168.0.3:55893]
+HTTP GET /monitor/company/js/bootstrap.min.js 200 [0.29, 192.168.0.3:55891]
+HTTP GET /favicon.ico 200 [0.15, 192.168.0.3:55891]
+HTTP GET /monitor/company/addinfo 200 [0.04, 192.168.0.3:55891]
+HTTP GET /monitor/company/js/jquery.min.js 200 [0.54, 192.168.0.3:55891]
+HTTP GET /monitor/company/js/perfect-scrollbar.min.js 200 [0.54, 192.168.0.3:55890]
+HTTP GET /monitor/company/js/bootstrap.min.js 200 [0.54, 192.168.0.3:55893]
+HTTP GET /monitor/company/js/main.min.js 200 [0.54, 192.168.0.3:55892]
+HTTP GET /favicon.ico 200 [0.17, 192.168.0.3:55892]
+HTTP GET /monitor/company/addinfo 200 [0.03, 192.168.0.3:55892]
+HTTP GET /monitor/company/js/main.min.js 200 [0.27, 192.168.0.3:55891]
+HTTP GET /monitor/company/js/perfect-scrollbar.min.js 200 [0.27, 192.168.0.3:55890]
+HTTP GET /monitor/company/js/bootstrap.min.js 200 [0.28, 192.168.0.3:55893]
+HTTP GET /monitor/company/js/jquery.min.js 200 [0.28, 192.168.0.3:55892]
+HTTP GET /favicon.ico 200 [0.14, 192.168.0.3:55892]
+HTTP GET /monitor/company/addinfo 200 [0.02, 192.168.0.3:55892]
+HTTP GET /monitor/company/js/perfect-scrollbar.min.js 200 [0.27, 192.168.0.3:55890]
+HTTP GET /monitor/company/js/main.min.js 200 [0.28, 192.168.0.3:55891]
+HTTP GET /monitor/company/js/jquery.min.js 200 [0.28, 192.168.0.3:55892]
+HTTP GET /monitor/company/js/bootstrap.min.js 200 [0.28, 192.168.0.3:55893]
+HTTP GET /favicon.ico 200 [0.20, 192.168.0.3:55893]
+HTTP GET /monitor/company/addinfo 200 [0.12, 192.168.0.3:55893]
+HTTP GET /monitor/company/js/jquery.min.js 200 [0.32, 192.168.0.3:55893]
+HTTP GET /monitor/company/js/bootstrap.min.js 200 [0.32, 192.168.0.3:55892]
+HTTP GET /monitor/company/js/main.min.js 200 [0.33, 192.168.0.3:55890]
+HTTP GET /monitor/company/js/perfect-scrollbar.min.js 200 [0.33, 192.168.0.3:55891]
+HTTP GET /favicon.ico 200 [0.08, 192.168.0.3:55891]
+HTTP GET /monitor/company/addinfo 200 [0.12, 192.168.0.3:55891]
+HTTP GET /monitor/company/js/jquery.min.js 200 [0.33, 192.168.0.3:55891]
+HTTP GET /monitor/company/js/main.min.js 200 [0.33, 192.168.0.3:55893]
+HTTP GET /monitor/company/js/perfect-scrollbar.min.js 200 [0.33, 192.168.0.3:55892]
+HTTP GET /monitor/company/js/bootstrap.min.js 200 [0.34, 192.168.0.3:55890]
+HTTP GET /favicon.ico 200 [0.08, 192.168.0.3:55890]
+HTTP GET /monitor/company/addinfo 200 [0.03, 192.168.0.3:55902]
+HTTP GET /monitor/company/js/jquery.min.js 200 [0.28, 192.168.0.3:55902]
+HTTP GET /monitor/company/js/bootstrap.min.js 200 [0.28, 192.168.0.3:55903]
+HTTP GET /monitor/company/js/main.min.js 200 [0.28, 192.168.0.3:55905]
+HTTP GET /monitor/company/js/perfect-scrollbar.min.js 200 [0.28, 192.168.0.3:55904]
+HTTP GET /favicon.ico 200 [0.09, 192.168.0.3:55904]
+HTTP GET /monitor/company/addinfo 200 [0.03, 192.168.0.3:55947]
+HTTP GET /monitor/company/js/perfect-scrollbar.min.js 200 [0.89, 192.168.0.3:55949]
+HTTP GET /monitor/company/js/main.min.js 200 [0.89, 192.168.0.3:55950]
+HTTP GET /monitor/company/js/bootstrap.min.js 200 [0.91, 192.168.0.3:55948]
+HTTP GET /monitor/company/js/jquery.min.js 200 [0.92, 192.168.0.3:55947]
+HTTP GET /favicon.ico 200 [0.08, 192.168.0.3:55947]
+HTTP GET /monitor/company/addinfo 200 [0.10, 192.168.0.3:55947]
+HTTP GET /monitor/company/js/bootstrap.min.js 200 [0.27, 192.168.0.3:55948]
+HTTP GET /monitor/company/js/jquery.min.js 200 [0.28, 192.168.0.3:55947]
+HTTP GET /monitor/company/js/perfect-scrollbar.min.js 200 [0.28, 192.168.0.3:55950]
+HTTP GET /monitor/company/js/main.min.js 200 [0.28, 192.168.0.3:55949]
+HTTP GET /favicon.ico 200 [0.07, 192.168.0.3:55949]
+HTTP GET /monitor/company/addinfo 200 [0.10, 192.168.0.3:55949]
+HTTP GET /monitor/company/js/main.min.js 200 [0.46, 192.168.0.3:55948]
+HTTP GET /monitor/company/js/bootstrap.min.js 200 [0.47, 192.168.0.3:55950]
+HTTP GET /monitor/company/js/perfect-scrollbar.min.js 200 [0.47, 192.168.0.3:55947]
+HTTP GET /monitor/company/js/jquery.min.js 200 [0.47, 192.168.0.3:55949]
+HTTP GET /favicon.ico 200 [0.09, 192.168.0.3:55949]
+HTTP GET /monitor/company/addinfo 200 [0.02, 192.168.0.3:55949]
+HTTP GET /monitor/company/js/jquery.min.js 200 [0.34, 192.168.0.3:55949]
+HTTP GET /monitor/company/js/bootstrap.min.js 200 [0.36, 192.168.0.3:55947]
+HTTP GET /monitor/company/js/perfect-scrollbar.min.js 200 [0.37, 192.168.0.3:55950]
+HTTP GET /monitor/company/js/main.min.js 200 [0.39, 192.168.0.3:55948]
+HTTP GET /favicon.ico 200 [0.16, 192.168.0.3:55948]
+HTTP GET /monitor/company/addinfo 200 [0.02, 192.168.0.3:55948]
+HTTP GET /monitor/company/js/jquery.min.js 200 [0.09, 192.168.0.3:55948]
+HTTP GET /monitor/company/js/main.min.js 200 [0.54, 192.168.0.3:55949]
+HTTP GET /monitor/company/js/perfect-scrollbar.min.js 200 [0.55, 192.168.0.3:55947]
+HTTP GET /monitor/company/js/bootstrap.min.js 200 [0.58, 192.168.0.3:55950]
+HTTP GET /favicon.ico 200 [0.08, 192.168.0.3:55950]
+HTTP GET /monitor/company/addinfo 200 [0.02, 192.168.0.3:55950]
+HTTP GET /monitor/company/js/bootstrap.min.js 200 [0.27, 192.168.0.3:55947]
+HTTP GET /monitor/company/js/jquery.min.js 200 [0.28, 192.168.0.3:55950]
+HTTP GET /monitor/company/js/perfect-scrollbar.min.js 200 [0.28, 192.168.0.3:55949]
+HTTP GET /monitor/company/js/main.min.js 200 [0.28, 192.168.0.3:55948]
+HTTP GET /favicon.ico 200 [0.08, 192.168.0.3:55948]
+HTTP GET / 200 [0.08, 192.168.0.3:55948]
+HTTP GET /favicon.ico 200 [0.11, 192.168.0.3:55948]
+HTTP GET / 200 [0.11, 192.168.0.3:55949]
+HTTP GET /favicon.ico 200 [0.27, 192.168.0.3:55949]
+HTTP GET /task/tasklist 200 [0.04, 192.168.0.3:55949]
+HTTP GET /favicon.ico 200 [0.08, 192.168.0.3:55949]
+HTTP GET /task/taskinfo?task_id=10 200 [0.04, 192.168.0.3:55949]
+HTTP GET /favicon.ico 200 [0.20, 192.168.0.3:55949]
+HTTP GET /task/tasklist 200 [0.03, 192.168.0.3:55949]
+HTTP GET /favicon.ico 200 [0.08, 192.168.0.3:55949]
+HTTP GET /task/edittask?task_id=10 200 [0.16, 192.168.0.3:55949]
+HTTP GET /static/upload/upload.js 200 [0.03, 192.168.0.3:55950]
+HTTP GET /static/upload/jquery.js 200 [0.03, 192.168.0.3:55949]
+HTTP GET /static/upload/webuploader.js 200 [0.03, 192.168.0.3:55948]
+HTTP GET /static/upload/image.png 200 [0.03, 192.168.0.3:55974]
+HTTP GET /static/js/jquery-tags-input/jquery.tagsinput.min.js 200 [0.07, 192.168.0.3:55947]
+HTTP GET /favicon.ico 200 [0.08, 192.168.0.3:55947]
+HTTP GET /favicon.ico 200 [0.32, 192.168.0.3:55947]
+HTTP GET /task/add_task_point?task_id=11 200 [0.04, 192.168.0.3:55947]
+HTTP GET /favicon.ico 200 [0.11, 192.168.0.3:55947]
+HTTP GET /task/taskinfo/?task_id=11 200 [0.03, 192.168.0.3:55947]
+HTTP GET /favicon.ico 200 [0.08, 192.168.0.3:55947]
+HTTP GET /task/edittask/?task_id=11 200 [0.09, 192.168.0.3:55947]
+HTTP GET /favicon.ico 200 [0.08, 192.168.0.3:55947]
+HTTP GET /task/addtask/ 200 [0.02, 192.168.0.3:55947]
+HTTP GET /favicon.ico 200 [0.07, 192.168.0.3:55947]
+HTTP GET /task/tasklist 200 [0.04, 192.168.0.3:55947]
+HTTP GET /favicon.ico 200 [0.08, 192.168.0.3:55947]
+HTTP GET / 200 [0.10, 192.168.0.3:56171]
+HTTP GET /favicon.ico 200 [0.09, 192.168.0.3:56171]
+HTTP GET /monitor/company/listinfo 200 [0.03, 192.168.0.3:56171]
+HTTP GET /favicon.ico 200 [0.08, 192.168.0.3:56171]
+HTTP GET /monitor/company/addinfo 200 [0.02, 192.168.0.3:56171]
+HTTP GET /monitor/company/js/perfect-scrollbar.min.js 200 [0.34, 192.168.0.3:56176]
+HTTP GET /monitor/company/js/jquery.min.js 200 [0.35, 192.168.0.3:56171]
+HTTP GET /monitor/company/js/main.min.js 200 [0.35, 192.168.0.3:56177]
+HTTP GET /monitor/company/js/bootstrap.min.js 200 [0.35, 192.168.0.3:56172]
+HTTP GET /favicon.ico 200 [0.08, 192.168.0.3:56172]
+HTTP GET /monitor/company/addinfo 200 [0.02, 192.168.0.3:56172]
+HTTP GET /monitor/company/js/bootstrap.min.js 200 [0.48, 192.168.0.3:56177]
+HTTP GET /monitor/company/js/jquery.min.js 200 [0.50, 192.168.0.3:56172]
+HTTP GET /monitor/company/js/main.min.js 200 [0.54, 192.168.0.3:56176]
+HTTP GET /monitor/company/js/perfect-scrollbar.min.js 200 [0.54, 192.168.0.3:56171]
+HTTP GET /favicon.ico 200 [0.07, 192.168.0.3:56171]
+HTTP GET /monitor/company/addinfo 200 [0.02, 192.168.0.3:56171]
+HTTP GET /monitor/company/js/jquery.min.js 200 [0.27, 192.168.0.3:56171]
+HTTP GET /monitor/company/js/perfect-scrollbar.min.js 200 [0.27, 192.168.0.3:56172]
+HTTP GET /monitor/company/js/bootstrap.min.js 200 [0.28, 192.168.0.3:56176]
+HTTP GET /monitor/company/js/main.min.js 200 [0.28, 192.168.0.3:56177]
+HTTP GET /favicon.ico 200 [0.32, 192.168.0.3:56177]
+HTTP GET /monitor/company/addinfo 200 [0.02, 192.168.0.3:56177]
+HTTP GET /monitor/company/js/jquery.min.js 200 [0.27, 192.168.0.3:56177]
+HTTP GET /monitor/company/js/perfect-scrollbar.min.js 200 [0.28, 192.168.0.3:56172]
+HTTP GET /monitor/company/js/bootstrap.min.js 200 [0.32, 192.168.0.3:56176]
+HTTP GET /monitor/company/js/main.min.js 200 [0.33, 192.168.0.3:56171]
+HTTP GET /favicon.ico 200 [0.26, 192.168.0.3:56171]
+HTTP GET /monitor/company/addinfo 200 [0.11, 192.168.0.3:56171]
+HTTP GET /monitor/company/js/perfect-scrollbar.min.js 200 [0.27, 192.168.0.3:56172]
+HTTP GET /monitor/company/js/jquery.min.js 200 [0.28, 192.168.0.3:56171]
+HTTP GET /monitor/company/js/main.min.js 200 [0.28, 192.168.0.3:56177]
+HTTP GET /monitor/company/js/bootstrap.min.js 200 [0.28, 192.168.0.3:56176]
+HTTP GET /favicon.ico 200 [0.08, 192.168.0.3:56176]
+HTTP GET /monitor/company/addinfo 200 [0.18, 192.168.0.3:56176]
+HTTP GET /monitor/company/js/main.min.js 200 [0.33, 192.168.0.3:56172]
+HTTP GET /monitor/company/js/perfect-scrollbar.min.js 200 [0.33, 192.168.0.3:56171]
+HTTP GET /monitor/company/js/bootstrap.min.js 200 [0.33, 192.168.0.3:56177]
+HTTP GET /monitor/company/js/jquery.min.js 200 [0.34, 192.168.0.3:56176]
+HTTP GET /favicon.ico 200 [0.08, 192.168.0.3:56176]
+HTTP GET /monitor/company/addinfo 200 [0.15, 192.168.0.3:56176]
+HTTP GET /monitor/company/js/main.min.js 200 [0.29, 192.168.0.3:56172]
+HTTP GET /monitor/company/js/bootstrap.min.js 200 [0.30, 192.168.0.3:56177]
+HTTP GET /monitor/company/js/jquery.min.js 200 [0.30, 192.168.0.3:56176]
+HTTP GET /monitor/company/js/perfect-scrollbar.min.js 200 [0.30, 192.168.0.3:56171]
+HTTP GET /favicon.ico 200 [0.08, 192.168.0.3:56171]
+HTTP GET /monitor/company/addinfo 200 [0.03, 192.168.0.3:56214]
+HTTP GET /monitor/company/js/main.min.js 200 [0.27, 192.168.0.3:56216]
+HTTP GET /monitor/company/js/bootstrap.min.js 200 [0.27, 192.168.0.3:56215]
+HTTP GET /monitor/company/js/jquery.min.js 200 [0.28, 192.168.0.3:56214]
+HTTP GET /monitor/company/js/perfect-scrollbar.min.js 200 [0.28, 192.168.0.3:56217]
+HTTP GET /favicon.ico 200 [0.08, 192.168.0.3:56217]
+HTTP GET /monitor/company/addinfo 200 [0.02, 192.168.0.3:56233]
+HTTP GET /static/js/bootstrap-datetimepicker/moment.min.js 200 [0.01, 192.168.0.3:56233]
+HTTP GET /static/js/bootstrap-datetimepicker/bootstrap-datetimepicker.min.js 200 [0.01, 192.168.0.3:56232]
+HTTP GET /static/js/bootstrap-datetimepicker/locale/zh-cn.js 200 [0.02, 192.168.0.3:56234]
+HTTP GET /static/js/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min.js 200 [0.03, 192.168.0.3:56236]
+HTTP GET /static/js/bootstrap-datepicker/bootstrap-datepicker.min.js 200 [0.38, 192.168.0.3:56235]
+HTTP GET /favicon.ico 200 [0.08, 192.168.0.3:56235]
+HTTP GET /monitor/company/addinfo 200 [0.17, 192.168.0.3:56250]
+HTTP GET /favicon.ico 200 [0.08, 192.168.0.3:56250]
+HTTP GET /monitor/company/addinfo 200 [0.02, 192.168.0.3:56250]
+HTTP GET /favicon.ico 200 [0.07, 192.168.0.3:56250]
+/mnt/JamesDjango/monitor/models.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 01, 2019 - 16:46:00
+Django version 2.2.1, using settings 'JamesDjango.settings'
+Starting ASGI/Channels version 2.1.5 development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+*____________________*____________________*____________________
+Watching for file changes with StatReloader
+Listen failure: Couldn't listen on 0.0.0.0:80: [Errno 98] Address already in use.
+/mnt/JamesDjango/monitor/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 01, 2019 - 17:18:36
+Django version 2.2.1, using settings 'JamesDjango.settings'
+Starting ASGI/Channels version 2.1.5 development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+Internal Server Error: /monitor/company/addinfo
+Traceback (most recent call last):
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/root/.pyenv/versions/env365/lib/python3.6/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/mnt/JamesDjango/monitor/views.py", line 19, in addinfo
+    input_company=request.POST.get(company,None)
+NameError: name 'company' is not defined
+HTTP POST /monitor/company/addinfo 500 [0.10, 192.168.0.3:56302]
+HTTP GET /favicon.ico 200 [0.32, 192.168.0.3:56302]
+Watching for file changes with StatReloader
+HTTP GET / 200 [0.03, 192.168.0.3:62905]
+HTTP GET /users/captcha 200 [2.41, 192.168.0.3:62905]
+HTTP GET /static/cat.jpg 200 [0.01, 192.168.0.3:62905]
+HTTP GET / 200 [0.02, 192.168.0.3:62905]
+HTTP GET /users/captcha 200 [0.02, 192.168.0.3:62905]
+HTTP GET /static/cat.jpg 200 [0.00, 192.168.0.3:62905]
+HTTP POST /users/login 302 [0.91, 192.168.0.3:62905]
+HTTP POST /users/login 302 [0.99, 192.168.0.3:62920]
+HTTP GET / 200 [0.50, 192.168.0.3:62920]
+HTTP GET /favicon.ico 200 [0.08, 192.168.0.3:62920]
+HTTP GET /monitor/company/listinfo 200 [0.03, 192.168.0.3:62920]
+HTTP GET /favicon.ico 200 [0.08, 192.168.0.3:62920]
+/mnt/JamesDjango/monitor/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 02, 2019 - 15:23:30
+Django version 2.2.1, using settings 'JamesDjango.settings'
+Starting ASGI/Channels version 2.1.5 development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+R4rZ r4rz
+登陆成功
+R4rZ r4rz
+登陆成功
+Watching for file changes with StatReloader
+HTTP GET /monitor/company/listinfo 200 [0.03, 192.168.0.3:49559]
+HTTP GET /users/captcha 200 [0.18, 192.168.0.3:49559]
+HTTP GET /static/cat.jpg 200 [0.01, 192.168.0.3:49559]
+HTTP POST /users/login 302 [0.34, 192.168.0.3:49559]
+HTTP GET / 200 [0.08, 192.168.0.3:49559]
+HTTP GET /favicon.ico 200 [0.17, 192.168.0.3:49559]
+HTTP GET /task/tasklist 200 [0.04, 192.168.0.3:49559]
+HTTP GET /favicon.ico 200 [0.07, 192.168.0.3:49559]
+HTTP GET /monitor/company/listinfo 200 [0.03, 192.168.0.3:49559]
+HTTP GET /favicon.ico 200 [0.08, 192.168.0.3:49559]
+HTTP GET /monitor/company/addinfo 200 [0.02, 192.168.0.3:49559]
+HTTP GET /favicon.ico 200 [0.13, 192.168.0.3:49559]
+HTTP GET /favicon.ico 200 [0.08, 192.168.0.3:49559]
+HTTP GET /monitor/company/listinfo 200 [0.03, 192.168.0.3:49559]
+HTTP GET /favicon.ico 200 [0.20, 192.168.0.3:49559]
+HTTP GET /monitor/company/addinfo 200 [0.02, 192.168.0.3:49559]
+HTTP GET /favicon.ico 200 [0.08, 192.168.0.3:49559]
+/mnt/JamesDjango/monitor/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 02, 2019 - 16:11:22
+Django version 2.2.1, using settings 'JamesDjango.settings'
+Starting ASGI/Channels version 2.1.5 development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+hOL9 hol9
+登陆成功
+Watching for file changes with StatReloader
+/mnt/JamesDjango/monitor/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 02, 2019 - 16:11:48
+Django version 2.2.1, using settings 'JamesDjango.settings'
+Starting ASGI/Channels version 2.1.5 development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+/mnt/JamesDjango/monitor/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 02, 2019 - 16:12:07
+Django version 2.2.1, using settings 'JamesDjango.settings'
+Starting ASGI/Channels version 2.1.5 development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+/mnt/JamesDjango/monitor/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 02, 2019 - 16:12:22
+Django version 2.2.1, using settings 'JamesDjango.settings'
+Starting ASGI/Channels version 2.1.5 development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+HTTP GET /monitor/company/addinfo 200 [0.04, 192.168.0.3:49628]
+HTTP GET /favicon.ico 200 [0.08, 192.168.0.3:49628]
+HTTP GET /monitor/company/addinfo 200 [0.02, 192.168.0.3:49628]
+HTTP GET /favicon.ico 200 [0.08, 192.168.0.3:49628]
+HTTP GET / 200 [0.10, 192.168.0.3:49628]
+HTTP GET /favicon.ico 200 [0.21, 192.168.0.3:49628]
+HTTP GET /monitor/company/listinfo 200 [0.04, 192.168.0.3:49628]
+HTTP GET /favicon.ico 200 [0.08, 192.168.0.3:49628]
+HTTP GET /monitor/company/addinfo 200 [0.02, 192.168.0.3:49628]
+HTTP GET /favicon.ico 200 [0.08, 192.168.0.3:49628]
+/mnt/JamesDjango/monitor/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 02, 2019 - 16:12:27
+Django version 2.2.1, using settings 'JamesDjango.settings'
+Starting ASGI/Channels version 2.1.5 development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+HTTP GET /monitor/company/addinfo 200 [0.04, 192.168.0.3:49741]
+HTTP GET /favicon.ico 200 [0.08, 192.168.0.3:49741]
+HTTP GET / 200 [0.09, 192.168.0.3:49741]
+HTTP GET /favicon.ico 200 [0.08, 192.168.0.3:49741]
+HTTP GET /wiki/wikilist 200 [0.03, 192.168.0.3:49741]
+HTTP GET /static/images/time.png 200 [0.01, 192.168.0.3:49742]
+HTTP GET /static/images/avator.png 200 [0.01, 192.168.0.3:49741]
+HTTP GET /wiki/images/topbar.png 200 [0.21, 192.168.0.3:49743]
+HTTP GET /favicon.ico 200 [0.20, 192.168.0.3:49743]
+HTTP GET /monitor/company/listinfo 200 [0.07, 192.168.0.3:49743]
+HTTP GET /favicon.ico 200 [0.08, 192.168.0.3:49743]
+HTTP GET /monitor/company/addinfo 200 [0.03, 192.168.0.3:49743]
+HTTP GET /favicon.ico 200 [0.08, 192.168.0.3:49743]
+HTTP GET / 200 [0.10, 192.168.0.3:50075]
+HTTP GET /favicon.ico 200 [0.08, 192.168.0.3:50075]
+HTTP GET / 200 [0.16, 192.168.0.3:50075]
+HTTP GET /favicon.ico 200 [0.14, 192.168.0.3:50075]
+HTTP GET /wiki/wikilist 200 [0.02, 192.168.0.3:50075]
+HTTP GET /wiki/images/topbar.png 200 [0.08, 192.168.0.3:50075]
+HTTP GET /favicon.ico 200 [0.08, 192.168.0.3:50075]
+HTTP GET /wiki/wikilist 200 [0.04, 192.168.0.3:50075]
+HTTP GET /wiki/images/topbar.png 200 [0.08, 192.168.0.3:50075]
+HTTP GET /favicon.ico 200 [0.08, 192.168.0.3:50075]
+HTTP GET /monitor/company/listinfo 200 [0.03, 192.168.0.3:50075]
+HTTP GET /favicon.ico 200 [0.08, 192.168.0.3:50075]
+HTTP GET /monitor/company/delinfo 200 [0.08, 192.168.0.3:50075]
+HTTP GET /favicon.ico 200 [0.08, 192.168.0.3:50075]
+HTTP GET /wiki/wikilist 200 [0.15, 192.168.0.3:50075]
+HTTP GET /wiki/images/topbar.png 200 [0.08, 192.168.0.3:50075]
+HTTP GET /favicon.ico 200 [0.21, 192.168.0.3:50075]
+HTTP GET /monitor/company/delinfo 200 [0.10, 192.168.0.3:50566]
+HTTP GET /favicon.ico 200 [0.08, 192.168.0.3:50566]
+HTTP GET /wiki/wikilist 200 [0.03, 192.168.0.3:50566]
+HTTP GET /wiki/images/topbar.png 200 [0.09, 192.168.0.3:50566]
+HTTP GET /favicon.ico 200 [0.23, 192.168.0.3:50566]
+HTTP GET /monitor/company/listinfo 200 [0.03, 192.168.0.3:50566]
+HTTP GET /favicon.ico 200 [0.21, 192.168.0.3:50566]
+HTTP GET /monitor/company/monitor/company/delinfo?ids%5B%5D=3 200 [0.10, 192.168.0.3:50577]
+HTTP GET /favicon.ico 200 [0.09, 192.168.0.3:50577]
+HTTP GET /monitor/company/monitor/company/delinfo?ids%5B%5D=3 200 [16.35, 192.168.0.3:50602]
+HTTP GET /favicon.ico 200 [0.09, 192.168.0.3:50602]
+Application instance <Task pending coro=<AsgiHandler.__call__() running at /root/.pyenv/versions/env365/lib/python3.6/site-packages/channels/http.py:202> wait_for=<Future pending cb=[_chain_future.<locals>._call_check_cancel() at /root/.pyenv/versions/3.6.5/lib/python3.6/asyncio/futures.py:403, <TaskWakeupMethWrapper object at 0x7fc00c086228>()]>> for connection <WebRequest at 0x7fc00c0b5128 method=GET uri=/monitor/company/listinfo clientproto=HTTP/1.1> took too long to shut down and was killed.
+HTTP GET /monitor/company/listinfo 200 [17.79, 192.168.0.3:50635]
+HTTP GET /favicon.ico 200 [3.63, 192.168.0.3:50635]
+HTTP GET /monitor/company/monitor/company/delinfo?ids%5B%5D=3 200 [0.10, 192.168.0.3:50635]
+HTTP GET /static/css/materialdesignicons.min.css.map 404 [0.01, 192.168.0.3:50679]
+Application instance <Task pending coro=<AsgiHandler.__call__() running at /root/.pyenv/versions/env365/lib/python3.6/site-packages/channels/http.py:202> wait_for=<Future pending cb=[_chain_future.<locals>._call_check_cancel() at /root/.pyenv/versions/3.6.5/lib/python3.6/asyncio/futures.py:403, <TaskWakeupMethWrapper object at 0x7fc00c088348>()]>> for connection <WebRequest at 0x7fc00c150908 method=GET uri=/monitor/company/monitor/company/delinfo?ids%5B%5D=3 clientproto=HTTP/1.1> took too long to shut down and was killed.
+Application instance <Task pending coro=<AsgiHandler.__call__() running at /root/.pyenv/versions/env365/lib/python3.6/site-packages/channels/http.py:202> wait_for=<Future pending cb=[_chain_future.<locals>._call_check_cancel() at /root/.pyenv/versions/3.6.5/lib/python3.6/asyncio/futures.py:403, <TaskWakeupMethWrapper object at 0x7fc00c088c48>()]>> for connection <WebRequest at 0x7fc00c08e4a8 method=GET uri=/monitor/company/monitor/company/delinfo?ids%5B%5D=3 clientproto=HTTP/1.1> took too long to shut down and was killed.
+Application instance <Task pending coro=<AsgiHandler.__call__() running at /root/.pyenv/versions/env365/lib/python3.6/site-packages/channels/http.py:202> wait_for=<Future pending cb=[_chain_future.<locals>._call_check_cancel() at /root/.pyenv/versions/3.6.5/lib/python3.6/asyncio/futures.py:403, <TaskWakeupMethWrapper object at 0x7fc00c0506d8>()]>> for connection <WebRequest at 0x7fc00c09ecf8 method=GET uri=/monitor/company/monitor/company/delinfo?ids%5B%5D=3 clientproto=HTTP/1.1> took too long to shut down and was killed.
+Application instance <Task pending coro=<AsgiHandler.__call__() running at /root/.pyenv/versions/env365/lib/python3.6/site-packages/channels/http.py:202> wait_for=<Future pending cb=[_chain_future.<locals>._call_check_cancel() at /root/.pyenv/versions/3.6.5/lib/python3.6/asyncio/futures.py:403, <TaskWakeupMethWrapper object at 0x7fc00c050ac8>()]>> for connection <WebRequest at 0x7fc00c0723c8 method=GET uri=/monitor/company/monitor/company/delinfo?ids%5B%5D=3 clientproto=HTTP/1.1> took too long to shut down and was killed.
+Application instance <Task pending coro=<AsgiHandler.__call__() running at /root/.pyenv/versions/env365/lib/python3.6/site-packages/channels/http.py:202> wait_for=<Future pending cb=[_chain_future.<locals>._call_check_cancel() at /root/.pyenv/versions/3.6.5/lib/python3.6/asyncio/futures.py:403, <TaskWakeupMethWrapper object at 0x7fc00c08f378>()]>> for connection <WebRequest at 0x7fc00c08ea58 method=GET uri=/monitor/company/monitor/company/delinfo?ids%5B%5D=3 clientproto=HTTP/1.1> took too long to shut down and was killed.
+Application instance <Task pending coro=<AsgiHandler.__call__() running at /root/.pyenv/versions/env365/lib/python3.6/site-packages/channels/http.py:202> wait_for=<Future pending cb=[_chain_future.<locals>._call_check_cancel() at /root/.pyenv/versions/3.6.5/lib/python3.6/asyncio/futures.py:403, <TaskWakeupMethWrapper object at 0x7fc00c08fbe8>()]>> for connection <WebRequest at 0x7fc00c05ec50 method=GET uri=/monitor/company/monitor/company/delinfo?ids%5B%5D=3 clientproto=HTTP/1.1> took too long to shut down and was killed.
+Application instance <Task pending coro=<AsgiHandler.__call__() running at /root/.pyenv/versions/env365/lib/python3.6/site-packages/channels/http.py:202> wait_for=<Future pending cb=[_chain_future.<locals>._call_check_cancel() at /root/.pyenv/versions/3.6.5/lib/python3.6/asyncio/futures.py:403, <TaskWakeupMethWrapper object at 0x7fc00c086f78>()]>> for connection <WebRequest at 0x7fc00ca212b0 method=GET uri=/monitor/company/listinfo clientproto=HTTP/1.1> took too long to shut down and was killed.
+Application instance <Task pending coro=<AsgiHandler.__call__() running at /root/.pyenv/versions/env365/lib/python3.6/site-packages/channels/http.py:202> wait_for=<Future pending cb=[_chain_future.<locals>._call_check_cancel() at /root/.pyenv/versions/3.6.5/lib/python3.6/asyncio/futures.py:403, <TaskWakeupMethWrapper object at 0x7fc00c035078>()]>> for connection <WebRequest at 0x7fc00c181eb8 method=GET uri=/monitor/company/listinfo clientproto=HTTP/1.1> took too long to shut down and was killed.
+HTTP GET /favicon.ico 200 [35.20, 192.168.0.3:50635]
+HTTP GET /monitor/company/listinfo 200 [20.47, 192.168.0.3:50709]
+HTTP GET /static/css/bootstrap.min.css 200 [0.19, 192.168.0.3:50709]
+HTTP GET /static/css/style.min.css 200 [0.19, 192.168.0.3:50731]
+HTTP GET /static/css/materialdesignicons.min.css 200 [0.91, 192.168.0.3:50730]
+HTTP GET /static/upload/webuploader.css 200 [0.92, 192.168.0.3:50733]
+HTTP GET /static/js/jquery-tags-input/jquery.tagsinput.min.css 200 [0.96, 192.168.0.3:50732]
+HTTP GET /static/js/jquery.min.js 200 [0.75, 192.168.0.3:50731]
+HTTP GET /static/upload/style.css 200 [0.97, 192.168.0.3:50734]
+HTTP GET /static/js/bootstrap.min.js 200 [0.05, 192.168.0.3:50730]
+HTTP GET /static/js/perfect-scrollbar.min.js 200 [0.06, 192.168.0.3:50733]
+HTTP GET /static/js/bootstrap-datetimepicker/bootstrap-datetimepicker.min.css 200 [0.79, 192.168.0.3:50709]
+HTTP GET /static/css/materialdesignicons.min.css.map 404 [0.03, 192.168.0.3:50732]
+HTTP GET /static/js/main.min.js 200 [0.03, 192.168.0.3:50734]
+HTTP GET /static/cat.jpg 200 [0.02, 192.168.0.3:50731]
+HTTP GET /static/fonts/materialdesignicons.woff2?v=2.0.46 200 [0.01, 192.168.0.3:50731]
+HTTP GET /media/Avatar/6b0e8f05a9423378ca6a82a50b357650.png 200 [0.10, 192.168.0.3:50730]
+HTTP GET /favicon.ico 200 [0.10, 192.168.0.3:50730]
+HTTP GET /monitor/company/monitor/company/delinfo?ids%5B%5D=3 200 [0.09, 192.168.0.3:50745]
+HTTP GET /static/css/bootstrap.min.css 200 [0.02, 192.168.0.3:50745]
+HTTP GET /static/js/jquery-tags-input/jquery.tagsinput.min.css 200 [0.02, 192.168.0.3:50748]
+HTTP GET /static/css/style.min.css 200 [0.02, 192.168.0.3:50746]
+HTTP GET /static/css/materialdesignicons.min.css 200 [0.02, 192.168.0.3:50747]
+HTTP GET /static/upload/webuploader.css 200 [0.02, 192.168.0.3:50749]
+HTTP GET /static/upload/style.css 200 [0.03, 192.168.0.3:50750]
+HTTP GET /static/js/bootstrap-datetimepicker/bootstrap-datetimepicker.min.css 200 [0.01, 192.168.0.3:50748]
+HTTP GET /static/js/jquery.min.js 200 [0.01, 192.168.0.3:50749]
+HTTP GET /static/js/bootstrap.min.js 200 [0.00, 192.168.0.3:50750]
+HTTP GET /static/js/perfect-scrollbar.min.js 200 [0.00, 192.168.0.3:50747]
+HTTP GET /static/js/main.min.js 200 [0.02, 192.168.0.3:50746]
+HTTP GET /static/cat.jpg 200 [0.02, 192.168.0.3:50749]
+HTTP GET /static/js/Chart.js 200 [0.02, 192.168.0.3:50745]
+HTTP GET /media/Avatar/6b0e8f05a9423378ca6a82a50b357650.png 200 [0.04, 192.168.0.3:50747]
+HTTP GET /static/fonts/materialdesignicons.woff2?v=2.0.46 200 [0.01, 192.168.0.3:50749]
+HTTP GET /static/css/materialdesignicons.min.css.map 404 [0.01, 192.168.0.3:50747]
+HTTP GET /favicon.ico 200 [0.09, 192.168.0.3:50747]
+/mnt/JamesDjango/monitor/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 02, 2019 - 16:14:01
+Django version 2.2.1, using settings 'JamesDjango.settings'
+Starting ASGI/Channels version 2.1.5 development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+HTTP GET /monitor/company/listinfo 200 [0.08, 192.168.0.3:50891]
+HTTP GET /static/css/bootstrap.min.css 200 [0.02, 192.168.0.3:50891]
+HTTP GET /static/css/materialdesignicons.min.css 200 [0.02, 192.168.0.3:50892]
+HTTP GET /static/upload/webuploader.css 200 [0.02, 192.168.0.3:50894]
+HTTP GET /static/js/jquery-tags-input/jquery.tagsinput.min.css 200 [0.02, 192.168.0.3:50896]
+HTTP GET /static/upload/style.css 200 [0.01, 192.168.0.3:50893]
+HTTP GET /static/css/style.min.css 200 [0.01, 192.168.0.3:50895]
+HTTP GET /static/js/bootstrap-datetimepicker/bootstrap-datetimepicker.min.css 200 [0.00, 192.168.0.3:50891]
+HTTP GET /static/js/jquery.min.js 200 [0.01, 192.168.0.3:50893]
+HTTP GET /static/js/bootstrap.min.js 200 [0.02, 192.168.0.3:50892]
+HTTP GET /static/js/perfect-scrollbar.min.js 200 [0.02, 192.168.0.3:50896]
+HTTP GET /static/js/main.min.js 200 [0.02, 192.168.0.3:50894]
+HTTP GET /static/cat.jpg 200 [0.02, 192.168.0.3:50891]
+HTTP GET /media/Avatar/6b0e8f05a9423378ca6a82a50b357650.png 200 [0.02, 192.168.0.3:50895]
+HTTP GET /static/css/materialdesignicons.min.css.map 404 [0.01, 192.168.0.3:50891]
+HTTP GET /static/fonts/materialdesignicons.woff2?v=2.0.46 200 [0.00, 192.168.0.3:50895]
+HTTP GET /favicon.ico 200 [0.08, 192.168.0.3:50895]
