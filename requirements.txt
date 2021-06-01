@@ -56,5 +56,5 @@ sqlparse==0.3.0
 Twisted==19.2.1
 txaio==18.8.1
 Unidecode==1.0.23
-urllib3==1.25.2
+urllib3==1.26.5
 zope.interface==4.6.0
