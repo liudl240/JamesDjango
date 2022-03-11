@@ -39,7 +39,7 @@ MarkupSafe==1.1.1
 mysqlclient==1.4.2.post1
 oauthlib==3.0.1
 paramiko==2.4.1
-Pillow==6.0.0
+Pillow==9.0.1
 pyasn1==0.4.5
 pycparser==2.19
 Pygments==2.4.2
